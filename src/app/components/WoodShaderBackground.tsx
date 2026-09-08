@@ -9,20 +9,20 @@ export function WoodShaderBackground() {
 
     function syncSize() {
       if (!canvas) return;
-      const w = canvas.clientWidth || 1280;
-      const h = canvas.clientHeight || 720;
+      const dpr = window.devicePixelRatio || 1;
+      const w = Math.floor((canvas.clientWidth || 1280) * dpr);
+      const h = Math.floor((canvas.clientHeight || 720) * dpr);
       if (canvas.width !== w || canvas.height !== h) {
         canvas.width = w;
         canvas.height = h;
       }
     }
-    
+
     const resizeObserver = new ResizeObserver(syncSize);
     resizeObserver.observe(canvas);
     syncSize();
 
-    // @ts-ignore
-    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    const gl = (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')) as WebGLRenderingContext | null;
     if (!gl) return;
 
     const vs = `attribute vec2 a_position;
@@ -32,10 +32,11 @@ void main() {
   gl_Position = vec4(a_position, 0.0, 1.0);
 }`;
 
-    const fs = `precision highp float;
+    const fs = `precision mediump float;
 varying vec2 v_texCoord;
 uniform float u_time;
 uniform vec2 u_resolution;
+uniform vec2 u_mouse;
 
 float hash(vec2 p) {
     p = fract(p * vec2(123.34, 456.21));
@@ -71,12 +72,21 @@ void main() {
     finalColor = mix(finalColor, color3, flow2 * 0.2);
     finalColor *= (1.0 - grain * 0.04);
     
+    // Mouse interaction glow
+    vec2 mouseUV = u_mouse / u_resolution;
+    float aspect = u_resolution.x / u_resolution.y;
+    vec2 uvAspect = vec2(uv.x * aspect, uv.y);
+    vec2 mouseAspect = vec2(mouseUV.x * aspect, mouseUV.y);
+    float distToMouse = length(uvAspect - mouseAspect);
+    float mouseGlow = smoothstep(0.4, 0.0, distToMouse);
+    finalColor += vec3(0.15, 0.1, 0.05) * mouseGlow * 0.4;
+
     float dist = length(uv - 0.5);
     finalColor *= smoothstep(1.2, 0.5, dist);
     
     gl_FragColor = vec4(finalColor, 1.0);
 }`;
-    
+
     function cs(type: number, src: string) {
       const s = gl.createShader(type)!;
       gl.shaderSource(s, src);
@@ -93,11 +103,11 @@ void main() {
     const buf = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buf);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
-    
+
     const pos = gl.getAttribLocation(prog, 'a_position');
     gl.enableVertexAttribArray(pos);
     gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
-    
+
     const uTime = gl.getUniformLocation(prog, 'u_time');
     const uRes = gl.getUniformLocation(prog, 'u_resolution');
     const uMouse = gl.getUniformLocation(prog, 'u_mouse');
@@ -125,7 +135,7 @@ void main() {
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
       animationFrameId = requestAnimationFrame(render);
     }
-    
+
     render(0);
 
     return () => {
@@ -137,8 +147,8 @@ void main() {
 
   return (
     <div className="absolute inset-0 w-full h-full opacity-30 pointer-events-none z-0">
-      <canvas 
-        ref={canvasRef} 
+      <canvas
+        ref={canvasRef}
         style={{ display: 'block', width: '100%', height: '100%' }}
       />
     </div>
