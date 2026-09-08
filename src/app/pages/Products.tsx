@@ -1,6 +1,5 @@
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Link } from 'react-router';
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Images
@@ -14,17 +13,17 @@ import proofWardrobeImg from '../assets/93fec46fe2c182559cb71aafc651703bd56b2630
 
 // New Cabinet Images
 import cab1 from '../../assets/cabinet/1380088840-650x650.jpg';
-import cab2 from '../../assets/cabinet/02703170-1-650x650.jpg';
 import cab3 from '../../assets/cabinet/02702809-1-650x650.jpg';
 import cab4 from '../../assets/cabinet/02702153-650x650.jpg';
 import cab5 from '../../assets/cabinet/02702143-1.jpg';
 
 // New Dressoir Images
-import dres1 from '../../assets/dressoir/1380088840-650x650.jpg';
-import dres2 from '../../assets/dressoir/02703170-1-650x650.jpg';
-import dres3 from '../../assets/dressoir/02702809-1-650x650.jpg';
-import dres4 from '../../assets/dressoir/02702153-650x650.jpg';
-import dres5 from '../../assets/dressoir/02702143-1.jpg';
+import dres1 from '../../assets/dressoir/02703170-1-650x650.jpg';
+import dres2 from '../../assets/dressoir/02732018-1.jpg';
+import dres3 from '../../assets/dressoir/02732026-650x650.jpg';
+import dres4 from '../../assets/dressoir/MA-A-003-650x650.jpg';
+import dres5 from '../../assets/dressoir/TF-A-002-100-02732144-100x46x451-650x650.jpg';
+import dres6 from '../../assets/dressoir/TFA002-800-600x600.jpg';
 
 // Chair Images
 import chairImg1 from '../../assets/chair/02702213-650x650.jpg';
@@ -45,45 +44,53 @@ import waterSinkImg6 from '../../assets/water sink/f074e6f2-a389-4b73-8f0e-dfe82
 
 export function Products() {
   const { t } = useTranslation();
-  const [visibleItems, setVisibleItems] = useState(6);
-
-  const collectionImages = [
-    // CABINET
-    { image: proofCabinetImg, alt: 'Teak wood cabinet ready for shipment', title: 'Teak Wood Cabinet' },
-    { image: proofWardrobeImg, alt: 'Teak wood wardrobe with storage drawers', title: 'Teak Wood Wardrobe' },
-    { image: bedroomFurnitureImg, alt: 'Bedroom Wardrobe', title: 'Bedroom Wardrobe' },
-    { image: cab1, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
-    { image: cab2, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
-    { image: cab3, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
-    { image: cab4, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
-    { image: cab5, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
-    
-    // CHAIR
-    { image: chairImg1, alt: 'Lounge Teak Chair', title: 'Lounge Teak Chair' },
-    { image: chairImg2, alt: 'Lounge Teak Chair Angle 2', title: 'Lounge Teak Chair' },
-    { image: chairImg3, alt: 'Lounge Teak Chair Details', title: 'Lounge Teak Chair' },
-    { image: chairImg4, alt: 'Chair Variant 4', title: 'Lounge Teak Chair' },
-    { image: chairImg5, alt: 'Chair Variant 5', title: 'Lounge Teak Chair' },
-    { image: chairImg6, alt: 'Chair Variant 6', title: 'Lounge Teak Chair' },
-    { image: chairImg7, alt: 'Chair Variant 7', title: 'Lounge Teak Chair' },
-    
-    // DRESSOIR
-    { image: dressoirImg, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
-    { image: proofTvStandImg, alt: 'Custom TV stand with storage drawers', title: 'Custom TV Stand' },
-    { image: coffeeTableImg, alt: 'Coffee Table Minimalist', title: 'Minimalist Coffee Table' },
-    { image: dres1, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
-    { image: dres2, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
-    { image: dres3, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
-    { image: dres4, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
-    { image: dres5, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
-    
-    // WATER SINK STONE
-    { image: waterSinkImg1, alt: 'Water Sink Stone', title: 'Water Sink Stone' },
-    { image: waterSinkImg2, alt: 'Hand-carved stone sink basin', title: 'Hand-carved Stone Sink' },
-    { image: waterSinkImg3, alt: 'Modern stone sink with teak vanity', title: 'Modern Stone Sink' },
-    { image: waterSinkImg4, alt: 'Water Sink Variant 4', title: 'Water Sink Stone' },
-    { image: waterSinkImg5, alt: 'Water Sink Variant 5', title: 'Water Sink Stone' },
-    { image: waterSinkImg6, alt: 'Water Sink Variant 6', title: 'Water Sink Stone' },
+  const categories = [
+    {
+      name: 'Chair',
+      images: [
+        { image: chairImg1, alt: 'Lounge Teak Chair', title: 'Lounge Teak Chair' },
+        { image: chairImg2, alt: 'Lounge Teak Chair Angle 2', title: 'Lounge Teak Chair' },
+        { image: chairImg3, alt: 'Lounge Teak Chair Details', title: 'Lounge Teak Chair' },
+        { image: chairImg4, alt: 'Chair Variant 4', title: 'Lounge Teak Chair' },
+        { image: chairImg5, alt: 'Chair Variant 5', title: 'Lounge Teak Chair' },
+        { image: chairImg6, alt: 'Chair Variant 6', title: 'Lounge Teak Chair' },
+        { image: chairImg7, alt: 'Chair Variant 7', title: 'Lounge Teak Chair' },
+      ].slice(0, 6)
+    },
+    {
+      name: 'Dressoir',
+      images: [
+        { image: dres1, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
+        { image: dres2, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
+        { image: dres3, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
+        { image: dres4, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
+        { image: dres5, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
+        { image: dres6, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
+      ].slice(0, 6)
+    },
+    {
+      name: 'Cabinet',
+      images: [
+        { image: cab1, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
+        { image: cab3, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
+        { image: cab4, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
+        { image: cab5, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
+        { image: proofCabinetImg, alt: 'Teak wood cabinet ready for shipment', title: 'Teak Wood Cabinet' },
+        { image: proofWardrobeImg, alt: 'Teak wood wardrobe with storage drawers', title: 'Teak Wood Wardrobe' },
+        { image: bedroomFurnitureImg, alt: 'Bedroom Wardrobe', title: 'Bedroom Wardrobe' },
+      ].slice(0, 6)
+    },
+    {
+      name: 'Water Sink Stone',
+      images: [
+        { image: waterSinkImg1, alt: 'Water Sink Stone', title: 'Water Sink Stone' },
+        { image: waterSinkImg2, alt: 'Hand-carved stone sink basin', title: 'Hand-carved Stone Sink' },
+        { image: waterSinkImg3, alt: 'Modern stone sink with teak vanity', title: 'Modern Stone Sink' },
+        { image: waterSinkImg4, alt: 'Water Sink Variant 4', title: 'Water Sink Stone' },
+        { image: waterSinkImg5, alt: 'Water Sink Variant 5', title: 'Water Sink Stone' },
+        { image: waterSinkImg6, alt: 'Water Sink Variant 6', title: 'Water Sink Stone' },
+      ].slice(0, 6)
+    }
   ];
 
   return (
@@ -121,31 +128,28 @@ export function Products() {
             <h2 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-brand-dark-earth uppercase tracking-wider">{t('home.collection.title')}</h2>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
-            {collectionImages.slice(0, visibleItems).map((item, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div className="w-full aspect-[4/5] overflow-hidden bg-brand-cream/30">
-                  <ImageWithFallback
-                    src={item.image}
-                    alt={item.alt}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
+          {categories.map((category, catIdx) => (
+            <div key={catIdx} className="mb-24 last:mb-0">
+              <div className="flex flex-col items-center mb-12">
+                <h3 className="font-headline-md text-headline-md text-brand-dark-earth uppercase tracking-wider">
+                  {category.name}
+                </h3>
               </div>
-            ))}
-          </div>
-
-          {/* Load More Button */}
-          {visibleItems < collectionImages.length && (
-            <div className="mt-16 text-center">
-              <button 
-                onClick={() => setVisibleItems(prev => prev + 3)}
-                className="inline-flex items-center justify-center border border-brand-dark-earth text-brand-dark-earth font-label-md text-label-md h-12 px-8 hover:bg-brand-dark-earth hover:text-white transition-colors duration-300 uppercase tracking-wider"
-              >
-                Load More
-              </button>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
+                {category.images.map((item, index) => (
+                  <div key={index} className="group cursor-pointer">
+                    <div className="w-full aspect-[4/5] overflow-hidden bg-brand-cream/30">
+                      <ImageWithFallback
+                        src={item.image}
+                        alt={item.alt}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-          )}
+          ))}
         </div>
       </section>
 
