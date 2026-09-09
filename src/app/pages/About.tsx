@@ -5,8 +5,31 @@ import woodTextureImg from '../assets/1b6ab2dd5700691fc625338f6c671348c61cf7b8.p
 import aboutWorkshopImg from '../assets/about-hero.jpeg';
 import { WoodShaderBackground } from '../components/WoodShaderBackground';
 
+import DriftWall from '../components/DriftWall';
+import '../components/DriftWall.css';
+
+// Import various images for the DriftWall
+import dres1 from '../../assets/dressoir/02703170-1-650x650.jpg';
+import dres2 from '../../assets/dressoir/02732018-1.jpg';
+import cab1 from '../../assets/cabinet/1380088840-650x650.jpg';
+import cab3 from '../../assets/cabinet/02702809-1-650x650.jpg';
+import chair1 from '../../assets/chair/02702213-650x650.jpg';
+import chair2 from '../../assets/chair/02702930-650x650.jpg';
+
 export function About() {
   const { t } = useTranslation();
+
+  const showcaseImages = [
+    { image: dres1, alt: 'Dressoir 1' },
+    { image: chair1, alt: 'Chair 1' },
+    { image: artisanImg, alt: 'Artisan' },
+    { image: cab1, alt: 'Cabinet 1' },
+    { image: dres2, alt: 'Dressoir 2' },
+    { image: woodTextureImg, alt: 'Wood Texture' },
+    { image: chair2, alt: 'Chair 2' },
+    { image: cab3, alt: 'Cabinet 3' },
+    { image: aboutWorkshopImg, alt: 'Workshop' },
+  ];
 
   return (
     <div className="pt-20">
@@ -56,15 +79,24 @@ export function About() {
         </div>
       </section>
 
-      {/* Visual Showcase */}
-      <section className="max-w-7xl mx-auto px-grid-margin py-section-gap-desktop">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter h-auto md:h-[700px]">
-          <div className="relative rounded-lg overflow-hidden shadow-level1 h-[400px] md:h-full group">
-            <ImageWithFallback src={woodTextureImg} alt="Wood texture detail" className="object-cover w-full h-full absolute inset-0 transition-transform duration-700 group-hover:scale-105" />
-          </div>
-          <div className="relative rounded-lg overflow-hidden shadow-level1 h-[400px] md:h-full md:mt-16 group">
-            <ImageWithFallback src={aboutWorkshopImg} alt="Artisan workshop" className="object-cover w-full h-full absolute inset-0 transition-transform duration-700 group-hover:scale-105" />
-          </div>
+      {/* Visual Showcase (Drift Wall) */}
+      <section className="w-full relative py-section-gap-desktop overflow-hidden bg-brand-cream/10 border-y border-brand-dark-earth/10">
+        <div className="text-center mb-16 relative z-10 px-grid-margin">
+          <h2 className="font-headline-lg text-headline-lg text-brand-dark-earth mb-4">A Glimpse of Our Art</h2>
+          <div className="w-16 h-1 bg-brand-terracotta mx-auto"></div>
+        </div>
+        <div className="w-full h-[600px] md:h-[800px] relative">
+          <DriftWall
+            items={showcaseImages}
+            direction="up"
+            speed={0.7}
+            columns={4}
+            tileWidth={300}
+            tileHeight={400}
+            gap={24}
+            radius={8}
+            overlayColor="rgba(0, 0, 0, 0.05)"
+          />
         </div>
       </section>
 
