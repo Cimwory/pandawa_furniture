@@ -22,7 +22,7 @@ export function WoodShaderBackground() {
     resizeObserver.observe(canvas);
     syncSize();
 
-    const gl = (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')) as WebGLRenderingContext | null;
+    const gl = (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')) as WebGLRenderingContext;
     if (!gl) return;
 
     const vs = `attribute vec2 a_position;
