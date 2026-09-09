@@ -88,15 +88,22 @@ void main() {
 }`;
 
     function cs(type: number, src: string) {
-      const s = gl.createShader(type)!;
+      const s = gl.createShader(type);
+      if (!s) return null;
       gl.shaderSource(s, src);
       gl.compileShader(s);
       return s;
     }
 
-    const prog = gl.createProgram()!;
-    gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
-    gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+    const prog = gl.createProgram();
+    if (!prog) return;
+
+    const vsShader = cs(gl.VERTEX_SHADER, vs);
+    const fsShader = cs(gl.FRAGMENT_SHADER, fs);
+    if (!vsShader || !fsShader) return;
+
+    gl.attachShader(prog, vsShader);
+    gl.attachShader(prog, fsShader);
     gl.linkProgram(prog);
     gl.useProgram(prog);
 
@@ -142,6 +149,8 @@ void main() {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener('mousemove', handleMouseMove);
       resizeObserver.disconnect();
+      // Mencegah error "Too many active WebGL contexts"
+      gl.getExtension('WEBGL_lose_context')?.loseContext();
     };
   }, []);
 
