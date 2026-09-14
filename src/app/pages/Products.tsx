@@ -217,7 +217,7 @@ export function Products() {
     : productData.filter((p) => p.category === activeCategory);
 
   return (
-    <div className="pt-20">
+    <div className="pt-[100px] md:pt-[112px]">
       {/* Hero Section */}
       <section className="relative h-[65vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

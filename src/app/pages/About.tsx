@@ -76,7 +76,7 @@ export function About() {
   };
 
   return (
-    <div className="pt-20">
+    <div className="pt-[100px] md:pt-[112px]">
       {/* REFINED HERO SECTION: Warm Artisanal Editorial & Master Craft Showcase */}
       <section className="relative w-full overflow-hidden bg-[#FAF7F2] border-b border-brand-dark-earth/10">
         
