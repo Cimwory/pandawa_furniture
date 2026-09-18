@@ -1,8 +1,6 @@
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { useTranslation } from 'react-i18next';
 import artisanImg from '../assets/d455cb17ae1190210b91ca432cd6a6d574f3963a.png';
-import woodTextureImg from '../assets/1b6ab2dd5700691fc625338f6c671348c61cf7b8.png';
-import aboutWorkshopImg from '../assets/about-hero.jpeg';
 import { WoodShaderBackground } from '../components/WoodShaderBackground';
 
 import DriftWall from '../components/DriftWall';
