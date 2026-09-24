@@ -132,6 +132,22 @@ export function Products() {
       subtitle: 'Bangku Bulat Kayu Jati Solid',
       image: chairImg4,
     },
+    {
+      id: 'chr-05',
+      category: 'chair',
+      categoryName: 'Kursi Santai',
+      title: 'Classic Scandinavian Teak Chair',
+      subtitle: 'Kursi Kayu Jati Desain Skandinavia Klasik',
+      image: chairImg5,
+    },
+    {
+      id: 'chr-06',
+      category: 'chair',
+      categoryName: 'Kursi Kerja',
+      title: 'Solid Teak Studio Desk Chair',
+      subtitle: 'Kursi Kerja Jati Solid Finishing Alami',
+      image: chairImg6,
+    },
 
     // Dressoir
     {
@@ -157,6 +173,30 @@ export function Products() {
       title: 'Sliding Louvre Dressoir',
       subtitle: 'Bufet Bilah Kayu Jati Sirkulasi Udara',
       image: dres3,
+    },
+    {
+      id: 'drs-04',
+      category: 'dressoir',
+      categoryName: 'Bufet Rendah',
+      title: 'Lowline Teak Media Credenza',
+      subtitle: 'Kredensa Rendah Jati untuk Ruang Keluarga',
+      image: dres4,
+    },
+    {
+      id: 'drs-05',
+      category: 'dressoir',
+      categoryName: 'Bufet Laci',
+      title: 'Multi-Drawer Teak Dresser',
+      subtitle: 'Bufet Jati Laci Bertingkat Serbaguna',
+      image: dres5,
+    },
+    {
+      id: 'drs-06',
+      category: 'dressoir',
+      categoryName: 'Lemari Bufet',
+      title: 'Vintage Jepara Wide Sideboard',
+      subtitle: 'Bufet Panjang Khas Jepara Elegan',
+      image: dres6,
     },
 
     // Cabinet
@@ -184,6 +224,30 @@ export function Products() {
       subtitle: 'Lemari Serbaguna Kriya Jepara',
       image: proofCabinetImg,
     },
+    {
+      id: 'cab-04',
+      category: 'cabinet',
+      categoryName: 'Lemari Kaca',
+      title: 'Modern Teak Vitrine Cabinet',
+      subtitle: 'Lemari Pajang Kaca Minimalis Kayu Jati',
+      image: cab4,
+    },
+    {
+      id: 'cab-05',
+      category: 'cabinet',
+      categoryName: 'Lemari Buku',
+      title: 'Open Teak Bookshelf & Cabinet',
+      subtitle: 'Lemari Rak Buku & Simpan Kayu Jati',
+      image: cab5,
+    },
+    {
+      id: 'cab-06',
+      category: 'cabinet',
+      categoryName: 'Lemari Pakaian',
+      title: 'Three-Door Master Teak Wardrobe',
+      subtitle: 'Lemari Pakaian Jati 3 Pintu dengan Laci',
+      image: proofWardrobeImg,
+    },
 
     // Water Sink
     {
@@ -209,6 +273,30 @@ export function Products() {
       title: 'Floating Teak Vanity & Stone Sink',
       subtitle: 'Meja Wastafel Gantung Jati & Wastafel Batu',
       image: waterSinkImg3,
+    },
+    {
+      id: 'snk-04',
+      category: 'stone',
+      categoryName: 'Wastafel Marmer',
+      title: 'Hand-Carved Marble Washbasin',
+      subtitle: 'Wastafel Marmer Alami Ukiran Tangan',
+      image: waterSinkImg4,
+    },
+    {
+      id: 'snk-05',
+      category: 'stone',
+      categoryName: 'Wastafel Batu Alam',
+      title: 'Oval River Rock Vanity Basin',
+      subtitle: 'Wastafel Batu Kali Bentuk Oval Alami',
+      image: waterSinkImg5,
+    },
+    {
+      id: 'snk-06',
+      category: 'stone',
+      categoryName: 'Wastafel Monolith',
+      title: 'Rustic Monolith Stone Basin',
+      subtitle: 'Wastafel Monolit Tekstur Kasar Alami',
+      image: waterSinkImg6,
     },
   ];
 
