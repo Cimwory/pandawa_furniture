@@ -133,7 +133,7 @@ const CHAPTERS: Chapter[] = [
 
 export function CraftScrollytelling() {
   const { i18n } = useTranslation();
-  const isId = i18n.language === 'id';
+  const isId = (i18n.resolvedLanguage || i18n.language)?.startsWith('id');
 
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIdx, setActiveIdx] = useState(0);

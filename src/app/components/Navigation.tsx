@@ -16,11 +16,12 @@ export function Navigation() {
     { path: '/contact', label: t('nav.contact') },
   ];
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language.startsWith('id') ? 'en' : 'id';
-    i18n.changeLanguage(newLang);
+  const isId = (i18n.resolvedLanguage || i18n.language)?.startsWith('id');
+
+  const setLanguage = (lang: 'id' | 'en') => {
+    i18n.changeLanguage(lang);
     try {
-      localStorage.setItem('pandawa_language', newLang);
+      localStorage.setItem('pandawa_language', lang);
     } catch {}
   };
 
@@ -133,34 +134,35 @@ export function Navigation() {
           {/* Right Section: Language Switcher & Consultation CTA */}
           <div className="hidden sm:flex items-center gap-3 md:gap-4">
             {/* Minimalist Language Switcher */}
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-brand-dark-earth/15 bg-white/80 hover:bg-white hover:border-brand-dark-earth/30 text-xs font-medium text-brand-dark-earth transition-all shadow-sm"
-              title={t('upbar.chatTitle')}
-            >
-              <span className="material-symbols-outlined text-[16px] text-brand-terracotta">
+            <div className="inline-flex items-center p-1 rounded-full border border-brand-dark-earth/15 bg-white/80 shadow-sm text-xs">
+              <span className="material-symbols-outlined text-[15px] text-brand-terracotta pl-1.5 pr-1 select-none">
                 translate
               </span>
-              <span
-                className={`transition-colors ${
-                  i18n.language === 'id'
-                    ? 'font-bold text-brand-terracotta'
-                    : 'text-brand-dark-earth/60'
+              <button
+                type="button"
+                onClick={() => setLanguage('id')}
+                className={`px-2.5 py-0.5 rounded-full font-medium transition-all ${
+                  isId
+                    ? 'bg-brand-terracotta text-white font-bold shadow-sm'
+                    : 'text-brand-dark-earth/60 hover:text-brand-dark-earth'
                 }`}
+                aria-label="Pilih Bahasa Indonesia"
               >
                 ID
-              </span>
-              <span className="text-brand-dark-earth/30">|</span>
-              <span
-                className={`transition-colors ${
-                  i18n.language === 'en'
-                    ? 'font-bold text-brand-terracotta'
-                    : 'text-brand-dark-earth/60'
+              </button>
+              <button
+                type="button"
+                onClick={() => setLanguage('en')}
+                className={`px-2.5 py-0.5 rounded-full font-medium transition-all ${
+                  !isId
+                    ? 'bg-brand-terracotta text-white font-bold shadow-sm'
+                    : 'text-brand-dark-earth/60 hover:text-brand-dark-earth'
                 }`}
+                aria-label="Select English Language"
               >
                 EN
-              </span>
-            </button>
+              </button>
+            </div>
 
             {/* Warm Luxury CTA Button */}
             <Magnet magnetStrength={0.2}>
@@ -180,12 +182,26 @@ export function Navigation() {
 
           {/* Mobile Hamburger & Language Toggle */}
           <div className="lg:hidden flex items-center gap-2.5">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-brand-dark-earth/15 bg-white/80 text-xs font-semibold text-brand-dark-earth shadow-sm"
-            >
-              <span>{i18n.language.toUpperCase()}</span>
-            </button>
+            <div className="inline-flex items-center p-0.5 rounded-full border border-brand-dark-earth/15 bg-white/80 shadow-sm text-xs font-semibold">
+              <button
+                type="button"
+                onClick={() => setLanguage('id')}
+                className={`px-2 py-1 rounded-full transition-all ${
+                  isId ? 'bg-brand-terracotta text-white font-bold' : 'text-brand-dark-earth/70'
+                }`}
+              >
+                ID
+              </button>
+              <button
+                type="button"
+                onClick={() => setLanguage('en')}
+                className={`px-2 py-1 rounded-full transition-all ${
+                  !isId ? 'bg-brand-terracotta text-white font-bold' : 'text-brand-dark-earth/70'
+                }`}
+              >
+                EN
+              </button>
+            </div>
 
             <button
               className="w-10 h-10 rounded-xl bg-white border border-brand-dark-earth/15 flex items-center justify-center text-brand-dark-earth shadow-sm hover:bg-brand-cream transition-colors"

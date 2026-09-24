@@ -71,8 +71,8 @@
       "constructionVal": "Purus & Pasak Kuat"
     },
     "collection": {
-      "badge": "Curated Pandawa Collection",
-      "title": "Koleksi Contoh",
+      "badge": "Koleksi Pilihan Pandawa",
+      "title": "Koleksi Pilihan Kami",
       "viewAll": "Lihat Katalog Lengkap",
       "viewAllBtn": "LIHAT SEMUA PRODUK",
       "loadMore": "Tampilkan Lebih Banyak Koleksi (+{{count}})"
@@ -155,7 +155,7 @@
       "all": "SEMUA KOLEKSI",
       "chair": "SERI KURSI",
       "dressoir": "KREDENSA & BUFET",
-      "cabinet": "LEMARI & ARMOIRE",
+      "cabinet": "LEMARI & WARDROBE",
       "stone": "WASTAFEL BATU & JATI",
       "chairLounge": "Kursi Santai",
       "chairDining": "Kursi Makan",
@@ -168,6 +168,18 @@
       "sort": "URUTAN: KRONOLOGIS",
       "items": "PRODUK",
       "index": "INDEKS /"
+    },
+    "sidebar": {
+      "catalogSpec": "SPESIFIKASI KATALOG",
+      "gettingCraft": "PANDUAN KRIYA",
+      "timberStandards": "STANDAR KAYU JATI",
+      "teakGrade": "GRADE KAYU",
+      "heartwoodA": "JATI EMAS GRADE A",
+      "joineryMethod": "METODE SAMBUNGAN",
+      "zeroNail": "PASAK TANPA PAKU",
+      "polishAgent": "FINISHING ALAMI",
+      "organicBeeswax": "LILIN LEBAH ALAMI",
+      "customOrderSpec": "PESANAN KUSTOM →"
     },
     "card": {
       "badge": "Karya Pandawa",

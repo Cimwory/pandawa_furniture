@@ -169,6 +169,18 @@
       "items": "ITEMS",
       "index": "INDEX /"
     },
+    "sidebar": {
+      "catalogSpec": "CATALOG SPEC",
+      "gettingCraft": "GETTING CRAFT",
+      "timberStandards": "TIMBER STANDARDS",
+      "teakGrade": "TEAK GRADE",
+      "heartwoodA": "HEARTWOOD A",
+      "joineryMethod": "JOINERY METHOD",
+      "zeroNail": "ZERO-NAIL",
+      "polishAgent": "POLISH AGENT",
+      "organicBeeswax": "ORGANIC BEESWAX",
+      "customOrderSpec": "CUSTOM ORDER SPEC →"
+    },
     "card": {
       "badge": "Pandawa Craft",
       "origin": "Jepara Craft",

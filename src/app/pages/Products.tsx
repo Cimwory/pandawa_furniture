@@ -49,7 +49,7 @@ import waterSinkImg6 from '../../assets/water sink/f074e6f2-a389-4b73-8f0e-dfe82
 
 export function Products() {
   const { t, i18n } = useTranslation();
-  const isId = i18n.language === 'id';
+  const isId = (i18n.resolvedLanguage || i18n.language)?.startsWith('id');
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [activeSubFilter, setActiveSubFilter] = useState<string>('all');
 

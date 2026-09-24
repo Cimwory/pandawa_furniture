@@ -14,51 +14,52 @@ import {
 import { ExpressiveCard } from '../components/animejs/ExpressiveCard';
 
 export function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [visibleItems, setVisibleItems] = useState(3);
+  const isId = (i18n.resolvedLanguage || i18n.language)?.startsWith('id');
 
   const collections = [
     {
       id: 'flores',
-      title: "Flores Teak Dining Table",
-      subtitle: "Meja Makan Kayu Jati Solid",
+      title: isId ? "Meja Makan Jati Flores" : "Flores Teak Dining Table",
+      subtitle: isId ? "Meja Makan Kayu Jati Solid Pilihan" : "Solid Reclaimed Teak Dining Table",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDtN1RhIbtMCdwlejV1YrJA7ufvcR0haAxAo1v4Mca6lsIcLGHZAE5LC-SZSKjwSQZ-2KO2tKxQ0DzNv7hKi-o_ul-QZIlquzFwxZoH1_pHNVOSYlgrvt9Pswm8ro6-_uVl2NMW9p4Tz0EEhWymihO27J7g5CGDngeQ2HnpwT_R-WhXe6R08SMrdeRK6ChRm7rnQk4_rhtjsOHvOT6cBwQXA8N0zEjVwzfNWL_YZdTsNLVXkt_jtXb-Mg",
-      categoryName: 'Meja Makan',
+      categoryName: isId ? 'Meja Makan' : 'Dining Table',
     },
     {
       id: 'mandeling',
-      title: "Mandeling Sculptural Lounge Chair",
-      subtitle: "Kursi Santai Lengkung Ergonomis",
+      title: isId ? "Kursi Santai Lengkung Mandeling" : "Mandeling Sculptural Lounge Chair",
+      subtitle: isId ? "Kursi Santai Lengkung Ergonomis" : "Ergonomic Sculptural Lounge Chair",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHl52K8OgYNtkt439xcTQGjymV5DNOxA_4cPNLOjM4N-TTZ5oMStVdEYttKgucYnE6d1xK35fn2IftA9csLnqjPRVcztxmTOyN9wXmtmfrcOxEtSs9DunTeK5U4oyyOR7eL_TpkBFwaq9b38x_GBxkTl2CsG-R_PcwwMQaA5DohdRtR-v29rcS8mm3hAe-qJgWO3xWbmt46A8YIUusyjDFKbBsbkXfs4VJalMuWJQbwCFX5HXPybbJCw",
-      categoryName: 'Kursi Santai',
+      categoryName: isId ? 'Kursi Santai' : 'Lounge Chair',
     },
     {
       id: 'aceh',
-      title: "Aceh Minimalist Indoor Credenza",
-      subtitle: "Bufet Minimalis Kayu Jati",
+      title: isId ? "Bufet Minimalis Jati Aceh" : "Aceh Minimalist Indoor Credenza",
+      subtitle: isId ? "Bufet Minimalis Kayu Jati Daur Ulang" : "Reclaimed Teak Minimalist Credenza",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAdYUfhQA_B14kFpNWW0-eT7xIFFssAUZtGACQrjIaKcilCUei5OYRFS6yX97iM4djnncwa9uNMv-UL7OCrkAUESwzKaD6Kd3gaJvBYal5vRGR05u2Tv8Q8XK8jMb9kId8uAnOeKl4_vzIzuOLFHExCzfmo_3E075DccXBO_5Zus8wkUjpylMEluOQSnaXKc40oHIntW66LzLY0OPrIpSttPYd06b_i22tIpPsHKZCczfWF9ZkZKMzR6w",
-      categoryName: 'Bufet & Credenza',
+      categoryName: isId ? 'Bufet & Kredensa' : 'Sideboard & Credenza',
     },
     {
       id: 'bali',
-      title: "Bali Weather-Resistant Sun Table",
-      subtitle: "Meja Teras Jati Tahan Cuaca",
+      title: isId ? "Meja Teras Jati Luar Ruang Bali" : "Bali Weather-Resistant Sun Table",
+      subtitle: isId ? "Meja Teras Jati Tahan Cuaca Tropis" : "Weather-Resistant Outdoor Teak Table",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCKxRORyTe_o3kx0H7z8Q_Xe1gAfZ97mhvusyBcDgJM7ucVQNyJgHtaSaflUxtfKXRluKbRFlXCBazSY5kksiaDyggVXxGphXDTt7GMco1xLRBEgi7_Iz0qieg3eTBoixoVHBbyGGomnX5gSrS7K33-tnzGBi02gWtA0xcDMoXx7zTkC_JkNGEKBQHBYmMTHSXf-qdNtIWUvB9D3MHKu-Lti0PcNA-z6LFQvrgVsHd5voahelO2h0VqTg",
-      categoryName: 'Meja Luar Ruang',
+      categoryName: isId ? 'Meja Luar Ruang' : 'Outdoor Table',
     },
     {
       id: 'jepara',
-      title: "Jepara Classic Heritage Cabinet",
-      subtitle: "Lemari Pajang Ukir Tradisional",
+      title: isId ? "Lemari Kaca Ukir Pusaka Jepara" : "Jepara Classic Heritage Cabinet",
+      subtitle: isId ? "Lemari Pajang Ukir Tradisional Warisan" : "Hand-Carved Traditional Heritage Armoire",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDtN1RhIbtMCdwlejV1YrJA7ufvcR0haAxAo1v4Mca6lsIcLGHZAE5LC-SZSKjwSQZ-2KO2tKxQ0DzNv7hKi-o_ul-QZIlquzFwxZoH1_pHNVOSYlgrvt9Pswm8ro6-_uVl2NMW9p4Tz0EEhWymihO27J7g5CGDngeQ2HnpwT_R-WhXe6R08SMrdeRK6ChRm7rnQk4_rhtjsOHvOT6cBwQXA8N0zEjVwzfNWL_YZdTsNLVXkt_jtXb-Mg",
-      categoryName: 'Lemari Hias',
+      categoryName: isId ? 'Lemari Hias' : 'Display Cabinet',
     },
     {
       id: 'sumatra',
-      title: "Sumatra Modern Low Daybed",
-      subtitle: "Bale Santai Desain Skandinavia",
+      title: isId ? "Bale Santai Minimalis Modern Sumatra" : "Sumatra Modern Low Daybed",
+      subtitle: isId ? "Bale Santai Desain Ergonomis Kontemporer" : "Contemporary Low Profile Teak Daybed",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHl52K8OgYNtkt439xcTQGjymV5DNOxA_4cPNLOjM4N-TTZ5oMStVdEYttKgucYnE6d1xK35fn2IftA9csLnqjPRVcztxmTOyN9wXmtmfrcOxEtSs9DunTeK5U4oyyOR7eL_TpkBFwaq9b38x_GBxkTl2CsG-R_PcwwMQaA5DohdRtR-v29rcS8mm3hAe-qJgWO3xWbmt46A8YIUusyjDFKbBsbkXfs4VJalMuWJQbwCFX5HXPybbJCw",
-      categoryName: 'Bale Santai',
+      categoryName: isId ? 'Bale Santai' : 'Daybed Lounge',
     },
   ];
 
