@@ -44,14 +44,7 @@ export function Navigation() {
               </span>
             </div>
 
-            <span className="hidden lg:inline text-white/20">|</span>
 
-            <div className="hidden lg:flex items-center gap-1.5 text-[#C5B7A9]">
-              <span className="material-symbols-outlined text-[14px] text-[#C5B7A9]">
-                schedule
-              </span>
-              <span>{t('upbar.hours')}</span>
-            </div>
           </div>
 
           {/* Center: Timber Quality Badge */}
