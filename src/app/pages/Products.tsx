@@ -48,52 +48,53 @@ import waterSinkImg5 from '../../assets/water sink/abbc1bbd-c466-4ce6-8d15-6de8f
 import waterSinkImg6 from '../../assets/water sink/f074e6f2-a389-4b73-8f0e-dfe8252a78ae.jpg';
 
 export function Products() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isId = i18n.language === 'id';
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [activeSubFilter, setActiveSubFilter] = useState<string>('all');
 
   const navCategories: CategoryItem[] = [
     {
       id: 'all',
-      name: 'ALL COLLECTIONS',
+      name: t('products.nav.all'),
       count: 24,
     },
     {
       id: 'chair',
-      name: 'CHAIR SERIES',
+      name: t('products.nav.chair'),
       count: 6,
       isNew: true,
       subItems: [
-        { id: 'chair-lounge', name: 'Lounge Chairs' },
-        { id: 'chair-dining', name: 'Dining Chairs' },
+        { id: 'chair-lounge', name: t('products.nav.chairLounge') },
+        { id: 'chair-dining', name: t('products.nav.chairDining') },
       ],
     },
     {
       id: 'dressoir',
-      name: 'DRESSOIR & CREDENZA',
+      name: t('products.nav.dressoir'),
       count: 6,
       subItems: [
-        { id: 'dres-sideboard', name: 'Low Sideboards' },
-        { id: 'dres-slat', name: 'Slatted Credenzas' },
+        { id: 'dres-sideboard', name: t('products.nav.dresSideboard') },
+        { id: 'dres-slat', name: t('products.nav.dresSlat') },
       ],
     },
     {
       id: 'cabinet',
-      name: 'CABINET & ARMOIRE',
+      name: t('products.nav.cabinet'),
       count: 6,
       subItems: [
-        { id: 'cab-glass', name: 'Glass Cabinets' },
-        { id: 'cab-wardrobe', name: 'Solid Wardrobes' },
+        { id: 'cab-glass', name: t('products.nav.cabGlass') },
+        { id: 'cab-wardrobe', name: t('products.nav.cabWardrobe') },
       ],
     },
     {
       id: 'stone',
-      name: 'STONE & TEAK VANITY',
+      name: t('products.nav.stone'),
       count: 6,
       isNew: true,
       subItems: [
-        { id: 'stone-river', name: 'River Stone Basins' },
-        { id: 'stone-granite', name: 'Chiseled Granite' },
+        { id: 'stone-river', name: t('products.nav.stoneRiver') },
+        { id: 'stone-granite', name: t('products.nav.stoneGranite') },
       ],
     },
   ];
@@ -104,48 +105,66 @@ export function Products() {
       id: 'chr-01',
       category: 'chair',
       categoryName: 'Kursi Jati',
+      categoryNameEn: 'Teak Chair',
       title: 'Ergonomic Teak Lounge Chair',
+      titleId: 'Kursi Santai Jati Ergonomis',
       subtitle: 'Kursi Santai Lengkung Ergonomis Kayu Jati',
+      subtitleEn: 'Ergonomic curved solid teak lounge chair',
       image: chairImg1,
     },
     {
       id: 'chr-02',
       category: 'chair',
       categoryName: 'Kursi Makan',
+      categoryNameEn: 'Dining Chair',
       title: 'Minimalist Teak Dining Chair',
+      titleId: 'Kursi Makan Jati Minimalis',
       subtitle: 'Kursi Makan Kayu Jati Minimalis',
+      subtitleEn: 'Minimalist solid teak dining chair',
       image: chairImg2,
     },
     {
       id: 'chr-03',
       category: 'chair',
       categoryName: 'Kursi Ukir',
+      categoryNameEn: 'Armchair',
       title: 'Heritage Jepara Armchair',
+      titleId: 'Kursi Lengan Warisan Jepara',
       subtitle: 'Kursi Lengan Khas Pengrajin Jepara',
+      subtitleEn: 'Traditional handcrafted Jepara armchair',
       image: chairImg3,
     },
     {
       id: 'chr-04',
       category: 'chair',
       categoryName: 'Bangku Jati',
+      categoryNameEn: 'Teak Stool',
       title: 'Nordic Teak Stool & Ottoman',
+      titleId: 'Bangku Jati Gaya Nordik',
       subtitle: 'Bangku Bulat Kayu Jati Solid',
+      subtitleEn: 'Solid circular teak accent stool',
       image: chairImg4,
     },
     {
       id: 'chr-05',
       category: 'chair',
       categoryName: 'Kursi Santai',
+      categoryNameEn: 'Lounge Chair',
       title: 'Classic Scandinavian Teak Chair',
+      titleId: 'Kursi Jati Skandinavia Klasik',
       subtitle: 'Kursi Kayu Jati Desain Skandinavia Klasik',
+      subtitleEn: 'Classic Scandinavian design teak chair',
       image: chairImg5,
     },
     {
       id: 'chr-06',
       category: 'chair',
       categoryName: 'Kursi Kerja',
+      categoryNameEn: 'Studio Chair',
       title: 'Solid Teak Studio Desk Chair',
+      titleId: 'Kursi Kerja Studio Jati Solid',
       subtitle: 'Kursi Kerja Jati Solid Finishing Alami',
+      subtitleEn: 'Natural finish solid teak studio desk chair',
       image: chairImg6,
     },
 
@@ -154,48 +173,66 @@ export function Products() {
       id: 'drs-01',
       category: 'dressoir',
       categoryName: 'Bufet Jati',
+      categoryNameEn: 'Teak Credenza',
       title: 'Solid Teak 4-Door Credenza',
+      titleId: 'Bufet Kredensa 4 Pintu Jati Solid',
       subtitle: 'Bufet Pintu Geser 4 Pintu Kayu Jati',
+      subtitleEn: 'Solid teak 4 sliding door credenza',
       image: dres1,
     },
     {
       id: 'drs-02',
       category: 'dressoir',
       categoryName: 'Meja Konsol',
+      categoryNameEn: 'Console Table',
       title: 'Minimalist Sideboard Console',
+      titleId: 'Meja Konsol Bufet Minimalis',
       subtitle: 'Konsol Minimalis dengan Laci Halus',
+      subtitleEn: 'Minimalist console with smooth sliding drawers',
       image: dres2,
     },
     {
       id: 'drs-03',
       category: 'dressoir',
       categoryName: 'Bufet Bilah',
+      categoryNameEn: 'Louvre Sideboard',
       title: 'Sliding Louvre Dressoir',
+      titleId: 'Bufet Bilah Pintu Geser',
       subtitle: 'Bufet Bilah Kayu Jati Sirkulasi Udara',
+      subtitleEn: 'Louvred teak sideboard with airflow ventilation',
       image: dres3,
     },
     {
       id: 'drs-04',
       category: 'dressoir',
       categoryName: 'Bufet Rendah',
+      categoryNameEn: 'Lowline Credenza',
       title: 'Lowline Teak Media Credenza',
+      titleId: 'Kredensa Media Jati Rendah',
       subtitle: 'Kredensa Rendah Jati untuk Ruang Keluarga',
+      subtitleEn: 'Low profile teak media console for living room',
       image: dres4,
     },
     {
       id: 'drs-05',
       category: 'dressoir',
       categoryName: 'Bufet Laci',
+      categoryNameEn: 'Drawer Dresser',
       title: 'Multi-Drawer Teak Dresser',
+      titleId: 'Bufet Laci Bertingkat Jati',
       subtitle: 'Bufet Jati Laci Bertingkat Serbaguna',
+      subtitleEn: 'Multi-tiered storage teak drawer dresser',
       image: dres5,
     },
     {
       id: 'drs-06',
       category: 'dressoir',
       categoryName: 'Lemari Bufet',
+      categoryNameEn: 'Sideboard',
       title: 'Vintage Jepara Wide Sideboard',
+      titleId: 'Bufet Lebar Vintage Jepara',
       subtitle: 'Bufet Panjang Khas Jepara Elegan',
+      subtitleEn: 'Elegant wide-profile vintage Jepara credenza',
       image: dres6,
     },
 
@@ -204,48 +241,66 @@ export function Products() {
       id: 'cab-01',
       category: 'cabinet',
       categoryName: 'Lemari Hias',
+      categoryNameEn: 'Display Cabinet',
       title: 'Glass Display Teak Cabinet',
+      titleId: 'Lemari Pajang Kaca Rangka Jati',
       subtitle: 'Lemari Pajang Kaca Rangka Jati Solid',
+      subtitleEn: 'Glass display showcase with solid teak frame',
       image: cab1,
     },
     {
       id: 'cab-02',
       category: 'cabinet',
       categoryName: 'Lemari Pakaian',
+      categoryNameEn: 'Wardrobe',
       title: 'Double Door Tall Wardrobe',
+      titleId: 'Lemari Pakaian Jati 2 Pintu',
       subtitle: 'Lemari Pakaian Jati 2 Pintu Kokoh',
+      subtitleEn: 'Sturdy 2-door tall solid teak wardrobe',
       image: cab3,
     },
     {
       id: 'cab-03',
       category: 'cabinet',
       categoryName: 'Lemari Dapur',
+      categoryNameEn: 'Pantry Cabinet',
       title: 'Custom Pantry & Linen Cabinet',
+      titleId: 'Lemari Dapur & Linen Serbaguna',
       subtitle: 'Lemari Serbaguna Kriya Jepara',
+      subtitleEn: 'Handcrafted Jepara pantry & storage cabinet',
       image: proofCabinetImg,
     },
     {
       id: 'cab-04',
       category: 'cabinet',
       categoryName: 'Lemari Kaca',
+      categoryNameEn: 'Vitrine Cabinet',
       title: 'Modern Teak Vitrine Cabinet',
+      titleId: 'Lemari Vitrin Kaca Modern Jati',
       subtitle: 'Lemari Pajang Kaca Minimalis Kayu Jati',
+      subtitleEn: 'Minimalist modern glass vitrine display cabinet',
       image: cab4,
     },
     {
       id: 'cab-05',
       category: 'cabinet',
       categoryName: 'Lemari Buku',
+      categoryNameEn: 'Bookshelf',
       title: 'Open Teak Bookshelf & Cabinet',
+      titleId: 'Rak Buku & Lemari Simpan Jati',
       subtitle: 'Lemari Rak Buku & Simpan Kayu Jati',
+      subtitleEn: 'Open teak bookshelf with lower storage cabinet',
       image: cab5,
     },
     {
       id: 'cab-06',
       category: 'cabinet',
       categoryName: 'Lemari Pakaian',
+      categoryNameEn: 'Master Wardrobe',
       title: 'Three-Door Master Teak Wardrobe',
+      titleId: 'Lemari Pakaian Jati Master 3 Pintu',
       subtitle: 'Lemari Pakaian Jati 3 Pintu dengan Laci',
+      subtitleEn: '3-door master bedroom teak wardrobe with drawers',
       image: proofWardrobeImg,
     },
 
@@ -254,48 +309,66 @@ export function Products() {
       id: 'snk-01',
       category: 'stone',
       categoryName: 'Wastafel Batu',
+      categoryNameEn: 'River Stone Sink',
       title: 'River Stone Vessel Basin',
+      titleId: 'Wastafel Pahatan Batu Sungai Alami',
       subtitle: 'Wastafel Pahatan Batu Sungai Alami',
+      subtitleEn: 'Organic natural river stone vessel washbasin',
       image: waterSinkImg1,
     },
     {
       id: 'snk-02',
       category: 'stone',
       categoryName: 'Wastafel Granit',
+      categoryNameEn: 'Granite Sink',
       title: 'Chiseled Granite Natural Basin',
+      titleId: 'Wastafel Granit Pahat Alami',
       subtitle: 'Wastafel Granit Alami Finishing Halus',
+      subtitleEn: 'Hand-chiseled smooth natural granite sink',
       image: waterSinkImg2,
     },
     {
       id: 'snk-03',
       category: 'stone',
       categoryName: 'Vanity Wastafel',
+      categoryNameEn: 'Teak Stone Vanity',
       title: 'Floating Teak Vanity & Stone Sink',
+      titleId: 'Meja Wastafel Gantung Jati & Batu',
       subtitle: 'Meja Wastafel Gantung Jati & Wastafel Batu',
+      subtitleEn: 'Floating solid teak vanity paired with stone sink',
       image: waterSinkImg3,
     },
     {
       id: 'snk-04',
       category: 'stone',
       categoryName: 'Wastafel Marmer',
+      categoryNameEn: 'Marble Basin',
       title: 'Hand-Carved Marble Washbasin',
+      titleId: 'Wastafel Marmer Ukir Tangan',
       subtitle: 'Wastafel Marmer Alami Ukiran Tangan',
+      subtitleEn: 'Artisan hand-carved natural marble basin',
       image: waterSinkImg4,
     },
     {
       id: 'snk-05',
       category: 'stone',
       categoryName: 'Wastafel Batu Alam',
+      categoryNameEn: 'River Rock Basin',
       title: 'Oval River Rock Vanity Basin',
+      titleId: 'Wastafel Batu Kali Bentuk Oval',
       subtitle: 'Wastafel Batu Kali Bentuk Oval Alami',
+      subtitleEn: 'Natural smooth oval river rock washbasin',
       image: waterSinkImg5,
     },
     {
       id: 'snk-06',
       category: 'stone',
       categoryName: 'Wastafel Monolith',
+      categoryNameEn: 'Monolith Sink',
       title: 'Rustic Monolith Stone Basin',
+      titleId: 'Wastafel Monolit Batu Kasar',
       subtitle: 'Wastafel Monolit Tekstur Kasar Alami',
+      subtitleEn: 'Raw rustic textured monolithic stone sink',
       image: waterSinkImg6,
     },
   ];
@@ -325,7 +398,7 @@ export function Products() {
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-mono text-xs mb-4 uppercase tracking-widest">
             <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-            DOCUMENTED SPECIFICATIONS
+            {t('products.hero.specBadge')}
           </div>
 
           <h1 className="font-display-lg text-display-lg text-white mb-6">
@@ -343,7 +416,7 @@ export function Products() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 text-xs font-mono text-brand-terracotta uppercase font-bold tracking-wider mb-2">
               <span className="material-symbols-outlined text-lg">design_services</span>
-              <span>BESPOKE ENGINEERING AVAILABLE</span>
+              <span>{t('products.notice.engBadge')}</span>
             </div>
             <h2 className="font-headline-md text-2xl md:text-3xl text-brand-dark-earth font-bold mb-2">
               {t('products.notice.title')}
@@ -387,17 +460,17 @@ export function Products() {
               {/* Category Header Bar (Anime.js Docs Style) */}
               <div className="flex items-center justify-between p-4 rounded-xl bg-white border border-brand-dark-earth/10 shadow-sm mb-8 font-mono text-xs">
                 <div className="flex items-center gap-2">
-                  <span className="text-brand-terracotta font-bold">INDEX /</span>
+                  <span className="text-brand-terracotta font-bold">{t('products.nav.index')}</span>
                   <span className="text-brand-dark-earth font-bold uppercase tracking-wider">
-                    {navCategories.find(c => c.id === activeCategory)?.name || 'ALL COLLECTIONS'}
+                    {navCategories.find(c => c.id === activeCategory)?.name || t('products.nav.all')}
                   </span>
                   <span className="px-2 py-0.5 rounded bg-brand-cream text-brand-dark-earth/70 font-semibold">
-                    {filteredProducts.length} ITEMS
+                    {filteredProducts.length} {t('products.nav.items')}
                   </span>
                 </div>
 
                 <div className="hidden sm:flex items-center gap-2 text-brand-dark-earth/50">
-                  <span>SORT: CHRONOLOGICAL</span>
+                  <span>{t('products.nav.sort')}</span>
                 </div>
               </div>
 
@@ -406,10 +479,10 @@ export function Products() {
                 {filteredProducts.map((product) => (
                   <ExpressiveCard
                     key={product.id}
-                    title={product.title}
-                    subtitle={product.subtitle}
+                    title={isId && (product as any).titleId ? (product as any).titleId : product.title}
+                    subtitle={!isId && (product as any).subtitleEn ? (product as any).subtitleEn : product.subtitle}
                     image={product.image}
-                    categoryName={product.categoryName}
+                    categoryName={!isId && (product as any).categoryNameEn ? (product as any).categoryNameEn : product.categoryName}
                   />
                 ))}
               </div>
@@ -419,17 +492,17 @@ export function Products() {
                 <div>
                   <div className="text-brand-terracotta font-serif font-bold text-base mb-1.5 flex items-center gap-2">
                     <span className="material-symbols-outlined text-lg">straighten</span>
-                    <span>Ingin Menyesuaikan Ukuran Khusus?</span>
+                    <span>{t('products.customSize.title')}</span>
                   </div>
                   <p className="text-white/80 text-sm font-sans leading-relaxed max-w-2xl">
-                    Semua karya mebel Pandawa dibuat secara kriya tangan (*bespoke*). Anda dapat memesan dimensi custom yang disesuaikan presisi dengan denah interior dan kebutuhan ruang Anda.
+                    {t('products.customSize.desc')}
                   </p>
                 </div>
                 <Link
                   to="/contact"
                   className="flex-shrink-0 px-6 py-3 rounded-full bg-brand-terracotta text-white text-xs md:text-sm font-medium hover:bg-[#a55825] transition-colors shadow-md"
                 >
-                  Konsultasi Ukuran Kustom →
+                  {t('products.customSize.btn')}
                 </Link>
               </div>
 

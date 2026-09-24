@@ -47,40 +47,58 @@ export function About() {
             <div className="inline-flex items-center gap-2 self-start px-4 py-1.5 rounded-full border border-[#2D241B]/12 bg-white/80 backdrop-blur-sm shadow-sm mb-6 text-xs text-brand-dark-earth">
               <span className="w-2 h-2 rounded-full bg-brand-terracotta" />
               <span className="font-medium tracking-wide uppercase text-[11px] text-brand-dark-earth/80">
-                {t('about.heritage.badge', 'Warisan Kriya Sejak 1994 · Jepara')}
+                {t('about.hero.badge')}
               </span>
             </div>
 
             {/* High-Impact Editorial Headline */}
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-normal text-brand-dark-earth tracking-tight leading-[1.15] mb-6">
-              Tiga Dekade Merawat{' '}
+              {t('about.hero.headlinePart1')}{' '}
               <span className="italic text-brand-terracotta font-serif">
-                Keindahan Abadi
+                {t('about.hero.headlineHighlight')}
               </span>{' '}
-              Kayu Jati Alami.
+              {t('about.hero.headlinePart2')}
             </h1>
 
             {/* Narrative Subtext */}
             <p className="text-base md:text-lg text-brand-dark-earth/80 leading-relaxed mb-8 max-w-xl font-sans">
-              Berakar dari pusat ukir dan mebel legendaris di Jepara, Pandawa Furniture meneruskan dedikasi turun-temurun para empu kriya kayu. Setiap meja makan, credenza berbilah, dan kursi santai dibuat dengan tangan dari kayu jati pilihan, dirakit melalui sambungan pasak tradisional tanpa paku, dan disempurnakan dengan minyak nabati alami.
+              {t('about.hero.subtext')}
             </p>
 
             {/* Three Craft Pillars */}
             <div className="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-white/90 border border-brand-dark-earth/10 shadow-sm backdrop-blur-sm mb-8">
               <div className="p-1 text-left">
-                <span className="block text-[11px] font-medium tracking-wider text-brand-dark-earth/60 uppercase mb-1">ASAL KAYU</span>
-                <span className="font-serif font-bold text-brand-dark-earth text-sm block">Jati Perhutani</span>
-                <span className="text-[11px] text-brand-deep-olive font-medium">100% Berkelanjutan</span>
+                <span className="block text-[11px] font-medium tracking-wider text-brand-dark-earth/60 uppercase mb-1">
+                  {t('about.hero.pillars.woodSource')}
+                </span>
+                <span className="font-serif font-bold text-brand-dark-earth text-sm block">
+                  {t('about.hero.pillars.woodSourceVal')}
+                </span>
+                <span className="text-[11px] text-brand-deep-olive font-medium">
+                  {t('about.hero.pillars.woodSourceSub')}
+                </span>
               </div>
               <div className="p-1 text-left border-x border-brand-dark-earth/10 px-3">
-                <span className="block text-[11px] font-medium tracking-wider text-brand-dark-earth/60 uppercase mb-1">KONSTRUKSI</span>
-                <span className="font-serif font-bold text-brand-dark-earth text-sm block">Purus & Pasak</span>
-                <span className="text-[11px] text-brand-terracotta font-medium">Kekuatan Abadi</span>
+                <span className="block text-[11px] font-medium tracking-wider text-brand-dark-earth/60 uppercase mb-1">
+                  {t('about.hero.pillars.construction')}
+                </span>
+                <span className="font-serif font-bold text-brand-dark-earth text-sm block">
+                  {t('about.hero.pillars.constructionVal')}
+                </span>
+                <span className="text-[11px] text-brand-terracotta font-medium">
+                  {t('about.hero.pillars.constructionSub')}
+                </span>
               </div>
               <div className="p-1 text-left pl-2">
-                <span className="block text-[11px] font-medium tracking-wider text-brand-dark-earth/60 uppercase mb-1">FINISHING</span>
-                <span className="font-serif font-bold text-brand-dark-earth text-sm block">Minyak Nabati</span>
-                <span className="text-[11px] text-brand-dark-earth/70 font-medium">Aman & Natural</span>
+                <span className="block text-[11px] font-medium tracking-wider text-brand-dark-earth/60 uppercase mb-1">
+                  {t('about.hero.pillars.finishing')}
+                </span>
+                <span className="font-serif font-bold text-brand-dark-earth text-sm block">
+                  {t('about.hero.pillars.finishingVal')}
+                </span>
+                <span className="text-[11px] text-brand-dark-earth/70 font-medium">
+                  {t('about.hero.pillars.finishingSub')}
+                </span>
               </div>
             </div>
 
@@ -91,7 +109,7 @@ export function About() {
                   onClick={scrollToFoundation}
                   className="inline-flex items-center gap-2 bg-brand-terracotta text-white h-13 px-8 rounded-full text-sm font-medium hover:bg-[#a55825] shadow-lg shadow-brand-terracotta/25 hover:shadow-xl hover:shadow-brand-terracotta/35 transition-all duration-300"
                 >
-                  <span>Mengenal Filosofi Kami</span>
+                  <span>{t('about.hero.btnPhilosophy')}</span>
                   <span className="text-xs">↓</span>
                 </button>
               </Magnet>
@@ -101,7 +119,7 @@ export function About() {
                   to="/production"
                   className="inline-flex items-center gap-2 border border-brand-dark-earth/20 bg-white/80 hover:bg-white text-brand-dark-earth h-13 px-7 rounded-full text-sm font-medium hover:border-brand-dark-earth transition-all shadow-sm"
                 >
-                  <span>Proses Pembuatan</span>
+                  <span>{t('about.hero.btnProcess')}</span>
                   <span className="text-xs">→</span>
                 </Link>
               </Magnet>
@@ -120,11 +138,11 @@ export function About() {
                 <div className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-brand-deep-olive" />
                   <span className="font-serif font-bold tracking-wide text-sm">
-                    Pak Alex · Kepala Pengrajin Kayu
+                    {t('about.hero.artisanName')}
                   </span>
                 </div>
                 <span className="text-xs text-brand-dark-earth/60 font-medium">
-                  Pengalaman 32+ Tahun
+                  {t('about.hero.artisanExp')}
                 </span>
               </div>
 
@@ -144,11 +162,11 @@ export function About() {
                   <div className="flex items-center gap-2 mb-2">
                     <span className="material-symbols-outlined text-brand-terracotta text-lg">format_quote</span>
                     <span className="text-xs font-semibold uppercase tracking-wider text-brand-terracotta">
-                      Dedikasi Kriya Jepara
+                      {t('about.hero.artisanBadge')}
                     </span>
                   </div>
                   <p className="font-serif italic text-sm md:text-[15px] text-brand-dark-earth/90 leading-snug">
-                    "Setiap bilah kayu memiliki jiwa dan alur seratnya sendiri. Tugas kami adalah merawatnya dengan sabar agar menjadi karya yang hidup di rumah Anda selama bergenerasi."
+                    {t('about.hero.artisanQuote')}
                   </p>
                 </div>
 
@@ -168,7 +186,7 @@ export function About() {
               <CountUp to={32} suffix="+" duration={2.2} />
             </div>
             <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70">
-              Tahun Pengalaman Kriya
+              {t('about.stats.experience')}
             </p>
           </div>
           <div className="p-4">
@@ -176,7 +194,7 @@ export function About() {
               <CountUp to={100} suffix="%" duration={2.5} />
             </div>
             <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70">
-              Kayu Jati Legal & Terpilih
+              {t('about.stats.wood')}
             </p>
           </div>
           <div className="p-4">
@@ -184,7 +202,7 @@ export function About() {
               <CountUp to={45} suffix="+" duration={2.0} />
             </div>
             <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70">
-              Empu Pengrajin Jepara
+              {t('about.stats.artisans')}
             </p>
           </div>
           <div className="p-4">
@@ -192,7 +210,7 @@ export function About() {
               <CountUp to={1200} prefix="" suffix="+" duration={2.5} separator="," />
             </div>
             <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70">
-              Karya Furniture Terwujud
+              {t('about.stats.furniture')}
             </p>
           </div>
         </div>
@@ -202,13 +220,13 @@ export function About() {
       <section id="foundation-section" className="max-w-7xl mx-auto px-grid-margin py-section-gap-desktop scroll-mt-24">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-brand-dark-earth/15 bg-white/70 text-xs font-medium text-brand-terracotta uppercase tracking-wider mb-3">
-            <span>FILOSOFI & NILAI DASAR</span>
+            <span>{t('about.foundation.badge')}</span>
           </div>
           <h2 className="font-serif text-3xl md:text-4xl text-brand-dark-earth mb-4 font-bold">{t('about.foundation.title')}</h2>
           <div className="w-16 h-1 bg-brand-terracotta mx-auto rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
-          <SpotlightCard
+          <SpotlightCard 
             spotlightColor="rgba(190, 115, 61, 0.15)"
             borderColor="rgba(190, 115, 61, 0.3)"
             className="p-10 text-center shadow-level1 bg-white hover:-translate-y-1 transition-transform duration-300 rounded-2xl"
@@ -218,7 +236,7 @@ export function About() {
             <p className="text-sm text-brand-dark-earth/75 leading-relaxed">{t('about.pillar1.desc')}</p>
           </SpotlightCard>
 
-          <SpotlightCard
+          <SpotlightCard 
             spotlightColor="rgba(80, 100, 67, 0.15)"
             borderColor="rgba(80, 100, 67, 0.3)"
             className="p-10 text-center shadow-level1 bg-white hover:-translate-y-1 transition-transform duration-300 rounded-2xl"
@@ -228,7 +246,7 @@ export function About() {
             <p className="text-sm text-brand-dark-earth/75 leading-relaxed">{t('about.pillar2.desc')}</p>
           </SpotlightCard>
 
-          <SpotlightCard
+          <SpotlightCard 
             spotlightColor="rgba(72, 49, 36, 0.15)"
             borderColor="rgba(72, 49, 36, 0.3)"
             className="p-10 text-center shadow-level1 bg-white hover:-translate-y-1 transition-transform duration-300 rounded-2xl"
@@ -253,9 +271,10 @@ export function About() {
         />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <span className="material-symbols-outlined text-4xl text-brand-cream mb-8 opacity-50 block" style={{ fontVariationSettings: "'wght' 300" }}>format_quote</span>
-          <p className="font-headline-lg text-headline-lg font-bold text-brand-cream mb-8 leading-relaxed">
-            Our mission is to bridge the gap between ancient Indonesian woodworking <span className="font-bold text-brand-terracotta">heritage</span> and <span className="font-bold text-brand-terracotta">modern</span>, conscious living. We craft heirloom pieces not just for today, but for generations, ensuring every cut <span className="font-bold text-brand-terracotta">respects the earth</span>.
-          </p>
+          <p 
+            className="font-headline-lg text-headline-lg font-bold text-brand-cream mb-8 leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: t('about.mission.quote') }}
+          />
         </div>
       </section>
     </div>

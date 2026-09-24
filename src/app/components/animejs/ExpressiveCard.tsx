@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 export interface ExpressiveCardProps {
   id?: string;
@@ -13,13 +14,16 @@ export interface ExpressiveCardProps {
 
 export const ExpressiveCard: React.FC<ExpressiveCardProps> = ({
   title,
-  subtitle = 'Kayu Jati Asli Jepara',
+  subtitle,
   image,
-  categoryName = 'Kriya Jati',
+  categoryName,
   inquireHref = '/contact',
   className = '',
 }) => {
+  const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
+  const cardSubtitle = subtitle || t('products.card.origin', 'Kayu Jati Asli Jepara');
+  const cardCategory = categoryName || t('products.card.badge', 'Kriya Jati');
 
   return (
     <div
@@ -35,11 +39,11 @@ export const ExpressiveCard: React.FC<ExpressiveCardProps> = ({
       {/* Top Header: Simple Organic Tag */}
       <div className="px-5 pt-4 pb-3 flex items-center justify-between border-b border-[#2D241B]/6 bg-[#FAF7F2]/60 backdrop-blur-sm z-10 text-xs">
         <span className="text-[11px] font-medium tracking-wide text-brand-dark-earth/70 uppercase">
-          {categoryName}
+          {cardCategory}
         </span>
         <span className="text-[11px] tracking-wide text-brand-terracotta font-medium flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-terracotta" />
-          Karya Pandawa
+          {t('products.card.badge')}
         </span>
       </div>
 
@@ -65,20 +69,20 @@ export const ExpressiveCard: React.FC<ExpressiveCardProps> = ({
             {title}
           </h3>
           <p className="text-xs md:text-sm text-brand-dark-earth/70 font-sans leading-relaxed">
-            {subtitle}
+            {cardSubtitle}
           </p>
         </div>
 
         {/* Bottom Action Button */}
         <div className="pt-3 border-t border-[#2D241B]/6 flex items-center justify-between">
           <span className="text-[11px] text-brand-dark-earth/60 font-medium">
-            Kriya Jepara
+            {t('products.card.origin')}
           </span>
           <Link
             to={inquireHref}
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-terracotta hover:text-[#a55825] transition-colors group-hover:translate-x-1 duration-300"
           >
-            <span>Konsultasi Produk</span>
+            <span>{t('products.card.inquire')}</span>
             <span className="text-sm">→</span>
           </Link>
         </div>

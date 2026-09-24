@@ -5,14 +5,21 @@
     "shipping": "Pengiriman Seluruh Nusantara & Ekspor Internasional",
     "hours": "Senin – Sabtu: 08.00 – 17.00 WIB",
     "chat": "WhatsApp Pengrajin",
-    "status": "Online"
+    "status": "Online",
+    "chatTitle": "Konsultasi Cepat via WhatsApp",
+    "chatWaBtn": "Hubungi WhatsApp Pengrajin"
   },
   "nav": {
     "home": "Beranda",
     "about": "Tentang Kami",
     "products": "Produk",
     "production": "Produksi & Pengiriman",
-    "contact": "Kontak"
+    "contact": "Kontak",
+    "tagline": "Kriya Kayu Jati Jepara · Est. 1994",
+    "mobileTitle": "Navigasi Koleksi",
+    "mobileSubtitle": "Kriya Jati Solid",
+    "consultation": "Konsultasi Desain",
+    "mobileConsultation": "Konsultasi Desain & Pemesanan"
   },
   "footer": {
     "desc": "Keanggunan abadi dari kayu jati daur ulang Indonesia.",
@@ -42,17 +49,33 @@
       "explore": "Jelajahi Koleksi",
       "chat": "Hubungi Kami"
     },
+    "pillars": {
+      "badge": "Pilar Kriya Pandawa",
+      "title": "Keunggulan Kayu Jati Pilihan"
+    },
     "values": {
+      "badge1": "Kayu Berkelanjutan",
       "title1": "Bersumber dari Alam",
       "desc1": "Menghargai keindahan sumber daya alam Indonesia melalui pengerjaan yang bertanggung jawab.",
+      "sourceLabel": "Sumber Kayu",
+      "sourceVal": "Jati Perhutani Legal",
+      "badge2": "Pengrajin Jepara",
       "title2": "Dibuat oleh Pengrajin",
       "desc2": "Berkolaborasi dengan pengrajin lokal Indonesia, memberdayakan komunitas dan melestarikan keterampilan tradisional.",
+      "traditionLabel": "Tradisi Ukir",
+      "traditionVal": "Generasi Ke-3",
+      "badge3": "Pesanan Khusus",
       "title3": "Desain Sesuai Pesanan",
-      "desc3": "Setiap karya dapat disesuaikan dengan visi Anda, menciptakan furnitur yang unik milik Anda."
+      "desc3": "Setiap karya dapat disesuaikan dengan visi Anda, menciptakan furnitur yang unik milik Anda.",
+      "constructionLabel": "Konstruksi",
+      "constructionVal": "Purus & Pasak Kuat"
     },
     "collection": {
-      "title": "Sample Collection",
-      "viewAll": "Lihat Katalog Lengkap"
+      "badge": "Koleksi Pilihan Jepara",
+      "title": "Koleksi Contoh",
+      "viewAll": "Lihat Katalog Lengkap",
+      "viewAllBtn": "LIHAT SEMUA PRODUK",
+      "loadMore": "Tampilkan Lebih Banyak Koleksi (+{{count}})"
     },
     "cta": {
       "title": "Wujudkan Detail Impian Anda",
@@ -60,12 +83,42 @@
       "button": "Mulai Pesanan Khusus"
     }
   },
+  "showcase": {
+    "title": "Sekilas Karya Kriya Kami"
+  },
   "about": {
     "hero": {
-      "title": "Tentang Pandawa Furniture",
-      "desc": "Warisan keluarga yang berakar pada keahlian pengerjaan kayu Indonesia, keberlanjutan, dan keindahan furnitur jati yang tak lekang oleh waktu"
+      "badge": "Warisan Kriya Sejak 1994 · Jepara",
+      "headlinePart1": "Tiga Dekade Merawat",
+      "headlineHighlight": "Keindahan Abadi",
+      "headlinePart2": "Kayu Jati Alami.",
+      "subtext": "Berakar dari pusat ukir dan mebel legendaris di Jepara, Pandawa Furniture meneruskan dedikasi turun-temurun para empu kriya kayu. Setiap meja makan, credenza berbilah, dan kursi santai dibuat dengan tangan dari kayu jati pilihan, dirakit melalui sambungan pasak tradisional tanpa paku, dan disempurnakan dengan minyak nabati alami.",
+      "pillars": {
+        "woodSource": "ASAL KAYU",
+        "woodSourceVal": "Jati Perhutani",
+        "woodSourceSub": "100% Berkelanjutan",
+        "construction": "KONSTRUKSI",
+        "constructionVal": "Purus & Pasak",
+        "constructionSub": "Kekuatan Abadi",
+        "finishing": "FINISHING",
+        "finishingVal": "Minyak Nabati",
+        "finishingSub": "Aman & Natural"
+      },
+      "btnPhilosophy": "Mengenal Filosofi Kami",
+      "btnProcess": "Proses Pembuatan",
+      "artisanName": "Pak Alex · Kepala Pengrajin Kayu",
+      "artisanExp": "Pengalaman 32+ Tahun",
+      "artisanBadge": "Dedikasi Kriya Jepara",
+      "artisanQuote": "\"Setiap bilah kayu memiliki jiwa dan alur seratnya sendiri. Tugas kami adalah merawatnya dengan sabar agar menjadi karya yang hidup di rumah Anda selama bergenerasi.\""
+    },
+    "stats": {
+      "experience": "Tahun Pengalaman Kriya",
+      "wood": "Kayu Jati Legal & Terpilih",
+      "artisans": "Empu Pengrajin Jepara",
+      "furniture": "Karya Furniture Terwujud"
     },
     "foundation": {
+      "badge": "FILOSOFI & NILAI DASAR",
       "title": "Fondasi Kami",
       "desc": "Pandawa Furniture dibangun di atas tiga pilar utama yang mendefinisikan siapa kami dan apa yang kami ciptakan."
     },
@@ -80,18 +133,51 @@
     "pillar3": {
       "title": "Keistimewaan Kayu Jati Lama",
       "desc": "Kayu jati daur ulang yang sudah tua memiliki tekstur unik dan daya tahan yang luar biasa. Jejak sejarah dan cuaca membuat setiap karya menjadi lebih kuat, indah, dan benar-benar unik."
+    },
+    "mission": {
+      "quote": "Misi kami adalah menjembatani <span class=\"font-bold text-brand-terracotta\">warisan</span> seni kriya kayu nusantara dengan gaya hidup sadar lingkungan yang <span class=\"font-bold text-brand-terracotta\">modern</span>. Kami menciptakan furnitur pusaka yang abadi lintas generasi, memastikan setiap potongan kayu senantiasa <span class=\"font-bold text-brand-terracotta\">menghormati bumi</span>."
     }
   },
   "products": {
     "hero": {
+      "specBadge": "SPESIFIKASI TERDOKUMENTASI",
       "title": "Koleksi Kami",
       "desc": "Temukan furnitur yang memadukan warisan Indonesia dengan desain kontemporer."
     },
     "notice": {
+      "engBadge": "LAYANAN KUSTOM TERSEDIA",
       "title": "Kami Spesialis Desain Sesuai Pesanan",
       "desc1": "Katalog di bawah ini mewakili pilihan kurasi dari kemampuan dan kategori furnitur kami. Namun, hasrat sejati kami terletak pada pembuatan <strong>karya khusus sesuai pesanan</strong> yang disesuaikan secara khusus dengan visi, ruang, dan gaya hidup Anda.",
       "desc2": "Kami mengundang Anda untuk <strong>mendiskusikan kebutuhan spesifik Anda bersama kami</strong> guna menciptakan karya yang benar-benar unik yang mencerminkan gaya pribadi Anda dan menghargai tradisi pengrajin kayu Indonesia.",
       "button": "Mulai Desain Khusus Anda"
+    },
+    "nav": {
+      "all": "SEMUA KOLEKSI",
+      "chair": "SERI KURSI",
+      "dressoir": "KREDENSA & BUFET",
+      "cabinet": "LEMARI & ARMOIRE",
+      "stone": "WASTAFEL BATU & JATI",
+      "chairLounge": "Kursi Santai",
+      "chairDining": "Kursi Makan",
+      "dresSideboard": "Bufet Rendah",
+      "dresSlat": "Kredensa Bilah",
+      "cabGlass": "Lemari Kaca",
+      "cabWardrobe": "Lemari Pakaian",
+      "stoneRiver": "Wastafel Batu Kali",
+      "stoneGranite": "Wastafel Granit Pahat",
+      "sort": "URUTAN: KRONOLOGIS",
+      "items": "PRODUK",
+      "index": "INDEKS /"
+    },
+    "card": {
+      "badge": "Karya Pandawa",
+      "origin": "Kriya Jepara",
+      "inquire": "Konsultasi Produk"
+    },
+    "customSize": {
+      "title": "Ingin Menyesuaikan Ukuran Khusus?",
+      "desc": "Semua karya mebel Pandawa dibuat secara kriya tangan (bespoke). Anda dapat memesan dimensi custom yang disesuaikan presisi dengan denah interior dan kebutuhan ruang Anda.",
+      "btn": "Konsultasi Ukuran Kustom →"
     },
     "tabs": {
       "All": "Semua",

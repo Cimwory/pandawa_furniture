@@ -17,8 +17,11 @@ export function Navigation() {
   ];
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'id' : 'en';
+    const newLang = i18n.language.startsWith('id') ? 'en' : 'id';
     i18n.changeLanguage(newLang);
+    try {
+      localStorage.setItem('pandawa_language', newLang);
+    } catch {}
   };
 
   const whatsappUrl =
@@ -106,7 +109,7 @@ export function Navigation() {
                 </span>
               </div>
               <span className="text-[10px] md:text-[11px] text-brand-dark-earth/60 font-sans tracking-wide truncate max-w-[200px] sm:max-w-none">
-                Kriya Kayu Jati Jepara · Est. 1994
+                {t('nav.tagline')}
               </span>
             </div>
           </Link>
@@ -140,7 +143,7 @@ export function Navigation() {
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-brand-dark-earth/15 bg-white/80 hover:bg-white hover:border-brand-dark-earth/30 text-xs font-medium text-brand-dark-earth transition-all shadow-sm"
-              title="Ganti Bahasa / Switch Language"
+              title={t('upbar.chatTitle')}
             >
               <span className="material-symbols-outlined text-[16px] text-brand-terracotta">
                 translate
@@ -173,7 +176,7 @@ export function Navigation() {
                 className="inline-flex items-center gap-2 px-5 md:px-6 py-2 md:py-2.5 rounded-full bg-brand-terracotta text-white text-xs md:text-sm font-medium tracking-wide hover:bg-[#a55825] shadow-md shadow-brand-terracotta/20 hover:shadow-lg hover:shadow-brand-terracotta/30 transition-all duration-300"
               >
                 <span>
-                  {i18n.language === 'id' ? 'Konsultasi Desain' : 'Design Consultation'}
+                  {t('nav.consultation')}
                 </span>
                 <span className="text-xs transition-transform group-hover:translate-x-0.5">
                   →
@@ -229,16 +232,16 @@ export function Navigation() {
               className="w-full py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs flex items-center justify-center gap-2 transition-colors mt-1"
             >
               <span className="material-symbols-outlined text-base">chat</span>
-              <span>Hubungi WhatsApp Pengrajin</span>
+              <span>{t('upbar.chatWaBtn')}</span>
             </a>
           </div>
 
           <div className="pb-3 mb-4 border-b border-brand-dark-earth/10 flex items-center justify-between">
             <span className="text-xs font-medium uppercase tracking-widest text-brand-dark-earth/60">
-              Navigasi Koleksi
+              {t('nav.mobileTitle')}
             </span>
             <span className="text-xs text-brand-terracotta font-serif italic">
-              Kriya Jati Solid
+              {t('nav.mobileSubtitle')}
             </span>
           </div>
 
@@ -270,9 +273,7 @@ export function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-3.5 rounded-full bg-brand-terracotta text-white text-sm font-medium tracking-wide text-center block shadow-md hover:bg-[#a55825] transition-colors"
             >
-              {i18n.language === 'id'
-                ? 'Konsultasi Desain & Pemesanan'
-                : 'Design & Bespoke Order'}
+              {t('nav.mobileConsultation')}
             </Link>
           </div>
         </div>

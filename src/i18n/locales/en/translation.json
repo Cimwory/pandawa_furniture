@@ -5,14 +5,21 @@
     "shipping": "Nationwide Delivery & International Export Ready",
     "hours": "Mon – Sat: 08:00 – 17:00 WIB",
     "chat": "Artisan WhatsApp",
-    "status": "Online"
+    "status": "Online",
+    "chatTitle": "Fast WhatsApp Consultation",
+    "chatWaBtn": "Contact Artisan WhatsApp"
   },
   "nav": {
     "home": "Home",
     "about": "About Us",
     "products": "Products",
     "production": "Production & Shipping",
-    "contact": "Contact"
+    "contact": "Contact",
+    "tagline": "Jepara Teak Woodcraft · Est. 1994",
+    "mobileTitle": "Collection Navigation",
+    "mobileSubtitle": "Solid Teak Woodcraft",
+    "consultation": "Design Consultation",
+    "mobileConsultation": "Design & Bespoke Order"
   },
   "footer": {
     "desc": "Timeless elegance from Indonesian recycled teak.",
@@ -42,17 +49,33 @@
       "explore": "Explore Collection",
       "chat": "Chat with us"
     },
+    "pillars": {
+      "badge": "Pandawa Craft Pillars",
+      "title": "Excellence of Choice Teak Wood"
+    },
     "values": {
+      "badge1": "Sustainable Wood",
       "title1": "Source from Nature",
       "desc1": "Honoring the beauty of Indonesian resources through responsible craftsmanship.",
+      "sourceLabel": "Wood Source",
+      "sourceVal": "Legal Perhutani Teak",
+      "badge2": "Jepara Artisans",
       "title2": "Artisan Crafted",
       "desc2": "Collaborating with local Indonesian artisans, empowering communities and preserving traditional skills.",
+      "traditionLabel": "Carving Tradition",
+      "traditionVal": "3rd Generation",
+      "badge3": "Bespoke Orders",
       "title3": "Bespoke Design",
-      "desc3": "Every piece can be customized to your vision, creating furniture that is uniquely yours."
+      "desc3": "Every piece can be customized to your vision, creating furniture that is uniquely yours.",
+      "constructionLabel": "Construction",
+      "constructionVal": "Strong Mortise & Tenon"
     },
     "collection": {
+      "badge": "Curated Jepara Selection",
       "title": "Sample Collection",
-      "viewAll": "View Full Catalog"
+      "viewAll": "View Full Catalog",
+      "viewAllBtn": "VIEW ALL PRODUCTS",
+      "loadMore": "Show More Collections (+{{count}})"
     },
     "cta": {
       "title": "Create your own detail",
@@ -60,12 +83,42 @@
       "button": "Start Your Custom Order"
     }
   },
+  "showcase": {
+    "title": "A Glimpse of Our Art"
+  },
   "about": {
     "hero": {
-      "title": "About Pandawa Furniture",
-      "desc": "A family legacy rooted in Indonesian craftsmanship, sustainability, and the timeless beauty of teak furniture"
+      "badge": "Heritage Woodcraft Since 1994 · Jepara",
+      "headlinePart1": "Three Decades of Honoring",
+      "headlineHighlight": "Timeless Beauty",
+      "headlinePart2": "in Natural Teak.",
+      "subtext": "Rooted in the legendary woodcarving and furniture heartland of Jepara, Pandawa Furniture carries forward generations of artisan woodworking mastery. Every dining table, slatted credenza, and lounge chair is handcrafted from choice teak timber, assembled through traditional mortise and tenon joints without nails, and perfected with natural botanical oils.",
+      "pillars": {
+        "woodSource": "TIMBER SOURCE",
+        "woodSourceVal": "Perhutani Teak",
+        "woodSourceSub": "100% Sustainable",
+        "construction": "CONSTRUCTION",
+        "constructionVal": "Mortise & Tenon",
+        "constructionSub": "Timeless Strength",
+        "finishing": "FINISHING",
+        "finishingVal": "Botanical Oils",
+        "finishingSub": "Safe & Natural"
+      },
+      "btnPhilosophy": "Explore Our Philosophy",
+      "btnProcess": "Crafting Process",
+      "artisanName": "Pak Alex · Master Craftsman",
+      "artisanExp": "32+ Years Experience",
+      "artisanBadge": "Jepara Craft Dedication",
+      "artisanQuote": "\"Every grain of teak carries its own soul and character. Our calling is to patiently nurture it into a living heirloom that graces your home for generations.\""
+    },
+    "stats": {
+      "experience": "Years of Woodcraft Mastery",
+      "wood": "Certified Legal Teak",
+      "artisans": "Master Jepara Artisans",
+      "furniture": "Heirloom Pieces Crafted"
     },
     "foundation": {
+      "badge": "PHILOSOPHY & CORE VALUES",
       "title": "Our Foundation",
       "desc": "Pandawa Furniture is built upon three main pillars that define who we are and what we create."
     },
@@ -80,18 +133,51 @@
     "pillar3": {
       "title": "The Beauty of Aged Teak",
       "desc": "Aged recycled teak possesses unique textures and exceptional durability. The marks of history and weather make every piece stronger, more beautiful, and truly one-of-a-kind."
+    },
+    "mission": {
+      "quote": "Our mission is to bridge the gap between ancient Indonesian woodworking <span class=\"font-bold text-brand-terracotta\">heritage</span> and <span class=\"font-bold text-brand-terracotta\">modern</span>, conscious living. We craft heirloom pieces not just for today, but for generations, ensuring every cut <span class=\"font-bold text-brand-terracotta\">respects the earth</span>."
     }
   },
   "products": {
     "hero": {
+      "specBadge": "DOCUMENTED SPECIFICATIONS",
       "title": "Our Collection",
       "desc": "Discover furniture that blends Indonesian heritage with contemporary design."
     },
     "notice": {
+      "engBadge": "BESPOKE ENGINEERING AVAILABLE",
       "title": "We Specialize in Bespoke & Custom Designs",
       "desc1": "The catalog below represents a curated selection of our capabilities and furniture categories. However, our true passion lies in creating <strong>custom, made-to-order pieces</strong> tailored specifically to your vision, space, and lifestyle.",
       "desc2": "We invite you to <strong>discuss your specific needs with us</strong> to create a truly unique piece that reflects your personal style and honors the artisan tradition of Indonesian woodworking.",
       "button": "Start Your Custom Design"
+    },
+    "nav": {
+      "all": "ALL COLLECTIONS",
+      "chair": "CHAIR SERIES",
+      "dressoir": "DRESSOIR & CREDENZA",
+      "cabinet": "CABINET & ARMOIRE",
+      "stone": "STONE & TEAK VANITY",
+      "chairLounge": "Lounge Chairs",
+      "chairDining": "Dining Chairs",
+      "dresSideboard": "Low Sideboards",
+      "dresSlat": "Slatted Credenzas",
+      "cabGlass": "Glass Cabinets",
+      "cabWardrobe": "Solid Wardrobes",
+      "stoneRiver": "River Stone Basins",
+      "stoneGranite": "Chiseled Granite",
+      "sort": "SORT: CHRONOLOGICAL",
+      "items": "ITEMS",
+      "index": "INDEX /"
+    },
+    "card": {
+      "badge": "Pandawa Craft",
+      "origin": "Jepara Craft",
+      "inquire": "Inquire Product"
+    },
+    "customSize": {
+      "title": "Need Custom Dimensions?",
+      "desc": "Every Pandawa piece is handcrafted (bespoke). You can order custom dimensions tailored precisely to your interior layout and spatial requirements.",
+      "btn": "Custom Size Consultation →"
     },
     "tabs": {
       "All": "All",

@@ -52,11 +52,16 @@ export const showcaseImages = [
   { image: img23, alt: 'Water sink 23' },
 ];
 
-export function VisualShowcase({ title = 'A Glimpse of Our Art' }: { title?: string }) {
+import { useTranslation } from 'react-i18next';
+
+export function VisualShowcase({ title }: { title?: string }) {
+  const { t } = useTranslation();
+  const displayTitle = title || t('showcase.title');
+
   return (
     <section className="w-full relative py-section-gap-desktop overflow-hidden bg-brand-cream/10 border-y border-brand-dark-earth/10">
       <div className="text-center mb-16 relative z-10 px-grid-margin">
-        <h2 className="font-headline-lg text-headline-lg text-brand-dark-earth mb-4 font-bold">{title}</h2>
+        <h2 className="font-headline-lg text-headline-lg text-brand-dark-earth mb-4 font-bold">{displayTitle}</h2>
         <div className="w-16 h-1 bg-brand-terracotta mx-auto rounded-full"></div>
       </div>
       <div className="w-full h-[600px] md:h-[800px] relative">

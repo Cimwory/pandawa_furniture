@@ -131,10 +131,10 @@ export function Home() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-brand-dark-earth/15 bg-white/70 mb-3 text-xs uppercase tracking-wider text-brand-terracotta font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-terracotta"></span>
-              Pilar Kriya Pandawa
+              {t('home.pillars.badge')}
             </div>
             <h2 className="font-serif text-3xl md:text-4xl text-brand-dark-earth font-bold">
-              Keunggulan Kayu Jati Pilihan
+              {t('home.pillars.title')}
             </h2>
           </div>
 
@@ -148,7 +148,7 @@ export function Home() {
               <div>
                 <div className="flex items-center justify-between border-b border-brand-dark-earth/10 pb-3 mb-6 text-xs">
                   <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-medium">
-                    Kayu Berkelanjutan
+                    {t('home.values.badge1')}
                   </span>
                   <span className="text-brand-dark-earth/50">01</span>
                 </div>
@@ -161,8 +161,8 @@ export function Home() {
               </div>
 
               <div className="pt-3 border-t border-brand-dark-earth/10 flex items-center justify-between text-xs text-brand-dark-earth/70">
-                <span>Sumber Kayu</span>
-                <span className="font-bold text-brand-deep-olive">Jati Perhutani Legal</span>
+                <span>{t('home.values.sourceLabel')}</span>
+                <span className="font-bold text-brand-deep-olive">{t('home.values.sourceVal')}</span>
               </div>
             </SpotlightCard>
             
@@ -175,7 +175,7 @@ export function Home() {
               <div>
                 <div className="flex items-center justify-between border-b border-brand-dark-earth/10 pb-3 mb-6 text-xs">
                   <span className="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-900 border border-amber-200 font-medium">
-                    Pengrajin Jepara
+                    {t('home.values.badge2')}
                   </span>
                   <span className="text-brand-dark-earth/50">02</span>
                 </div>
@@ -188,8 +188,8 @@ export function Home() {
               </div>
 
               <div className="pt-3 border-t border-brand-dark-earth/10 flex items-center justify-between text-xs text-brand-dark-earth/70">
-                <span>Tradisi Ukir</span>
-                <span className="font-bold text-brand-cocoa-brown">Generasi Ke-3</span>
+                <span>{t('home.values.traditionLabel')}</span>
+                <span className="font-bold text-brand-cocoa-brown">{t('home.values.traditionVal')}</span>
               </div>
             </SpotlightCard>
             
@@ -202,7 +202,7 @@ export function Home() {
               <div>
                 <div className="flex items-center justify-between border-b border-brand-dark-earth/10 pb-3 mb-6 text-xs">
                   <span className="px-2.5 py-0.5 rounded-full bg-red-50 text-red-800 border border-red-200 font-medium">
-                    Pesanan Khusus
+                    {t('home.values.badge3')}
                   </span>
                   <span className="text-brand-dark-earth/50">03</span>
                 </div>
@@ -215,8 +215,8 @@ export function Home() {
               </div>
 
               <div className="pt-3 border-t border-brand-dark-earth/10 flex items-center justify-between text-xs text-brand-dark-earth/70">
-                <span>Konstruksi</span>
-                <span className="font-bold text-brand-terracotta">Purus & Pasak Kuat</span>
+                <span>{t('home.values.constructionLabel')}</span>
+                <span className="font-bold text-brand-terracotta">{t('home.values.constructionVal')}</span>
               </div>
             </SpotlightCard>
           </div>
@@ -230,7 +230,7 @@ export function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between mb-16 pb-6 border-b border-brand-dark-earth/10 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 text-xs text-brand-terracotta uppercase font-medium tracking-wider mb-2">
-                <span>Koleksi Pilihan Jepara</span>
+                <span>{t('home.collection.badge')}</span>
               </div>
               <h2 className="font-serif text-3xl md:text-4xl text-brand-dark-earth font-bold">
                 {t('home.collection.title')}
@@ -241,7 +241,7 @@ export function Home() {
               to="/products"
               className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-brand-terracotta hover:text-brand-dark-earth transition-colors px-5 py-2.5 rounded-full border border-brand-terracotta/30 hover:border-brand-terracotta bg-brand-terracotta/5"
             >
-              <span>LIHAT SEMUA PRODUK</span>
+              <span>{t('home.collection.viewAllBtn')}</span>
               <span>→</span>
             </Link>
           </div>
@@ -267,7 +267,7 @@ export function Home() {
                   onClick={() => setVisibleItems(prev => prev + 3)}
                   className="inline-flex items-center justify-center border border-brand-dark-earth text-brand-dark-earth text-xs h-12 px-9 rounded-full hover:bg-brand-dark-earth hover:text-white transition-colors duration-300 tracking-wider font-semibold shadow-sm"
                 >
-                  Tampilkan Lebih Banyak Koleksi (+{collections.length - visibleItems})
+                  {t('home.collection.loadMore', { count: collections.length - visibleItems })}
                 </button>
               </Magnet>
             </div>
