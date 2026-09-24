@@ -4,11 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 // Images
 import productsHeroImg from '../assets/products-hero.jpeg';
-import dressoirImg from '../assets/15f0a36d33a7c06acb99f1b5cf23860e31c9e229.png';
-import coffeeTableImg from '../assets/ff89027649427a59d1b62a1e882d28aed26cc775.png';
 import bedroomFurnitureImg from '../assets/f3c9df50243d7f9e3d03f042f3f6626ec85bbf74.png';
 import proofCabinetImg from '../assets/fc5964b3113fde8a49149cd92f85ea4450691c43.png';
-import proofTvStandImg from '../assets/bb679ca50af152a8f0faa607e561f4d8254d5707.png';
 import proofWardrobeImg from '../assets/93fec46fe2c182559cb71aafc651703bd56b2630.png';
 
 // New Cabinet Images
