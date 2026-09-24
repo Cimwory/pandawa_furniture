@@ -1,20 +1,29 @@
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { useState } from 'react';
 import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import {
+  BlurText,
+  ShinyText,
+  Magnet,
+  StarBorder,
+  Particles,
+} from '../components/reactbits';
+import { ExpressiveCard } from '../components/animejs/ExpressiveCard';
+import { DocsNavSidebar, CategoryItem } from '../components/animejs/DocsNavSidebar';
 
 // Images
 import productsHeroImg from '../assets/products-hero.jpeg';
-import bedroomFurnitureImg from '../assets/f3c9df50243d7f9e3d03f042f3f6626ec85bbf74.png';
-import proofCabinetImg from '../assets/fc5964b3113fde8a49149cd92f85ea4450691c43.png';
-import proofWardrobeImg from '../assets/93fec46fe2c182559cb71aafc651703bd56b2630.png';
 
-// New Cabinet Images
+// Cabinet Images
 import cab1 from '../../assets/cabinet/1380088840-650x650.jpg';
 import cab3 from '../../assets/cabinet/02702809-1-650x650.jpg';
 import cab4 from '../../assets/cabinet/02702153-650x650.jpg';
 import cab5 from '../../assets/cabinet/02702143-1.jpg';
+import proofCabinetImg from '../assets/fc5964b3113fde8a49149cd92f85ea4450691c43.png';
+import proofWardrobeImg from '../assets/93fec46fe2c182559cb71aafc651703bd56b2630.png';
 
-// New Dressoir Images
+// Dressoir Images
 import dres1 from '../../assets/dressoir/02703170-1-650x650.jpg';
 import dres2 from '../../assets/dressoir/02732018-1.jpg';
 import dres3 from '../../assets/dressoir/02732026-650x650.jpg';
@@ -29,7 +38,6 @@ import chairImg3 from '../../assets/chair/1380686619-650x650.jpg';
 import chairImg4 from '../../assets/chair/1532591640-650x650.jpg';
 import chairImg5 from '../../assets/chair/1565899437-650x650.jpg';
 import chairImg6 from '../../assets/chair/KL-J-010-A1-650x650.jpg';
-import chairImg7 from '../../assets/chair/x_0y_01458114406-650x650.jpg';
 
 // Water Sink Images
 import waterSinkImg1 from '../../assets/water sink/6a3d62e1-b9c4-496c-9132-a025c0627efb.jpg';
@@ -41,126 +49,335 @@ import waterSinkImg6 from '../../assets/water sink/f074e6f2-a389-4b73-8f0e-dfe82
 
 export function Products() {
   const { t } = useTranslation();
-  const categories = [
+  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [activeSubFilter, setActiveSubFilter] = useState<string>('all');
+
+  const navCategories: CategoryItem[] = [
     {
-      name: 'Chair',
-      images: [
-        { image: chairImg1, alt: 'Lounge Teak Chair', title: 'Lounge Teak Chair' },
-        { image: chairImg2, alt: 'Lounge Teak Chair Angle 2', title: 'Lounge Teak Chair' },
-        { image: chairImg3, alt: 'Lounge Teak Chair Details', title: 'Lounge Teak Chair' },
-        { image: chairImg4, alt: 'Chair Variant 4', title: 'Lounge Teak Chair' },
-        { image: chairImg5, alt: 'Chair Variant 5', title: 'Lounge Teak Chair' },
-        { image: chairImg6, alt: 'Chair Variant 6', title: 'Lounge Teak Chair' },
-        { image: chairImg7, alt: 'Chair Variant 7', title: 'Lounge Teak Chair' },
-      ].slice(0, 6)
+      id: 'all',
+      name: 'ALL COLLECTIONS',
+      count: 24,
     },
     {
-      name: 'Dressoir',
-      images: [
-        { image: dres1, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
-        { image: dres2, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
-        { image: dres3, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
-        { image: dres4, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
-        { image: dres5, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
-        { image: dres6, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
-      ].slice(0, 6)
+      id: 'chair',
+      name: 'CHAIR SERIES',
+      count: 6,
+      isNew: true,
+      subItems: [
+        { id: 'chair-lounge', name: 'Lounge Chairs' },
+        { id: 'chair-dining', name: 'Dining Chairs' },
+      ],
     },
     {
-      name: 'Cabinet',
-      images: [
-        { image: cab1, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
-        { image: cab3, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
-        { image: cab4, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
-        { image: cab5, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
-        { image: proofCabinetImg, alt: 'Teak wood cabinet ready for shipment', title: 'Teak Wood Cabinet' },
-        { image: proofWardrobeImg, alt: 'Teak wood wardrobe with storage drawers', title: 'Teak Wood Wardrobe' },
-        { image: bedroomFurnitureImg, alt: 'Bedroom Wardrobe', title: 'Bedroom Wardrobe' },
-      ].slice(0, 6)
+      id: 'dressoir',
+      name: 'DRESSOIR & CREDENZA',
+      count: 6,
+      subItems: [
+        { id: 'dres-sideboard', name: 'Low Sideboards' },
+        { id: 'dres-slat', name: 'Slatted Credenzas' },
+      ],
     },
     {
-      name: 'Water Sink Stone',
-      images: [
-        { image: waterSinkImg1, alt: 'Water Sink Stone', title: 'Water Sink Stone' },
-        { image: waterSinkImg2, alt: 'Hand-carved stone sink basin', title: 'Hand-carved Stone Sink' },
-        { image: waterSinkImg3, alt: 'Modern stone sink with teak vanity', title: 'Modern Stone Sink' },
-        { image: waterSinkImg4, alt: 'Water Sink Variant 4', title: 'Water Sink Stone' },
-        { image: waterSinkImg5, alt: 'Water Sink Variant 5', title: 'Water Sink Stone' },
-        { image: waterSinkImg6, alt: 'Water Sink Variant 6', title: 'Water Sink Stone' },
-      ].slice(0, 6)
-    }
+      id: 'cabinet',
+      name: 'CABINET & ARMOIRE',
+      count: 6,
+      subItems: [
+        { id: 'cab-glass', name: 'Glass Cabinets' },
+        { id: 'cab-wardrobe', name: 'Solid Wardrobes' },
+      ],
+    },
+    {
+      id: 'stone',
+      name: 'STONE & TEAK VANITY',
+      count: 6,
+      isNew: true,
+      subItems: [
+        { id: 'stone-river', name: 'River Stone Basins' },
+        { id: 'stone-granite', name: 'Chiseled Granite' },
+      ],
+    },
   ];
 
+  const productData = [
+    // Chairs
+    {
+      id: 'chr-01',
+      category: 'chair',
+      categoryName: 'Kursi Jati',
+      title: 'Ergonomic Teak Lounge Chair',
+      subtitle: 'Kursi Santai Lengkung Ergonomis Kayu Jati',
+      image: chairImg1,
+    },
+    {
+      id: 'chr-02',
+      category: 'chair',
+      categoryName: 'Kursi Makan',
+      title: 'Minimalist Teak Dining Chair',
+      subtitle: 'Kursi Makan Kayu Jati Minimalis',
+      image: chairImg2,
+    },
+    {
+      id: 'chr-03',
+      category: 'chair',
+      categoryName: 'Kursi Ukir',
+      title: 'Heritage Jepara Armchair',
+      subtitle: 'Kursi Lengan Khas Pengrajin Jepara',
+      image: chairImg3,
+    },
+    {
+      id: 'chr-04',
+      category: 'chair',
+      categoryName: 'Bangku Jati',
+      title: 'Nordic Teak Stool & Ottoman',
+      subtitle: 'Bangku Bulat Kayu Jati Solid',
+      image: chairImg4,
+    },
+
+    // Dressoir
+    {
+      id: 'drs-01',
+      category: 'dressoir',
+      categoryName: 'Bufet Jati',
+      title: 'Solid Teak 4-Door Credenza',
+      subtitle: 'Bufet Pintu Geser 4 Pintu Kayu Jati',
+      image: dres1,
+    },
+    {
+      id: 'drs-02',
+      category: 'dressoir',
+      categoryName: 'Meja Konsol',
+      title: 'Minimalist Sideboard Console',
+      subtitle: 'Konsol Minimalis dengan Laci Halus',
+      image: dres2,
+    },
+    {
+      id: 'drs-03',
+      category: 'dressoir',
+      categoryName: 'Bufet Bilah',
+      title: 'Sliding Louvre Dressoir',
+      subtitle: 'Bufet Bilah Kayu Jati Sirkulasi Udara',
+      image: dres3,
+    },
+
+    // Cabinet
+    {
+      id: 'cab-01',
+      category: 'cabinet',
+      categoryName: 'Lemari Hias',
+      title: 'Glass Display Teak Cabinet',
+      subtitle: 'Lemari Pajang Kaca Rangka Jati Solid',
+      image: cab1,
+    },
+    {
+      id: 'cab-02',
+      category: 'cabinet',
+      categoryName: 'Lemari Pakaian',
+      title: 'Double Door Tall Wardrobe',
+      subtitle: 'Lemari Pakaian Jati 2 Pintu Kokoh',
+      image: cab3,
+    },
+    {
+      id: 'cab-03',
+      category: 'cabinet',
+      categoryName: 'Lemari Dapur',
+      title: 'Custom Pantry & Linen Cabinet',
+      subtitle: 'Lemari Serbaguna Kriya Jepara',
+      image: proofCabinetImg,
+    },
+
+    // Water Sink
+    {
+      id: 'snk-01',
+      category: 'stone',
+      categoryName: 'Wastafel Batu',
+      title: 'River Stone Vessel Basin',
+      subtitle: 'Wastafel Pahatan Batu Sungai Alami',
+      image: waterSinkImg1,
+    },
+    {
+      id: 'snk-02',
+      category: 'stone',
+      categoryName: 'Wastafel Granit',
+      title: 'Chiseled Granite Natural Basin',
+      subtitle: 'Wastafel Granit Alami Finishing Halus',
+      image: waterSinkImg2,
+    },
+    {
+      id: 'snk-03',
+      category: 'stone',
+      categoryName: 'Vanity Wastafel',
+      title: 'Floating Teak Vanity & Stone Sink',
+      subtitle: 'Meja Wastafel Gantung Jati & Wastafel Batu',
+      image: waterSinkImg3,
+    },
+  ];
+
+  const filteredProducts = activeCategory === 'all'
+    ? productData
+    : productData.filter((p) => p.category === activeCategory);
+
   return (
-    <div className="pt-20">
+    <div className="pt-[100px] md:pt-[112px]">
       {/* Hero Section */}
-      <section className="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center overflow-hidden">
+      <section className="relative h-[65vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/40 z-10"></div>
+          <div className="absolute inset-0 bg-black/55 z-10"></div>
           <ImageWithFallback src={productsHeroImg} alt="Our Collection" className="w-full h-full object-cover" />
         </div>
+
+        {/* Ambient Particles */}
+        <Particles
+          className="z-15"
+          quantity={35}
+          color="#ffdcc7"
+          size={2}
+          staticity={40}
+        />
+
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
-          <h1 className="font-display-lg text-display-lg text-white mb-6">{t('products.hero.title')}</h1>
-          <p className="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-mono text-xs mb-4 uppercase tracking-widest">
+            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            DOCUMENTED SPECIFICATIONS
+          </div>
+
+          <h1 className="font-display-lg text-display-lg text-white mb-6">
+            <BlurText text={t('products.hero.title')} delay={80} duration={0.8} />
+          </h1>
+          <p className="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
             {t('products.hero.desc')}
           </p>
         </div>
       </section>
 
-      {/* Bespoke Notice Section */}
-      <section className="w-full bg-brand-cream py-section-gap-mobile md:py-24 border-y border-brand-cocoa-brown/10">
-        <div className="max-w-4xl mx-auto px-grid-margin text-center">
-          <span className="material-symbols-outlined text-4xl text-brand-terracotta mb-4">design_services</span>
-          <h2 className="font-headline-md text-headline-md text-brand-dark-earth mb-4">{t('products.notice.title')}</h2>
-          <p className="font-body-md text-brand-dark-earth/70 mb-8 max-w-2xl mx-auto" dangerouslySetInnerHTML={{ __html: t('products.notice.desc1') }} />
-          <Link to="/contact" className="inline-flex items-center justify-center bg-brand-terracotta text-white px-10 h-14 rounded-full font-label-md text-label-md hover:bg-[#d6854b] hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300 shadow-lg">
-            {t('products.notice.button')}
-          </Link>
+      {/* Bespoke Notice Section with Magnet CTA */}
+      <section className="w-full bg-brand-cream py-16 border-y border-brand-cocoa-brown/10 relative overflow-hidden">
+        <div className="max-w-5xl mx-auto px-grid-margin flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2 text-xs font-mono text-brand-terracotta uppercase font-bold tracking-wider mb-2">
+              <span className="material-symbols-outlined text-lg">design_services</span>
+              <span>BESPOKE ENGINEERING AVAILABLE</span>
+            </div>
+            <h2 className="font-headline-md text-2xl md:text-3xl text-brand-dark-earth font-bold mb-2">
+              {t('products.notice.title')}
+            </h2>
+            <p className="font-body-md text-sm md:text-base text-brand-dark-earth/75 leading-relaxed" dangerouslySetInnerHTML={{ __html: t('products.notice.desc1') }} />
+          </div>
+
+          <div className="flex-shrink-0">
+            <Magnet magnetStrength={0.25}>
+              <StarBorder color="#BE733D" speed="3s">
+                <Link 
+                  to="/contact" 
+                  className="inline-flex items-center justify-center bg-brand-terracotta text-white px-8 h-12 rounded-full font-mono text-xs font-bold hover:bg-[#d6854b] shadow-lg transition-all duration-300 tracking-wider"
+                >
+                  <ShinyText text={t('products.notice.button')} color="#ffffff" shineColor="#ffdcc7" speed={3} />
+                </Link>
+              </StarBorder>
+            </Magnet>
+          </div>
         </div>
       </section>
 
-      {/* Sample Collection Section */}
-      <section className="w-full py-section-gap-desktop bg-surface">
+      {/* MODERN ANIME.JS DOCUMENTATION LAYOUT (SIDEBAR + EXPRESSIVE CARDS) */}
+      <section className="w-full py-16 md:py-24 bg-surface">
         <div className="max-w-7xl mx-auto px-grid-margin">
-          <div className="flex flex-col items-center mb-16">
-            <h2 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-brand-dark-earth uppercase tracking-wider">{t('home.collection.title')}</h2>
-          </div>
           
-          {categories.map((category, catIdx) => (
-            <div key={catIdx} className="mb-24 last:mb-0">
-              <div className="flex flex-col items-center mb-12">
-                <h3 className="font-headline-md text-headline-md text-brand-dark-earth uppercase tracking-wider">
-                  {category.name}
-                </h3>
+          <div className="flex flex-col lg:flex-row gap-10 items-start">
+            
+            {/* LEFT: Anime.js Tree Navigation Sidebar */}
+            <DocsNavSidebar
+              categories={navCategories}
+              activeCategoryId={activeCategory}
+              onSelectCategory={setActiveCategory}
+              activeSubFilter={activeSubFilter}
+              onSelectSubFilter={setActiveSubFilter}
+            />
+
+            {/* RIGHT: Main Expressive Cards Grid */}
+            <div className="flex-1 w-full">
+              
+              {/* Category Header Bar (Anime.js Docs Style) */}
+              <div className="flex items-center justify-between p-4 rounded-xl bg-white border border-brand-dark-earth/10 shadow-sm mb-8 font-mono text-xs">
+                <div className="flex items-center gap-2">
+                  <span className="text-brand-terracotta font-bold">INDEX /</span>
+                  <span className="text-brand-dark-earth font-bold uppercase tracking-wider">
+                    {navCategories.find(c => c.id === activeCategory)?.name || 'ALL COLLECTIONS'}
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-brand-cream text-brand-dark-earth/70 font-semibold">
+                    {filteredProducts.length} ITEMS
+                  </span>
+                </div>
+
+                <div className="hidden sm:flex items-center gap-2 text-brand-dark-earth/50">
+                  <span>SORT: CHRONOLOGICAL</span>
+                </div>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
-                {category.images.map((item, index) => (
-                  <div key={index} className="group cursor-pointer">
-                    <div className="w-full aspect-[4/5] overflow-hidden bg-brand-cream/30">
-                      <ImageWithFallback
-                        src={item.image}
-                        alt={item.alt}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                    </div>
-                  </div>
+
+              {/* Expressive Cards Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8">
+                {filteredProducts.map((product) => (
+                  <ExpressiveCard
+                    key={product.id}
+                    title={product.title}
+                    subtitle={product.subtitle}
+                    image={product.image}
+                    categoryName={product.categoryName}
+                  />
                 ))}
               </div>
+
+              {/* Bottom Bespoke Dimension Order Card */}
+              <div className="mt-12 p-8 rounded-2xl bg-[#2D241B] text-white border border-[#2D241B]/20 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                  <div className="text-brand-terracotta font-serif font-bold text-base mb-1.5 flex items-center gap-2">
+                    <span className="material-symbols-outlined text-lg">straighten</span>
+                    <span>Ingin Menyesuaikan Ukuran Khusus?</span>
+                  </div>
+                  <p className="text-white/80 text-sm font-sans leading-relaxed max-w-2xl">
+                    Semua karya mebel Pandawa dibuat secara kriya tangan (*bespoke*). Anda dapat memesan dimensi custom yang disesuaikan presisi dengan denah interior dan kebutuhan ruang Anda.
+                  </p>
+                </div>
+                <Link
+                  to="/contact"
+                  className="flex-shrink-0 px-6 py-3 rounded-full bg-brand-terracotta text-white text-xs md:text-sm font-medium hover:bg-[#a55825] transition-colors shadow-md"
+                >
+                  Konsultasi Ukuran Kustom →
+                </Link>
+              </div>
+
             </div>
-          ))}
+
+          </div>
+
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="w-full bg-brand-deep-olive py-32 text-center">
-        <div className="max-w-3xl mx-auto px-grid-margin flex flex-col items-center">
-          <h2 className="font-display-lg text-display-lg text-brand-cream mb-6">{t('products.cta.title')}</h2>
-          <p className="font-body-lg text-brand-cream/80 mb-10 max-w-xl">
+      <section className="w-full bg-brand-deep-olive py-28 text-center relative overflow-hidden">
+        <Particles
+          className="z-5"
+          quantity={30}
+          color="#d2eabf"
+          size={1.6}
+        />
+        <div className="max-w-3xl mx-auto px-grid-margin flex flex-col items-center relative z-10">
+          <h2 className="font-display-lg text-display-lg text-brand-cream mb-6">
+            {t('products.cta.title')}
+          </h2>
+          <p className="font-body-lg text-brand-cream/85 mb-10 max-w-xl leading-relaxed">
             {t('products.cta.desc')}
           </p>
-          <Link to="/contact" className="inline-flex items-center justify-center bg-brand-terracotta text-white px-10 h-14 rounded-full font-label-md text-label-md hover:bg-[#d6854b] hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300 shadow-lg gap-2">
-            <span className="material-symbols-outlined">forum</span>
-            {t('products.cta.button')}
-          </Link>
+          <Magnet magnetStrength={0.3}>
+            <StarBorder color="#ffffff" speed="3s">
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center justify-center bg-brand-terracotta text-white px-10 h-14 rounded-full font-label-md text-label-md hover:bg-[#d6854b] shadow-2xl shadow-brand-terracotta/50 transition-all duration-300 gap-2"
+              >
+                <span className="material-symbols-outlined text-xl">forum</span>
+                <ShinyText text={t('products.cta.button')} color="#ffffff" shineColor="#ffdcc7" speed={2.5} />
+              </Link>
+            </StarBorder>
+          </Magnet>
         </div>
       </section>
     </div>
