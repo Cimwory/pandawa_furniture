@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import heroBg from '../assets/2874e70677e9347f1c498bc483444526782683b2.png';
-import { CraftScrollytelling } from '../components/CraftScrollytelling';
+import { VisualShowcase } from '../components/VisualShowcase';
 import {
   SplitText,
   ShinyText,
@@ -121,8 +121,8 @@ export function Home() {
         </div>
       </section>
 
-      {/* 2. Artisanal Craft Scrollytelling Section */}
-      <CraftScrollytelling />
+      {/* 2. Visual Showcase (Drift Wall) */}
+      <VisualShowcase />
 
       {/* 3. Brand Values Section */}
       <section className="py-section-gap-mobile md:py-section-gap-desktop bg-brand-cream/50">
