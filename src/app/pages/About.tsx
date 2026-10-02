@@ -153,23 +153,6 @@ export function About() {
                   alt="Pak Alex / Mr. Alex - Owner of Pandawa Furniture Workshop"
                   className="object-cover object-center w-full h-full transition-transform duration-700 ease-out group-hover:scale-104"
                 />
-
-                {/* Gentle Gradient Vignette at Bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-
-                {/* Floating Natural Quote Card */}
-                <div className="absolute bottom-5 left-5 right-5 z-20 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-white/40 shadow-xl text-brand-dark-earth transition-transform duration-300 group-hover:-translate-y-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="material-symbols-outlined text-brand-terracotta text-lg">format_quote</span>
-                    <span className="text-xs font-semibold uppercase tracking-wider text-brand-terracotta">
-                      {t('about.hero.artisanBadge')}
-                    </span>
-                  </div>
-                  <p className="font-serif italic text-sm md:text-[15px] text-brand-dark-earth/90 leading-snug">
-                    {t('about.hero.artisanQuote')}
-                  </p>
-                </div>
-
               </div>
 
             </div>
