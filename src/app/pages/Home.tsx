@@ -64,7 +64,7 @@ export function Home() {
   ];
 
   return (
-    <div className="pt-[100px] md:pt-[112px]">
+    <div className="pt-[68px] md:pt-[76px]">
       {/* 1. Hero Section */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}

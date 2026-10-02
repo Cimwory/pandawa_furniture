@@ -14,7 +14,7 @@ export function Contact() {
   const { t } = useTranslation();
 
   return (
-    <div className="pt-[100px] md:pt-[112px]">
+    <div className="pt-[68px] md:pt-[76px]">
       {/* Hero Section */}
       <section className="relative w-full h-[614px] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div 

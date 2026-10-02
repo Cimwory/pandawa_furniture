@@ -30,59 +30,7 @@ export function Navigation() {
 
   return (
     <header className="fixed top-0 w-full z-50 transition-all duration-300 shadow-sm">
-      {/* 1. TOP UTILITY / ANNOUNCEMENT UPBAR */}
-      <div className="w-full bg-[#231A13] text-[#F3ECE4] text-[11px] font-sans tracking-wide border-b border-[#3D3228]/60 transition-colors">
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-12 flex items-center justify-between h-8 md:h-9">
-          
-          {/* Left: Workshop & Hours */}
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1.5 text-[#E4D7CC]">
-              <span className="material-symbols-outlined text-[15px] text-brand-terracotta">
-                pin_drop
-              </span>
-              <span className="truncate max-w-[220px] sm:max-w-none font-medium">
-                {t('upbar.location')}
-              </span>
-            </div>
-
-
-          </div>
-
-          {/* Center: Timber Quality Badge */}
-          <div className="hidden md:flex items-center gap-1.5 text-[11px] text-[#F0E6DD] bg-[#33261C] px-3 py-0.5 rounded-full border border-white/10">
-            <span className="text-[12px]">🪵</span>
-            <span className="font-medium tracking-wide">
-              {t('upbar.badge')}
-            </span>
-          </div>
-
-          {/* Right: Direct Artisan WhatsApp with Live Status */}
-          <div className="flex items-center gap-3">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white hover:text-brand-terracotta transition-colors group"
-              title="Konsultasi Cepat via WhatsApp"
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span className="flex items-center gap-1 font-semibold text-emerald-400 group-hover:text-emerald-300 transition-colors">
-                <span className="material-symbols-outlined text-[15px]">chat</span>
-                <span className="hidden sm:inline">{t('upbar.chat')}</span>
-              </span>
-              <span className="hidden sm:inline-block font-mono text-[9px] bg-emerald-950/80 text-emerald-400 px-1.5 py-0.5 rounded border border-emerald-500/30 font-bold uppercase tracking-wider">
-                {t('upbar.status')}
-              </span>
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-      {/* 2. MAIN ARTISANAL NAVIGATION BAR */}
+      {/* MAIN ARTISANAL NAVIGATION BAR */}
       <div className="w-full bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#2D241B]/10 transition-all duration-300">
         <div className="w-full max-w-7xl mx-auto px-4 md:px-12 flex items-center justify-between h-[68px] md:h-[76px]">
           
