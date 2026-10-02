@@ -22,7 +22,7 @@ export const ExpressiveCard: React.FC<ExpressiveCardProps> = ({
 }) => {
   const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
-  const cardSubtitle = subtitle || t('products.card.origin', 'Kayu Jati Asli Jepara');
+  const cardSubtitle = subtitle || t('products.card.origin', 'Kayu Jati Asli Kudus');
   const cardCategory = categoryName || t('products.card.badge', 'Kriya Jati');
 
   return (

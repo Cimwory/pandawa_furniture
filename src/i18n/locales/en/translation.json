@@ -1,6 +1,6 @@
 {
   "upbar": {
-    "location": "Workshop & Gallery: Kudus – Jepara, Central Java",
+    "location": "Workshop & Gallery: Kudus, Central Java",
     "badge": "100% Solid Heartwood Teak · Heritage Joinery & Natural Finish",
     "shipping": "Nationwide Delivery & International Export Ready",
     "hours": "Mon – Sat: 08:00 – 17:00 WIB",
@@ -15,7 +15,7 @@
     "products": "Products",
     "production": "Production & Shipping",
     "contact": "Contact",
-    "tagline": "Jepara Teak Woodcraft · Est. 1994",
+    "tagline": "Kudus Teak Woodcraft · Est. 1994",
     "mobileTitle": "Collection Navigation",
     "mobileSubtitle": "Solid Teak Woodcraft",
     "consultation": "Design Consultation",
@@ -38,7 +38,7 @@
       "whatsapp": "WhatsApp",
       "email": "Email Us",
       "locationTitle": "Location",
-      "locationDesc": "Jln. Lingkar Selatan Kudus-Jepara km 3, Desa Pasuruhan kidul, Kota Kudus"
+      "locationDesc": "Jln. Lingkar Selatan Kudus km 3, Desa Pasuruhan kidul, Kota Kudus"
     },
     "copyright": "2026 Pandawa Furniture. Crafted with care in Indonesia."
   },
@@ -59,7 +59,7 @@
       "desc1": "Honoring the beauty of Indonesian resources through responsible craftsmanship.",
       "sourceLabel": "Wood Source",
       "sourceVal": "Legal Perhutani Teak",
-      "badge2": "Jepara Artisans",
+      "badge2": "Kudus Artisans",
       "title2": "Artisan Crafted",
       "desc2": "Collaborating with local Indonesian artisans, empowering communities and preserving traditional skills.",
       "traditionLabel": "Carving Tradition",
@@ -88,11 +88,11 @@
   },
   "about": {
     "hero": {
-      "badge": "Heritage Woodcraft Since 1994 · Jepara",
+      "badge": "Heritage Woodcraft Since 1994 · Kudus",
       "headlinePart1": "Two Decades of Honoring",
       "headlineHighlight": "Timeless Beauty",
       "headlinePart2": "in Natural Teak.",
-      "subtext": "Rooted in the legendary woodcarving and furniture heartland of Jepara, Pandawa Furniture carries forward generations of artisan woodworking mastery. Every dining table, slatted credenza, and lounge chair is handcrafted from choice teak timber, assembled through traditional mortise and tenon joints without nails, and perfected with natural botanical oils.",
+      "subtext": "Rooted in the legendary woodcarving and furniture heartland of Kudus, Pandawa Furniture carries forward generations of artisan woodworking mastery. Every dining table, slatted credenza, and lounge chair is handcrafted from choice teak timber, assembled through traditional mortise and tenon joints without nails, and perfected with natural botanical oils.",
       "pillars": {
         "woodSource": "WOOD TYPE",
         "woodSourceVal": "Perhutani Teak",
@@ -108,13 +108,13 @@
       "btnProcess": "Crafting Process",
       "artisanName": "Mr. Alex · Owner Pandawa Furniture",
       "artisanExp": "32+ Years Experience",
-      "artisanBadge": "Jepara Craft Dedication",
+      "artisanBadge": "Kudus Craft Dedication",
       "artisanQuote": "\"Every grain of teak carries its own soul and character. Our calling is to patiently nurture it into a living heirloom that graces your home for generations.\""
     },
     "stats": {
       "experience": "Years of Woodcraft Mastery",
       "wood": "Certified Legal Teak",
-      "artisans": "Master Jepara Artisans",
+      "artisans": "Master Kudus Artisans",
       "furniture": "Heirloom Pieces Crafted"
     },
     "foundation": {
@@ -183,7 +183,7 @@
     },
     "card": {
       "badge": "Pandawa Craft",
-      "origin": "Jepara Craft",
+      "origin": "Kudus Craft",
       "inquire": "Inquire Product"
     },
     "customSize": {

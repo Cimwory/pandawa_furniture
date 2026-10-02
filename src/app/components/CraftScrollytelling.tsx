@@ -86,14 +86,14 @@ const CHAPTERS: Chapter[] = [
     number: '03',
     tag: 'ARTISANAL SCULPTING',
     titleEn: 'Master Hand-Carving & Contouring',
-    titleId: 'Pahat Seni Tangan Pengrajin Jepara',
-    descEn: 'Sculptural organic ergonomics carved entirely by hand. Jepara artisans with generations of lineage bring warmth and fluid curves to every surface, transforming rigid timber into living art.',
-    descId: 'Ergonomi organik skulptural yang dipahat sepenuhnya dengan tangan. Pengrajin Jepara turun-temurun menghadirkan kehangatan lekuk dinamis, mengubah balok kaku menjadi mahakarya.',
+    titleId: 'Pahat Seni Tangan Pengrajin Kudus',
+    descEn: 'Sculptural organic ergonomics carved entirely by hand. Kudus artisans with generations of lineage bring warmth and fluid curves to every surface, transforming rigid timber into living art.',
+    descId: 'Ergonomi organik skulptural yang dipahat sepenuhnya dengan tangan. Pengrajin Kudus turun-temurun menghadirkan kehangatan lekuk dinamis, mengubah balok kaku menjadi mahakarya.',
     accent: '#483124', // Cocoa Brown
     accentRgb: '72, 49, 36',
     image: carvingImg,
     specs: [
-      { labelEn: 'CARVING HERITAGE', labelId: 'WARISAN PAHAT', val: 'JEPARA ARTISAN GUILD' },
+      { labelEn: 'CARVING HERITAGE', labelId: 'WARISAN PAHAT', val: 'KUDUS ARTISAN GUILD' },
       { labelEn: 'SURFACE DETAIL', labelId: 'DETAIL PERMUKAAN', val: 'ORGANIC TACTILE RELIEF' },
       { labelEn: 'EXECUTION TIME', labelId: 'WAKTU PENGERJAAN', val: '48+ HOURS / PIECE' }
     ],
@@ -317,7 +317,7 @@ export function CraftScrollytelling() {
                 <div className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-brand-terracotta text-sm">carpenter</span>
                   <span className="font-serif font-bold text-[#FDFBF6] tracking-wide text-xs">
-                    {isId ? 'Catatan Empu Jepara' : 'Master Artisan Ledger'}
+                    {isId ? 'Catatan Empu Kudus' : 'Master Artisan Ledger'}
                   </span>
                 </div>
                 <span className="text-[10px] text-[#FDFBF6]/40 uppercase tracking-wider font-medium">

@@ -1,6 +1,6 @@
 {
   "upbar": {
-    "location": "Workshop & Galeri: Kudus – Jepara, Jawa Tengah",
+    "location": "Workshop & Galeri: Kudus, Jawa Tengah",
     "badge": "100% Kayu Jati Solid Pilihan · Garansi Mutu & Finishing Alami",
     "shipping": "Pengiriman Seluruh Nusantara & Ekspor Internasional",
     "hours": "Senin – Sabtu: 08.00 – 17.00 WIB",
@@ -15,7 +15,7 @@
     "products": "Produk",
     "production": "Produksi & Pengiriman",
     "contact": "Kontak",
-    "tagline": "Kriya Kayu Jati Jepara · Est. 1994",
+    "tagline": "Kriya Kayu Jati Kudus · Est. 1994",
     "mobileTitle": "Navigasi Koleksi",
     "mobileSubtitle": "Kriya Jati Solid",
     "consultation": "Konsultasi Desain",
@@ -38,7 +38,7 @@
       "whatsapp": "WhatsApp",
       "email": "Email Kami",
       "locationTitle": "Lokasi",
-      "locationDesc": "Jln. Lingkar Selatan Kudus-Jepara km 3, Desa Pasuruhan kidul, Kota Kudus"
+      "locationDesc": "Jln. Lingkar Selatan Kudus km 3, Desa Pasuruhan kidul, Kota Kudus"
     },
     "copyright": "2026 Pandawa Furniture. Dibuat dengan sepenuh hati di Indonesia."
   },
@@ -59,7 +59,7 @@
       "desc1": "Menghargai keindahan sumber daya alam Indonesia melalui pengerjaan yang bertanggung jawab.",
       "sourceLabel": "Sumber Kayu",
       "sourceVal": "Jati Perhutani Legal",
-      "badge2": "Pengrajin Jepara",
+      "badge2": "Pengrajin Kudus",
       "title2": "Dibuat oleh Pengrajin",
       "desc2": "Berkolaborasi dengan pengrajin lokal Indonesia, memberdayakan komunitas dan melestarikan keterampilan tradisional.",
       "traditionLabel": "Tradisi Ukir",
@@ -88,11 +88,11 @@
   },
   "about": {
     "hero": {
-      "badge": "Warisan Kriya Sejak 1994 · Jepara",
+      "badge": "Warisan Kriya Sejak 1994 · Kudus",
       "headlinePart1": "Dua Dekade Merawat",
       "headlineHighlight": "Keindahan Abadi",
       "headlinePart2": "Kayu Jati Alami.",
-      "subtext": "Berakar dari pusat ukir dan mebel legendaris di Jepara, Pandawa Furniture meneruskan dedikasi turun-temurun para empu kriya kayu. Setiap meja makan, credenza berbilah, dan kursi santai dibuat dengan tangan dari kayu jati pilihan, dirakit melalui sambungan pasak tradisional tanpa paku, dan disempurnakan dengan minyak nabati alami.",
+      "subtext": "Berakar dari pusat ukir dan mebel legendaris di Kudus, Pandawa Furniture meneruskan dedikasi turun-temurun para empu kriya kayu. Setiap meja makan, credenza berbilah, dan kursi santai dibuat dengan tangan dari kayu jati pilihan, dirakit melalui sambungan pasak tradisional tanpa paku, dan disempurnakan dengan minyak nabati alami.",
       "pillars": {
         "woodSource": "JENIS KAYU",
         "woodSourceVal": "Jati Perhutani",
@@ -108,13 +108,13 @@
       "btnProcess": "Proses Pembuatan",
       "artisanName": "Pak Alex · Owner Pandawa Furniture",
       "artisanExp": "Pengalaman 32+ Tahun",
-      "artisanBadge": "Dedikasi Kriya Jepara",
+      "artisanBadge": "Dedikasi Kriya Kudus",
       "artisanQuote": "\"Setiap bilah kayu memiliki jiwa dan alur seratnya sendiri. Tugas kami adalah merawatnya dengan sabar agar menjadi karya yang hidup di rumah Anda selama bergenerasi.\""
     },
     "stats": {
       "experience": "Tahun Pengalaman Kriya",
       "wood": "Kayu Jati Legal & Terpilih",
-      "artisans": "Empu Pengrajin Jepara",
+      "artisans": "Empu Pengrajin Kudus",
       "furniture": "Karya Furniture Terwujud"
     },
     "foundation": {
@@ -183,7 +183,7 @@
     },
     "card": {
       "badge": "Karya Pandawa",
-      "origin": "Kriya Jepara",
+      "origin": "Kriya Kudus",
       "inquire": "Konsultasi Produk"
     },
     "customSize": {

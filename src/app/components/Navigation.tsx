@@ -172,7 +172,7 @@ export function Navigation() {
           <div className="p-3.5 rounded-2xl bg-[#231A13] text-[#F3ECE4] text-xs mb-5 flex flex-col gap-2 shadow-inner">
             <div className="flex items-center justify-between">
               <span className="text-brand-terracotta font-serif font-bold text-sm">
-                Pandawa Jepara
+                Pandawa Kudus
               </span>
               <span className="inline-flex items-center gap-1 font-mono text-[9px] bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/30">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />

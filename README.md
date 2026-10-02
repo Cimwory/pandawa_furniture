@@ -1,13 +1,13 @@
 # 🪵 Pandawa Furniture — Artisan Earth & Timber
 
-> **Website Resmi & Katalog Digital Kriya Mebel Kayu Jati Jepara**  
+> **Website Resmi & Katalog Digital Kriya Mebel Kayu Jati Kudus**  
 > *Blending Generational Indonesian Woodcraft with Contemporary Architectural Aesthetics.*
 
 ---
 
 ## 🌟 Tentang Pandawa Furniture
 
-Berakar dari pusat kriya ukir dan pertukangan kayu legendaris di **Kudus & Jepara, Jawa Tengah**, **Pandawa Furniture** mewarisi dedikasi turun-temurun para empu pengrajin kayu. 
+Berakar dari pusat kriya ukir dan pertukangan kayu legendaris di **Kudus, Jawa Tengah**, **Pandawa Furniture** mewarisi dedikasi turun-temurun para empu pengrajin kayu. 
 
 Setiap perabot—mulai dari meja makan jati solid, credenza berbilah arsitektural, kursi santai ergonomis, hingga wastafel pahatan batu kali—dikerjakan secara kriya tangan (*handcrafted*) dengan prinsip:
 * **Kayu Jati Berkelanjutan**: Menggunakan kayu jati Perhutani legal dan *reclaimed teak* berusia puluhan tahun dengan kadar air yang terjaga presisi.

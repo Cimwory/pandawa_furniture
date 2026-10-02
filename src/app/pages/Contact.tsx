@@ -112,7 +112,7 @@ export function Contact() {
               </div>
               <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-2 font-semibold">{t('contact.info.location')}</h3>
               <p className="font-body-md text-body-md text-brand-dark-earth/75 leading-relaxed">
-                Jln. Lingkar Selatan Kudus-Jepara km 3,<br />
+                Jln. Lingkar Selatan Kudus km 3,<br />
                 Desa Pasuruhan kidul, Kota Kudus
               </p>
             </div>

@@ -48,8 +48,8 @@ export function Home() {
       categoryName: isId ? 'Meja Luar Ruang' : 'Outdoor Table',
     },
     {
-      id: 'jepara',
-      title: isId ? "Lemari Kaca Ukir Pusaka Jepara" : "Jepara Classic Heritage Cabinet",
+      id: 'kudus',
+      title: isId ? "Lemari Kaca Ukir Pusaka Kudus" : "Kudus Classic Heritage Cabinet",
       subtitle: isId ? "Lemari Pajang Ukir Tradisional Warisan" : "Hand-Carved Traditional Heritage Armoire",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDtN1RhIbtMCdwlejV1YrJA7ufvcR0haAxAo1v4Mca6lsIcLGHZAE5LC-SZSKjwSQZ-2KO2tKxQ0DzNv7hKi-o_ul-QZIlquzFwxZoH1_pHNVOSYlgrvt9Pswm8ro6-_uVl2NMW9p4Tz0EEhWymihO27J7g5CGDngeQ2HnpwT_R-WhXe6R08SMrdeRK6ChRm7rnQk4_rhtjsOHvOT6cBwQXA8N0zEjVwzfNWL_YZdTsNLVXkt_jtXb-Mg",
       categoryName: isId ? 'Lemari Hias' : 'Display Cabinet',
