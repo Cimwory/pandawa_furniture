@@ -150,7 +150,7 @@ export function About() {
               <div className="relative h-[460px] sm:h-[520px] w-full overflow-hidden bg-[#2D241B]/5">
                 <ImageWithFallback
                   src={artisanImg}
-                  alt="Pak Alex - Master Craftsman at Pandawa Furniture Workshop"
+                  alt="Owner of Pandawa Furniture Workshop"
                   className="object-cover object-center w-full h-full transition-transform duration-700 ease-out group-hover:scale-104"
                 />
 
