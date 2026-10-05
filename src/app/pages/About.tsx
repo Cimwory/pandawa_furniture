@@ -190,7 +190,7 @@ export function About() {
           </div>
           <div className="p-4">
             <div className="font-serif text-4xl md:text-5xl font-bold text-brand-terracotta mb-2">
-              <CountUp to={1200} prefix="" suffix="+" duration={2.5} separator="," />
+              <CountUp to={20} suffix="+" duration={2.0} />
             </div>
             <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70">
               {t('about.stats.furniture')}
