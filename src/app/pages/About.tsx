@@ -182,10 +182,10 @@ export function About() {
           </div>
           <div className="p-4">
             <div className="font-serif text-4xl md:text-5xl font-bold text-brand-cocoa-brown mb-2">
-              <CountUp to={45} suffix="+" duration={2.0} />
+              <CountUp to={1000} suffix="+" duration={2.0} separator="," />
             </div>
             <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70">
-              {t('about.stats.artisans')}
+              {t('about.stats.shipped')}
             </p>
           </div>
           <div className="p-4">

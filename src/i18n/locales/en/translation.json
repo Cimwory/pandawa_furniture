@@ -113,8 +113,9 @@
     },
     "stats": {
       "experience": "Years of Woodcraft Mastery",
-      "wood": "Certified Legal Teak",
-      "artisans": "Master Kudus Artisans",
+      "wood": "Recycle Teak Wood",
+      "shipped": "Shipped",
+      "artisans": "Shipped",
       "furniture": "Heirloom Pieces Crafted"
     },
     "foundation": {
