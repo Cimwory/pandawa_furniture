@@ -57,6 +57,8 @@
   --color-brand-cream: #FDFBF6;
 
   /* Typography */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Source Sans 3", sans-serif;
   --font-headline-md: "Syne", sans-serif;
   --font-body-lg: "Source Sans 3", sans-serif;
   --font-label-md: "Source Sans 3", sans-serif;
