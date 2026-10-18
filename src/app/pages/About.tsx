@@ -61,66 +61,29 @@ export function About() {
             </h1>
 
             {/* Narrative Subtext */}
-            <p className="text-base md:text-lg text-brand-dark-earth/80 leading-relaxed mb-8 max-w-xl font-sans">
+            <p className="text-base md:text-lg text-brand-dark-earth/80 leading-relaxed mb-10 max-w-xl font-sans">
               {t('about.hero.subtext')}
             </p>
 
-            {/* Three Craft Pillars */}
-            <div className="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-white/90 border border-brand-dark-earth/10 shadow-sm backdrop-blur-sm mb-8">
-              <div className="p-1 text-left">
-                <span className="block text-[11px] font-medium tracking-wider text-brand-dark-earth/60 uppercase mb-1">
-                  {t('about.hero.pillars.woodSource')}
-                </span>
-                <span className="font-serif font-bold text-brand-dark-earth text-sm block">
-                  {t('about.hero.pillars.woodSourceVal')}
-                </span>
-                <span className="text-[11px] text-brand-deep-olive font-medium">
-                  {t('about.hero.pillars.woodSourceSub')}
-                </span>
-              </div>
-              <div className="p-1 text-left border-x border-brand-dark-earth/10 px-3">
-                <span className="block text-[11px] font-medium tracking-wider text-brand-dark-earth/60 uppercase mb-1">
-                  {t('about.hero.pillars.construction')}
-                </span>
-                <span className="font-serif font-bold text-brand-dark-earth text-sm block">
-                  {t('about.hero.pillars.constructionVal')}
-                </span>
-                <span className="text-[11px] text-brand-terracotta font-medium">
-                  {t('about.hero.pillars.constructionSub')}
-                </span>
-              </div>
-              <div className="p-1 text-left pl-2">
-                <span className="block text-[11px] font-medium tracking-wider text-brand-dark-earth/60 uppercase mb-1">
-                  {t('about.hero.pillars.finishing')}
-                </span>
-                <span className="font-serif font-bold text-brand-dark-earth text-sm block">
-                  {t('about.hero.pillars.finishingVal')}
-                </span>
-                <span className="text-[11px] text-brand-dark-earth/70 font-medium">
-                  {t('about.hero.pillars.finishingSub')}
-                </span>
-              </div>
-            </div>
-
-            {/* Clean, Tactile Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4">
-              <Magnet magnetStrength={0.2}>
+            {/* Clean, Tactile Action Buttons - Enlarged and moved up */}
+            <div className="flex flex-wrap items-center gap-4 sm:gap-5">
+              <Magnet magnetStrength={0.2} className="w-full sm:w-auto">
                 <button
                   onClick={scrollToFoundation}
-                  className="inline-flex items-center gap-2 bg-brand-terracotta text-white h-13 px-8 rounded-full text-sm font-medium hover:bg-[#a55825] shadow-lg shadow-brand-terracotta/25 hover:shadow-xl hover:shadow-brand-terracotta/35 transition-all duration-300"
+                  className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-terracotta text-white h-14 sm:h-16 px-8 sm:px-10 rounded-full text-base font-semibold hover:bg-[#a55825] shadow-lg shadow-brand-terracotta/25 hover:shadow-xl hover:shadow-brand-terracotta/35 transition-all duration-300 cursor-pointer"
                 >
                   <span>{t('about.hero.btnPhilosophy')}</span>
-                  <span className="text-xs">↓</span>
+                  <span className="text-sm transition-transform duration-300 group-hover:translate-y-1">↓</span>
                 </button>
               </Magnet>
 
-              <Magnet magnetStrength={0.15}>
+              <Magnet magnetStrength={0.15} className="w-full sm:w-auto">
                 <Link
                   to="/production"
-                  className="inline-flex items-center gap-2 border border-brand-dark-earth/20 bg-white/80 hover:bg-white text-brand-dark-earth h-13 px-7 rounded-full text-sm font-medium hover:border-brand-dark-earth transition-all shadow-sm"
+                  className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 border-2 border-brand-dark-earth/20 bg-white/90 hover:bg-white text-brand-dark-earth h-14 sm:h-16 px-8 sm:px-9 rounded-full text-base font-semibold hover:border-brand-dark-earth transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   <span>{t('about.hero.btnProcess')}</span>
-                  <span className="text-xs">→</span>
+                  <span className="text-sm transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </Link>
               </Magnet>
             </div>

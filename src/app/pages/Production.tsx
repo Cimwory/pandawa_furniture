@@ -98,7 +98,7 @@ export function Production() {
             className="p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 bg-white"
           >
             <div className="w-16 h-16 rounded-full bg-brand-cocoa-brown text-white flex items-center justify-center mb-6 shadow-sm">
-              <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>shield</span>
+              <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>inventory_2</span>
             </div>
             <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">STEP 03</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s3.title')}</h3>
