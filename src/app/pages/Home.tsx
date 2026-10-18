@@ -4,7 +4,10 @@ import { useState } from 'react';
 import heroBg from '../assets/2874e70677e9347f1c498bc483444526782683b2.png';
 import floresTableImg from '../assets/flores_dining_table.jpg';
 import teakVanityImg from '../assets/teak_stone_vanity.jpg';
-import acehCredensaImg from '../assets/aceh_credensa_cabinet.png';
+import rusticVanityImg from '../assets/rustic_live_edge_vanity.jpg';
+import baliCoffeeTableImg from '../assets/bali_coffee_table.jpg';
+import kudusCabinetImg from '../assets/kudus_heritage_cabinet.png';
+import sumatraCredenzaImg from '../assets/sumatra_media_credenza.png';
 import { VisualShowcase } from '../components/VisualShowcase';
 import {
   SplitText,
@@ -38,31 +41,31 @@ export function Home() {
     },
     {
       id: 'aceh',
-      title: isId ? "Bufet Minimalis Jati Aceh" : "Aceh Minimalist Indoor Credenza",
-      subtitle: isId ? "Bufet Minimalis Kayu Jati Daur Ulang" : "Reclaimed Teak Minimalist Credenza",
-      image: acehCredensaImg,
-      categoryName: isId ? 'Bufet & Kredensa' : 'Sideboard & Credenza',
+      title: isId ? "Konsol Wastafel Jati Alami Aceh" : "Aceh Live-Edge Teak Vanity Console",
+      subtitle: isId ? "Meja Konsol Wastafel Kayu Jati Tepi Alami" : "Live-Edge Solid Teak Bathroom Vanity Console",
+      image: rusticVanityImg,
+      categoryName: isId ? 'Wastafel Alami' : 'Live-Edge Vanity',
     },
     {
       id: 'bali',
-      title: isId ? "Meja Teras Jati Luar Ruang Bali" : "Bali Weather-Resistant Sun Table",
-      subtitle: isId ? "Meja Teras Jati Tahan Cuaca Tropis" : "Weather-Resistant Outdoor Teak Table",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCKxRORyTe_o3kx0H7z8Q_Xe1gAfZ97mhvusyBcDgJM7ucVQNyJgHtaSaflUxtfKXRluKbRFlXCBazSY5kksiaDyggVXxGphXDTt7GMco1xLRBEgi7_Iz0qieg3eTBoixoVHBbyGGomnX5gSrS7K33-tnzGBi02gWtA0xcDMoXx7zTkC_JkNGEKBQHBYmMTHSXf-qdNtIWUvB9D3MHKu-Lti0PcNA-z6LFQvrgVsHd5voahelO2h0VqTg",
-      categoryName: isId ? 'Meja Luar Ruang' : 'Outdoor Table',
+      title: isId ? "Meja Kopi Jati Ruang Tamu Bali" : "Bali Living Room Teak Coffee Table",
+      subtitle: isId ? "Meja Kopi Kayu Jati dengan Laci Penyimpanan" : "Solid Teak Coffee Table with Storage Drawers",
+      image: baliCoffeeTableImg,
+      categoryName: isId ? 'Meja Kopi' : 'Coffee Table',
     },
     {
       id: 'kudus',
-      title: isId ? "Lemari Kaca Ukir Pusaka Kudus" : "Kudus Classic Heritage Cabinet",
-      subtitle: isId ? "Lemari Pajang Ukir Tradisional Warisan" : "Hand-Carved Traditional Heritage Armoire",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDtN1RhIbtMCdwlejV1YrJA7ufvcR0haAxAo1v4Mca6lsIcLGHZAE5LC-SZSKjwSQZ-2KO2tKxQ0DzNv7hKi-o_ul-QZIlquzFwxZoH1_pHNVOSYlgrvt9Pswm8ro6-_uVl2NMW9p4Tz0EEhWymihO27J7g5CGDngeQ2HnpwT_R-WhXe6R08SMrdeRK6ChRm7rnQk4_rhtjsOHvOT6cBwQXA8N0zEjVwzfNWL_YZdTsNLVXkt_jtXb-Mg",
-      categoryName: isId ? 'Lemari Hias' : 'Display Cabinet',
+      title: isId ? "Lemari Bilah Jati Pusaka Kudus" : "Kudus Louvre Teak Heritage Cabinet",
+      subtitle: isId ? "Lemari Bilah Kayu Jati dengan 3 Laci Fungsional" : "Louvred Solid Teak Cabinet with 3 Top Drawers",
+      image: kudusCabinetImg,
+      categoryName: isId ? 'Lemari Bilah' : 'Louvre Cabinet',
     },
     {
       id: 'sumatra',
-      title: isId ? "Bale Santai Minimalis Modern Sumatra" : "Sumatra Modern Low Daybed",
-      subtitle: isId ? "Bale Santai Desain Ergonomis Kontemporer" : "Contemporary Low Profile Teak Daybed",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHl52K8OgYNtkt439xcTQGjymV5DNOxA_4cPNLOjM4N-TTZ5oMStVdEYttKgucYnE6d1xK35fn2IftA9csLnqjPRVcztxmTOyN9wXmtmfrcOxEtSs9DunTeK5U4oyyOR7eL_TpkBFwaq9b38x_GBxkTl2CsG-R_PcwwMQaA5DohdRtR-v29rcS8mm3hAe-qJgWO3xWbmt46A8YIUusyjDFKbBsbkXfs4VJalMuWJQbwCFX5HXPybbJCw",
-      categoryName: isId ? 'Bale Santai' : 'Daybed Lounge',
+      title: isId ? "Kredensa Media TV Jati Modern Sumatra" : "Sumatra Modern Teak Media Credenza",
+      subtitle: isId ? "Kredensa TV Kayu Jati 4 Laci & Rak Terbuka" : "Solid Teak Media TV Console with 4 Drawers",
+      image: sumatraCredenzaImg,
+      categoryName: isId ? 'Kredensa TV' : 'Media Credenza',
     },
   ];
 
