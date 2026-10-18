@@ -2,6 +2,9 @@ import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import heroBg from '../assets/2874e70677e9347f1c498bc483444526782683b2.png';
+import floresTableImg from '../assets/flores_dining_table.jpg';
+import teakVanityImg from '../assets/teak_stone_vanity.jpg';
+import acehCredensaImg from '../assets/aceh_credensa_cabinet.png';
 import { VisualShowcase } from '../components/VisualShowcase';
 import {
   SplitText,
@@ -23,21 +26,21 @@ export function Home() {
       id: 'flores',
       title: isId ? "Meja Makan Jati Flores" : "Flores Teak Dining Table",
       subtitle: isId ? "Meja Makan Kayu Jati Solid Pilihan" : "Solid Reclaimed Teak Dining Table",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDtN1RhIbtMCdwlejV1YrJA7ufvcR0haAxAo1v4Mca6lsIcLGHZAE5LC-SZSKjwSQZ-2KO2tKxQ0DzNv7hKi-o_ul-QZIlquzFwxZoH1_pHNVOSYlgrvt9Pswm8ro6-_uVl2NMW9p4Tz0EEhWymihO27J7g5CGDngeQ2HnpwT_R-WhXe6R08SMrdeRK6ChRm7rnQk4_rhtjsOHvOT6cBwQXA8N0zEjVwzfNWL_YZdTsNLVXkt_jtXb-Mg",
+      image: floresTableImg,
       categoryName: isId ? 'Meja Makan' : 'Dining Table',
     },
     {
       id: 'mandeling',
-      title: isId ? "Kursi Santai Lengkung Mandeling" : "Mandeling Sculptural Lounge Chair",
-      subtitle: isId ? "Kursi Santai Lengkung Ergonomis" : "Ergonomic Sculptural Lounge Chair",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHl52K8OgYNtkt439xcTQGjymV5DNOxA_4cPNLOjM4N-TTZ5oMStVdEYttKgucYnE6d1xK35fn2IftA9csLnqjPRVcztxmTOyN9wXmtmfrcOxEtSs9DunTeK5U4oyyOR7eL_TpkBFwaq9b38x_GBxkTl2CsG-R_PcwwMQaA5DohdRtR-v29rcS8mm3hAe-qJgWO3xWbmt46A8YIUusyjDFKbBsbkXfs4VJalMuWJQbwCFX5HXPybbJCw",
-      categoryName: isId ? 'Kursi Santai' : 'Lounge Chair',
+      title: isId ? "Meja Wastafel Jati & Batu Kali" : "Teak & River Stone Vanity Sink",
+      subtitle: isId ? "Meja Wastafel Kayu Jati dengan Wastafel Batu Pahat" : "Solid Teak Vanity with Handcrafted Stone Basin",
+      image: teakVanityImg,
+      categoryName: isId ? 'Vanity Wastafel' : 'Teak Stone Vanity',
     },
     {
       id: 'aceh',
       title: isId ? "Bufet Minimalis Jati Aceh" : "Aceh Minimalist Indoor Credenza",
       subtitle: isId ? "Bufet Minimalis Kayu Jati Daur Ulang" : "Reclaimed Teak Minimalist Credenza",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAdYUfhQA_B14kFpNWW0-eT7xIFFssAUZtGACQrjIaKcilCUei5OYRFS6yX97iM4djnncwa9uNMv-UL7OCrkAUESwzKaD6Kd3gaJvBYal5vRGR05u2Tv8Q8XK8jMb9kId8uAnOeKl4_vzIzuOLFHExCzfmo_3E075DccXBO_5Zus8wkUjpylMEluOQSnaXKc40oHIntW66LzLY0OPrIpSttPYd06b_i22tIpPsHKZCczfWF9ZkZKMzR6w",
+      image: acehCredensaImg,
       categoryName: isId ? 'Bufet & Kredensa' : 'Sideboard & Credenza',
     },
     {
@@ -142,82 +145,67 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Value 1 */}
             <SpotlightCard
-              spotlightColor="rgba(80, 100, 67, 0.15)"
-              borderColor="rgba(80, 100, 67, 0.3)"
-              className="p-8 shadow-level1 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-300 bg-white rounded-2xl relative"
+              spotlightColor="rgba(255, 255, 255, 0.25)"
+              borderColor="rgba(255, 255, 255, 0.5)"
+              className="p-8 shadow-md shadow-brand-terracotta/20 flex flex-col justify-start transition-transform hover:-translate-y-1 duration-300 bg-brand-terracotta border border-white/20 rounded-2xl relative text-white"
             >
               <div>
-                <div className="flex items-center justify-between border-b border-brand-dark-earth/10 pb-3 mb-6 text-xs">
-                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-medium">
+                <div className="flex items-center justify-between border-b border-white/20 pb-3 mb-6 text-xs">
+                  <span className="px-2.5 py-0.5 rounded-full bg-white/20 text-white border border-white/30 font-medium">
                     {t('home.values.badge1')}
                   </span>
-                  <span className="text-brand-dark-earth/50">01</span>
+                  <span className="text-white/70">01</span>
                 </div>
 
-                <div className="w-14 h-14 rounded-2xl bg-brand-deep-olive/10 flex items-center justify-center mb-6 text-brand-deep-olive">
+                <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center mb-6 text-white">
                   <span className="material-symbols-outlined text-3xl">nest_eco_leaf</span>
                 </div>
-                <h3 className="font-serif text-xl text-brand-dark-earth mb-3 font-bold">{t('home.values.title1')}</h3>
-                <p className="text-sm text-brand-dark-earth/75 leading-relaxed mb-6">{t('home.values.desc1')}</p>
-              </div>
-
-              <div className="pt-3 border-t border-brand-dark-earth/10 flex items-center justify-between text-xs text-brand-dark-earth/70">
-                <span>{t('home.values.sourceLabel')}</span>
-                <span className="font-bold text-brand-deep-olive">{t('home.values.sourceVal')}</span>
+                <h3 className="font-serif text-xl text-white mb-3 font-bold">{t('home.values.title1')}</h3>
+                <p className="text-sm text-white/90 leading-relaxed">{t('home.values.desc1')}</p>
               </div>
             </SpotlightCard>
             
             {/* Value 2 */}
             <SpotlightCard
-              spotlightColor="rgba(72, 49, 36, 0.15)"
-              borderColor="rgba(72, 49, 36, 0.3)"
-              className="p-8 shadow-level1 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-300 bg-white rounded-2xl relative"
+              spotlightColor="rgba(255, 255, 255, 0.25)"
+              borderColor="rgba(255, 255, 255, 0.5)"
+              className="p-8 shadow-md shadow-brand-terracotta/20 flex flex-col justify-start transition-transform hover:-translate-y-1 duration-300 bg-brand-terracotta border border-white/20 rounded-2xl relative text-white"
             >
               <div>
-                <div className="flex items-center justify-between border-b border-brand-dark-earth/10 pb-3 mb-6 text-xs">
-                  <span className="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-900 border border-amber-200 font-medium">
+                <div className="flex items-center justify-between border-b border-white/20 pb-3 mb-6 text-xs">
+                  <span className="px-2.5 py-0.5 rounded-full bg-white/20 text-white border border-white/30 font-medium">
                     {t('home.values.badge2')}
                   </span>
-                  <span className="text-brand-dark-earth/50">02</span>
+                  <span className="text-white/70">02</span>
                 </div>
 
-                <div className="w-14 h-14 rounded-2xl bg-brand-cocoa-brown/10 flex items-center justify-center mb-6 text-brand-cocoa-brown">
+                <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center mb-6 text-white">
                   <span className="material-symbols-outlined text-3xl">group</span>
                 </div>
-                <h3 className="font-serif text-xl text-brand-dark-earth mb-3 font-bold">{t('home.values.title2')}</h3>
-                <p className="text-sm text-brand-dark-earth/75 leading-relaxed mb-6">{t('home.values.desc2')}</p>
-              </div>
-
-              <div className="pt-3 border-t border-brand-dark-earth/10 flex items-center justify-between text-xs text-brand-dark-earth/70">
-                <span>{t('home.values.traditionLabel')}</span>
-                <span className="font-bold text-brand-cocoa-brown">{t('home.values.traditionVal')}</span>
+                <h3 className="font-serif text-xl text-white mb-3 font-bold">{t('home.values.title2')}</h3>
+                <p className="text-sm text-white/90 leading-relaxed">{t('home.values.desc2')}</p>
               </div>
             </SpotlightCard>
             
             {/* Value 3 */}
             <SpotlightCard
-              spotlightColor="rgba(190, 115, 61, 0.15)"
-              borderColor="rgba(190, 115, 61, 0.3)"
-              className="p-8 shadow-level1 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-300 bg-white rounded-2xl relative"
+              spotlightColor="rgba(255, 255, 255, 0.25)"
+              borderColor="rgba(255, 255, 255, 0.5)"
+              className="p-8 shadow-md shadow-brand-terracotta/20 flex flex-col justify-start transition-transform hover:-translate-y-1 duration-300 bg-brand-terracotta border border-white/20 rounded-2xl relative text-white"
             >
               <div>
-                <div className="flex items-center justify-between border-b border-brand-dark-earth/10 pb-3 mb-6 text-xs">
-                  <span className="px-2.5 py-0.5 rounded-full bg-red-50 text-red-800 border border-red-200 font-medium">
+                <div className="flex items-center justify-between border-b border-white/20 pb-3 mb-6 text-xs">
+                  <span className="px-2.5 py-0.5 rounded-full bg-white/20 text-white border border-white/30 font-medium">
                     {t('home.values.badge3')}
                   </span>
-                  <span className="text-brand-dark-earth/50">03</span>
+                  <span className="text-white/70">03</span>
                 </div>
 
-                <div className="w-14 h-14 rounded-2xl bg-brand-terracotta/10 flex items-center justify-center mb-6 text-brand-terracotta">
+                <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center mb-6 text-white">
                   <span className="material-symbols-outlined text-3xl">auto_awesome</span>
                 </div>
-                <h3 className="font-serif text-xl text-brand-dark-earth mb-3 font-bold">{t('home.values.title3')}</h3>
-                <p className="text-sm text-brand-dark-earth/75 leading-relaxed mb-6">{t('home.values.desc3')}</p>
-              </div>
-
-              <div className="pt-3 border-t border-brand-dark-earth/10 flex items-center justify-between text-xs text-brand-dark-earth/70">
-                <span>{t('home.values.constructionLabel')}</span>
-                <span className="font-bold text-brand-terracotta">{t('home.values.constructionVal')}</span>
+                <h3 className="font-serif text-xl text-white mb-3 font-bold">{t('home.values.title3')}</h3>
+                <p className="text-sm text-white/90 leading-relaxed">{t('home.values.desc3')}</p>
               </div>
             </SpotlightCard>
           </div>

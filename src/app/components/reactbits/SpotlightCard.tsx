@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { cn } from '../ui/utils';
 
 interface SpotlightCardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
@@ -46,6 +47,8 @@ export const SpotlightCard: React.FC<SpotlightCardProps> = ({
     setOpacity(0);
   };
 
+  const hasCustomBg = className.includes('bg-');
+
   return (
     <div
       ref={divRef}
@@ -54,7 +57,11 @@ export const SpotlightCard: React.FC<SpotlightCardProps> = ({
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative rounded-xl border border-[#2D241B]/10 overflow-hidden bg-white dark:bg-[#2D241B]/20 transition-all duration-300 ${className}`}
+      className={cn(
+        "relative rounded-xl border border-[#2D241B]/10 overflow-hidden transition-all duration-300",
+        !hasCustomBg && "bg-white dark:bg-[#2D241B]/20",
+        className
+      )}
       {...props}
     >
       <div
