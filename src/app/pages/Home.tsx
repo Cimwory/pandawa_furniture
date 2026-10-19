@@ -48,24 +48,24 @@ export function Home() {
     },
     {
       id: 'bali',
-      title: isId ? "Meja Kopi Jati Ruang Tamu Bali" : "Bali Living Room Teak Coffee Table",
+      title: "Coffee Tables",
       subtitle: isId ? "Meja Kopi Kayu Jati dengan Laci Penyimpanan" : "Solid Teak Coffee Table with Storage Drawers",
       image: baliCoffeeTableImg,
-      categoryName: isId ? 'Meja Kopi' : 'Coffee Table',
+      categoryName: isId ? 'Meja Kopi' : 'Coffee Tables',
     },
     {
       id: 'aceh',
-      title: isId ? "Konsol Wastafel Jati Alami Aceh" : "Aceh Live-Edge Teak Vanity Console",
-      subtitle: isId ? "Meja Konsol Wastafel Kayu Jati Tepi Alami" : "Live-Edge Solid Teak Bathroom Vanity Console",
+      title: "Dressoir set",
+      subtitle: isId ? "Bufet & Meja Konsol Kayu Jati Solid Pilihan" : "Solid Teak Dressoir & Sideboard Console",
       image: rusticVanityImg,
-      categoryName: isId ? 'Wastafel Alami' : 'Live-Edge Vanity',
+      categoryName: isId ? 'Set Dressoir' : 'Dressoir Set',
     },
     {
       id: 'sumatra',
-      title: isId ? "Kredensa Media TV Jati Modern Sumatra" : "Sumatra Modern Teak Media Credenza",
+      title: "TV Room set",
       subtitle: isId ? "Kredensa TV Kayu Jati 4 Laci & Rak Terbuka" : "Solid Teak Media TV Console with 4 Drawers",
       image: sumatraCredenzaImg,
-      categoryName: isId ? 'Kredensa TV' : 'Media Credenza',
+      categoryName: isId ? 'Set Ruang TV' : 'TV Room Set',
     },
   ];
 
