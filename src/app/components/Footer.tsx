@@ -43,7 +43,7 @@ export function Footer() {
         <div>
           <h4 className="font-label-md text-label-md text-primary dark:text-primary-fixed-dim font-bold mb-4 uppercase tracking-wider">{t('footer.connect.title')}</h4>
           <div className="space-y-3 font-body-md text-body-md mb-6">
-            <a href="https://wa.me/" className="flex items-center space-x-2 text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out">
+            <a href="https://wa.me/6285168628421" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out">
               <MessageCircle size={18} />
               <span>{t('footer.connect.whatsapp')}</span>
             </a>

@@ -26,7 +26,7 @@ export function Navigation() {
   };
 
   const whatsappUrl =
-    'https://wa.me/6281234567890?text=Halo%20Pandawa%20Furniture%2C%20saya%20tertarik%20konsultasi%20pesanan%20kriya%20kayu%20jati';
+    'https://wa.me/6285168628421?text=Halo%20Pandawa%20Furniture%2C%20saya%20tertarik%20konsultasi%20pesanan%20kriya%20kayu%20jati';
 
   return (
     <header className="fixed top-0 w-full z-50 transition-all duration-300 shadow-xs">

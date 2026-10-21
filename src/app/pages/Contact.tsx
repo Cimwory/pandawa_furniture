@@ -137,9 +137,11 @@ export function Contact() {
           size={1.6}
         />
         <div className="relative z-10 max-w-3xl mx-auto">
-          <h2 className="font-display-lg text-[42px] md:text-[48px] text-brand-cream mb-6 leading-tight">Ready to craft your legacy?</h2>
+          <h2 className="font-display-lg text-[42px] md:text-[48px] text-brand-cream mb-6 leading-tight">
+            {t('contact.cta.title')}
+          </h2>
           <p className="font-body-lg text-body-lg text-brand-cream/85 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Every piece tells a story. Let us help you tell yours with sustainable, handcrafted precision.
+            {t('contact.cta.desc')}
           </p>
           <Magnet magnetStrength={0.3}>
             <StarBorder color="#ffffff" speed="3s">
@@ -147,7 +149,7 @@ export function Contact() {
                 to="/products" 
                 className="inline-flex items-center justify-center bg-brand-terracotta text-white font-label-md text-label-md px-10 h-14 rounded-full hover:bg-[#d6854b] shadow-2xl shadow-brand-terracotta/40 transition-all duration-300 font-semibold"
               >
-                <ShinyText text="Start a Project" color="#ffffff" shineColor="#ffdcc7" speed={2.5} />
+                <ShinyText text={t('contact.cta.button')} color="#ffffff" shineColor="#ffdcc7" speed={2.5} />
               </Link>
             </StarBorder>
           </Magnet>

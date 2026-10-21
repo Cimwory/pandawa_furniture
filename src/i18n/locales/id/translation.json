@@ -22,7 +22,7 @@
     "mobileConsultation": "Konsultasi Desain & Pemesanan"
   },
   "footer": {
-    "desc": "Keanggunan abadi dari kayu jati daur ulang Indonesia.",
+    "desc": "Keanggunan abadi kriya mebel kayu jati solid dan ramah lingkungan dari pengrajin Kudus, Jawa Tengah.",
     "quickLinks": {
       "title": "Tautan Cepat"
     },
@@ -113,10 +113,10 @@
     },
     "stats": {
       "experience": "Tahun Pengalaman Kriya",
-      "wood": "Recycle Teak Wood",
-      "shipped": "Shipped",
-      "artisans": "Shipped",
-      "furniture": "Heirloom Crafted"
+      "wood": "Jati Daur Ulang Pilihan",
+      "shipped": "Karya Mebel Terkirim",
+      "artisans": "Pengrajin Ahli Kudus",
+      "furniture": "Empu Kriya Berpengalaman"
     },
     "foundation": {
       "badge": "FILOSOFI & NILAI DASAR",
@@ -240,7 +240,7 @@
   "production": {
     "hero": {
       "title": "Produksi & Pengiriman",
-      "desc": "Dari kayu daur ulang hingga ke rumah Anda sebuah perjalanan transparan dari keahlian, keberlanjutan, dan perhatian."
+      "desc": "Dari kayu jati pilihan hingga ke hunian Anda — perjalanan transparan dari keahlian tangan, keberlanjutan, dan perhatian mutu."
     },
     "process": {
       "title": "Proses Transparan Kami",
@@ -298,6 +298,11 @@
       "location": "Lokasi",
       "phone": "Telepon",
       "email": "Email"
+    },
+    "cta": {
+      "title": "Siap Mewujudkan Karya Pusaka Anda?",
+      "desc": "Setiap karya menyimpan cerita berharga. Mari wujudkan visi Anda bersama presisi kriya kayu jati yang berkelanjutan.",
+      "button": "Mulai Konsultasi Proyek"
     }
   },
   "notFound": {

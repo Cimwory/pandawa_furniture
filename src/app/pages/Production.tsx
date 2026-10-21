@@ -18,7 +18,8 @@ import {
 } from '../components/reactbits';
 
 export function Production() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isId = (i18n.resolvedLanguage || i18n.language)?.startsWith('id');
 
   return (
     <div className="pt-[68px] md:pt-[76px]">
@@ -72,7 +73,7 @@ export function Production() {
             <div className="w-16 h-16 rounded-full bg-brand-deep-olive/10 text-brand-deep-olive flex items-center justify-center mb-6 shadow-sm">
               <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>energy_savings_leaf</span>
             </div>
-            <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">STEP 01</span>
+            <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">{isId ? 'TAHAP 01' : 'STEP 01'}</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s1.title')}</h3>
             <p className="font-body-md text-sm text-brand-dark-earth/75 leading-relaxed">{t('production.process.steps.s1.desc')}</p>
           </SpotlightCard>
@@ -86,7 +87,7 @@ export function Production() {
             <div className="w-16 h-16 rounded-full bg-brand-terracotta/10 text-brand-terracotta flex items-center justify-center mb-6 shadow-sm">
               <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>handyman</span>
             </div>
-            <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">STEP 02</span>
+            <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">{isId ? 'TAHAP 02' : 'STEP 02'}</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s2.title')}</h3>
             <p className="font-body-md text-sm text-brand-dark-earth/75 leading-relaxed">{t('production.process.steps.s2.desc')}</p>
           </SpotlightCard>
@@ -100,7 +101,7 @@ export function Production() {
             <div className="w-16 h-16 rounded-full bg-brand-cocoa-brown text-white flex items-center justify-center mb-6 shadow-sm">
               <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>inventory_2</span>
             </div>
-            <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">STEP 03</span>
+            <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">{isId ? 'TAHAP 03' : 'STEP 03'}</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s3.title')}</h3>
             <p className="font-body-md text-sm text-brand-dark-earth/75 leading-relaxed">{t('production.process.steps.s3.desc')}</p>
           </SpotlightCard>
@@ -114,7 +115,7 @@ export function Production() {
             <div className="w-16 h-16 rounded-full bg-brand-deep-olive/10 text-brand-deep-olive flex items-center justify-center mb-6 shadow-sm">
               <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>local_shipping</span>
             </div>
-            <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">STEP 04</span>
+            <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">{isId ? 'TAHAP 04' : 'STEP 04'}</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s4.title')}</h3>
             <p className="font-body-md text-sm text-brand-dark-earth/75 leading-relaxed">{t('production.process.steps.s4.desc')}</p>
           </SpotlightCard>

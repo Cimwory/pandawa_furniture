@@ -29,7 +29,8 @@ export const DocsNavSidebar: React.FC<DocsNavSidebarProps> = ({
   onSelectSubFilter,
   className = '',
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isId = (i18n.resolvedLanguage || i18n.language)?.startsWith('id');
 
   return (
     <aside className={`w-full lg:w-72 flex-shrink-0 font-sans text-xs ${className}`}>
@@ -84,7 +85,7 @@ export const DocsNavSidebar: React.FC<DocsNavSidebarProps> = ({
                             ? 'bg-white text-brand-terracotta'
                             : 'bg-brand-terracotta text-white'
                         }`}>
-                          NEW
+                          {isId ? 'BARU' : 'NEW'}
                         </span>
                       )}
                       {cat.count !== undefined && (

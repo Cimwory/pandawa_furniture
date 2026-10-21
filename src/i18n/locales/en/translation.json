@@ -113,10 +113,10 @@
     },
     "stats": {
       "experience": "Years of Woodcraft Mastery",
-      "wood": "Recycle Teak Wood",
-      "shipped": "Shipped",
-      "artisans": "Shipped",
-      "furniture": "Heirloom Crafted"
+      "wood": "100% Solid & Reclaimed Teak",
+      "shipped": "Handcrafted Pieces Delivered",
+      "artisans": "Master Artisans in Kudus",
+      "furniture": "Heirloom Grade Craftsmanship"
     },
     "foundation": {
       "badge": "PHILOSOPHY & CORE VALUES",
@@ -298,6 +298,11 @@
       "location": "Location",
       "phone": "Phone",
       "email": "Email"
+    },
+    "cta": {
+      "title": "Ready to craft your legacy?",
+      "desc": "Every piece tells a story. Let us help you tell yours with sustainable, handcrafted precision.",
+      "button": "Start a Project"
     }
   },
   "notFound": {
