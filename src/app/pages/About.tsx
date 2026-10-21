@@ -126,7 +126,7 @@ export function About() {
 
       {/* Dynamic Stats Section with React Bits CountUp */}
       <section className="bg-brand-cream/60 border-y border-brand-dark-earth/10 py-16">
-        <div className="max-w-7xl mx-auto px-grid-margin grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="max-w-5xl mx-auto px-grid-margin grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           <div className="p-4">
             <div className="font-serif text-4xl md:text-5xl font-bold text-brand-terracotta mb-2">
               <CountUp to={32} suffix="+" duration={2.2} />
@@ -149,14 +149,6 @@ export function About() {
             </div>
             <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70">
               {t('about.stats.shipped')}
-            </p>
-          </div>
-          <div className="p-4">
-            <div className="font-serif text-4xl md:text-5xl font-bold text-brand-terracotta mb-2">
-              <CountUp to={20} suffix="+" duration={2.0} />
-            </div>
-            <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70">
-              {t('about.stats.furniture')}
             </p>
           </div>
         </div>
