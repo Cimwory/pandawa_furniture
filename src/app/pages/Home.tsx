@@ -4,9 +4,9 @@ import { useState } from 'react';
 import heroBg from '../assets/2874e70677e9347f1c498bc483444526782683b2.png';
 import floresTableImg from '../assets/flores_dining_table.jpg';
 import teakVanityImg from '../assets/teak_stone_vanity.jpg';
-import rusticVanityImg from '../assets/rustic_live_edge_vanity.jpg';
+import cabinetStorageImg from '../assets/cabinet_storage_new.jpg';
 import baliCoffeeTableImg from '../assets/bali_coffee_table.jpg';
-import kudusCabinetImg from '../assets/kudus_heritage_cabinet.png';
+import dressoirSetImg from '../assets/dressoir_set_new.jpg';
 import sumatraCredenzaImg from '../assets/sumatra_media_credenza.png';
 import { VisualShowcase } from '../components/VisualShowcase';
 import {
@@ -42,8 +42,8 @@ export function Home() {
     {
       id: 'kudus',
       title: "Cabinet & Storage",
-      subtitle: isId ? "Lemari Bilah Kayu Jati dengan Laci Fungsional" : "Solid Teak Louvre Cabinet & Storage Solutions",
-      image: kudusCabinetImg,
+      subtitle: isId ? "Lemari Rak & Penyimpanan Kayu Jati Solid" : "Solid Teak Bookshelf & Storage Cabinet",
+      image: cabinetStorageImg,
       categoryName: isId ? 'Lemari & Penyimpanan' : 'Cabinet & Storage',
     },
     {
@@ -56,8 +56,8 @@ export function Home() {
     {
       id: 'aceh',
       title: "Dressoir set",
-      subtitle: isId ? "Bufet & Meja Konsol Kayu Jati Solid Pilihan" : "Solid Teak Dressoir & Sideboard Console",
-      image: rusticVanityImg,
+      subtitle: isId ? "Bufet Bilah Kayu Jati dengan Laci Fungsional" : "Solid Teak Louvre Dressoir & Sideboard",
+      image: dressoirSetImg,
       categoryName: isId ? 'Set Dressoir' : 'Dressoir Set',
     },
     {
