@@ -53,19 +53,19 @@ export const CATEGORIES: Category[] = [
 ];
 
 export const PRODUCTS: Product[] = [
-  // ─── Chair ──────────────────────────────────────────────────────────
+  // ─── CHAIR SERIES ────────────────────────────────────────────────────
   {
     id: 'chr-01',
-    name: 'Ergonomic Teak Lounge Chair',
+    name: 'Panel Chair',
     category: 'chair',
     image: chairImg1,
-    badge: 'New',
+    badge: null,
     description: 'Ergonomic curved solid teak lounge chair crafted with traditional joinery.',
     material: '100% Solid Heartwood Teak',
   },
   {
     id: 'chr-02',
-    name: 'Minimalist Teak Dining Chair',
+    name: 'Curve Chair',
     category: 'chair',
     image: chairImg2,
     badge: null,
@@ -74,7 +74,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'chr-03',
-    name: 'Heritage Kudus Armchair',
+    name: 'Round Stool',
     category: 'chair',
     image: chairImg3,
     badge: null,
@@ -83,7 +83,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'chr-04',
-    name: 'Nordic Teak Stool & Ottoman',
+    name: 'Spindle Bench',
     category: 'chair',
     image: chairImg4,
     badge: null,
@@ -92,7 +92,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'chr-05',
-    name: 'Classic Scandinavian Teak Chair',
+    name: 'Rattan Chair',
     category: 'chair',
     image: chairImg5,
     badge: null,
@@ -101,7 +101,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'chr-06',
-    name: 'Solid Teak Studio Desk Chair',
+    name: 'Leather Lounger',
     category: 'chair',
     image: chairImg6,
     badge: null,
@@ -109,10 +109,10 @@ export const PRODUCTS: Product[] = [
     material: '100% Solid Heartwood Teak',
   },
 
-  // ─── Dressoir ────────────────────────────────────────────────────────
+  // ─── DRESSOIR & CREDENZA ─────────────────────────────────────────────
   {
     id: 'drs-01',
-    name: 'Solid Teak 4-Door Credenza',
+    name: 'Drawer Credenza',
     category: 'dressoir',
     image: dres1,
     badge: null,
@@ -121,7 +121,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'drs-02',
-    name: 'Minimalist Sideboard Console',
+    name: 'Sliding Sideboard',
     category: 'dressoir',
     image: dres2,
     badge: null,
@@ -130,16 +130,16 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'drs-03',
-    name: 'Sliding Louvre Dressoir',
+    name: 'Nightstand',
     category: 'dressoir',
     image: dres3,
-    badge: 'New',
+    badge: null,
     description: 'Louvred teak sideboard with airflow ventilation and brass fittings.',
     material: '100% Solid Heartwood Teak',
   },
   {
     id: 'drs-04',
-    name: 'Lowline Teak Media Credenza',
+    name: 'Curve Lowboard',
     category: 'dressoir',
     image: dres4,
     badge: null,
@@ -148,7 +148,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'drs-05',
-    name: 'Multi-Drawer Teak Dresser',
+    name: 'Coffee Table',
     category: 'dressoir',
     image: dres5,
     badge: null,
@@ -157,7 +157,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'drs-06',
-    name: 'Vintage Kudus Wide Sideboard',
+    name: 'Long Lowboard',
     category: 'dressoir',
     image: dres6,
     badge: null,
@@ -165,10 +165,10 @@ export const PRODUCTS: Product[] = [
     material: 'Aged Solid Teak',
   },
 
-  // ─── Cabinet ─────────────────────────────────────────────────────────
+  // ─── CABINET & ARMOIRE ───────────────────────────────────────────────
   {
     id: 'cab-01',
-    name: 'Glass Display Teak Cabinet',
+    name: 'Open Bookcase',
     category: 'cabinet',
     image: cab1,
     badge: null,
@@ -177,7 +177,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'cab-02',
-    name: 'Double Door Tall Wardrobe',
+    name: 'Wine Cabinet',
     category: 'cabinet',
     image: cab3,
     badge: null,
@@ -186,7 +186,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'cab-03',
-    name: 'Custom Pantry & Linen Cabinet',
+    name: 'Glass Cabinet',
     category: 'cabinet',
     image: proofCabinetImg,
     badge: 'Custom',
@@ -195,7 +195,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'cab-04',
-    name: 'Modern Teak Vitrine Cabinet',
+    name: 'Glass Hutch',
     category: 'cabinet',
     image: cab4,
     badge: null,
@@ -204,7 +204,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'cab-05',
-    name: 'Open Teak Bookshelf & Cabinet',
+    name: 'Shelf Cabinet',
     category: 'cabinet',
     image: cab5,
     badge: null,
@@ -213,7 +213,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'cab-06',
-    name: 'Three-Door Master Teak Wardrobe',
+    name: 'Wardrobe',
     category: 'cabinet',
     image: proofWardrobeImg,
     badge: null,
@@ -221,19 +221,19 @@ export const PRODUCTS: Product[] = [
     material: '100% Solid Heartwood Teak',
   },
 
-  // ─── Sink Stone ──────────────────────────────────────────────────────
+  // ─── STONE & TEAK VANITY ─────────────────────────────────────────────
   {
     id: 'snk-01',
-    name: 'River Stone Vessel Basin',
+    name: 'Grey Basin',
     category: 'sink-stone',
     image: waterSinkImg1,
-    badge: 'New',
+    badge: null,
     description: 'Organic natural river stone vessel washbasin hollowed by hand.',
     material: 'Natural River Stone',
   },
   {
     id: 'snk-02',
-    name: 'Chiseled Granite Natural Basin',
+    name: 'Oval Basin',
     category: 'sink-stone',
     image: waterSinkImg2,
     badge: null,
@@ -242,7 +242,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'snk-03',
-    name: 'Floating Teak Vanity & Stone Sink',
+    name: 'Chiseled Basin',
     category: 'sink-stone',
     image: waterSinkImg3,
     badge: null,
@@ -251,7 +251,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'snk-04',
-    name: 'Hand-Carved Marble Washbasin',
+    name: 'Teak Vanity',
     category: 'sink-stone',
     image: waterSinkImg4,
     badge: null,
@@ -260,7 +260,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'snk-05',
-    name: 'Oval River Rock Vanity Basin',
+    name: 'Cream Basin',
     category: 'sink-stone',
     image: waterSinkImg5,
     badge: null,
@@ -269,7 +269,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'snk-06',
-    name: 'Rustic Monolith Stone Basin',
+    name: 'Square Basin',
     category: 'sink-stone',
     image: waterSinkImg6,
     badge: null,

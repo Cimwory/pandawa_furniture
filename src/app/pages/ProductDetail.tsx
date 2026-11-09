@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router';
 import { PRODUCTS, CATEGORIES } from '../data/products';
 import { MessageCircle, ArrowLeft } from 'lucide-react';
@@ -5,6 +6,14 @@ import { MessageCircle, ArrowLeft } from 'lucide-react';
 export function ProductDetail() {
   const { id } = useParams<{ id: string }>();
   const product = PRODUCTS.find((p) => p.id === id);
+
+  useEffect(() => {
+    if (product) {
+      document.title = `${product.name} | Pandawa Furniture`;
+    } else {
+      document.title = 'Product Not Found | Pandawa Furniture';
+    }
+  }, [product]);
 
   if (!product) {
     return (
@@ -140,4 +149,3 @@ export function ProductDetail() {
     </div>
   );
 }
-
