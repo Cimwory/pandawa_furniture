@@ -204,7 +204,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'cab-05',
-    name: 'Shelf Cabinet',
+    name: 'Open Shelf',
     category: 'cabinet',
     image: cab5,
     badge: null,
