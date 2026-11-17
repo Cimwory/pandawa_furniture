@@ -3,7 +3,7 @@ import cab1 from '../../assets/cabinet/1380088840-650x650.jpg';
 import cab3 from '../../assets/cabinet/02702809-1-650x650.jpg';
 import cab4 from '../../assets/cabinet/02702153-650x650.jpg';
 import cab5 from '../../assets/cabinet/02702143-1.jpg';
-import proofCabinetImg from '../assets/fc5964b3113fde8a49149cd92f85ea4450691c43.png';
+import bookrackImg from '../../assets/cabinet/bookrack.jpg';
 import proofWardrobeImg from '../assets/93fec46fe2c182559cb71aafc651703bd56b2630.png';
 
 // Dressoir Images
@@ -101,7 +101,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'chr-06',
-    name: 'Leather Lounger',
+    name: 'Rattan Lounger',
     category: 'chair',
     image: chairImg6,
     badge: null,
@@ -186,12 +186,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'cab-03',
-    name: 'Glass Cabinet',
+    name: 'Bookrack',
     category: 'cabinet',
-    image: proofCabinetImg,
-    badge: 'Custom',
-    description: 'Handcrafted Kudus pantry & storage cabinet customized to bespoke specifications.',
-    material: 'Custom Solid Teak',
+    image: bookrackImg,
+    badge: null,
+    description: 'Handcrafted Kudus solid teak bookrack with open shelving and lower cabinet.',
+    material: '100% Solid Heartwood Teak',
   },
   {
     id: 'cab-04',
