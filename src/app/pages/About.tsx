@@ -43,14 +43,6 @@ export function About() {
           {/* LEFT COLUMN: Narrative & Craftsmanship Essence */}
           <div className="lg:col-span-6 flex flex-col justify-center text-left">
 
-            {/* Elegant Artisanal Heritage Badge */}
-            <div className="inline-flex items-center gap-2 self-start px-4 py-1.5 rounded-full border border-[#2D241B]/12 bg-white/80 backdrop-blur-sm shadow-sm mb-6 text-xs text-brand-dark-earth">
-              <span className="w-2 h-2 rounded-full bg-brand-terracotta" />
-              <span className="font-medium tracking-wide uppercase text-[11px] text-brand-dark-earth/80">
-                {t('about.hero.badge')}
-              </span>
-            </div>
-
             {/* High-Impact Editorial Headline */}
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-normal text-brand-dark-earth tracking-tight leading-[1.15] mb-6">
               {t('about.hero.headlinePart1')}{' '}
