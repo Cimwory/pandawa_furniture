@@ -40,10 +40,10 @@ export function Production() {
         />
 
         <div className="relative z-20 text-center px-grid-margin max-w-4xl mx-auto flex flex-col items-center">
-          <h1 className="font-display-lg text-display-lg text-white mb-6 drop-shadow-md">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl text-white mb-6 drop-shadow-md leading-tight font-normal">
             <BlurText text={t('production.hero.title')} delay={70} duration={0.8} />
           </h1>
-          <p className="font-body-lg text-xl md:text-2xl text-brand-cream/90 max-w-2xl text-center drop-shadow-md leading-relaxed">
+          <p className="font-sans text-lg md:text-xl text-brand-cream/90 max-w-2xl text-center drop-shadow-md leading-relaxed font-light">
             {t('production.hero.desc')}
           </p>
         </div>
@@ -52,8 +52,8 @@ export function Production() {
       {/* Timeline Section with SpotlightCards */}
       <section className="py-section-gap-desktop px-grid-margin max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-headline-lg text-[32px] md:text-headline-lg text-brand-dark-earth mb-4">{t('production.process.title')}</h2>
-          <p className="font-body-md text-lg text-brand-dark-earth/70">
+          <h2 className="font-serif text-3xl md:text-4xl text-brand-dark-earth mb-4 font-normal tracking-tight">{t('production.process.title')}</h2>
+          <p className="font-sans text-base md:text-lg text-brand-dark-earth/70">
             {t('production.process.desc')}
           </p>
           <div className="w-16 h-1 bg-brand-terracotta mx-auto mt-4 rounded-full"></div>
@@ -68,56 +68,56 @@ export function Production() {
           <SpotlightCard
             spotlightColor="rgba(80, 100, 67, 0.25)"
             borderColor="rgba(80, 100, 67, 0.4)"
-            className="p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 bg-white"
+            className="p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 bg-white rounded-2xl"
           >
             <div className="w-16 h-16 rounded-full bg-brand-deep-olive/10 text-brand-deep-olive flex items-center justify-center mb-6 shadow-sm">
               <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>energy_savings_leaf</span>
             </div>
             <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">{isId ? 'TAHAP 01' : 'STEP 01'}</span>
-            <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s1.title')}</h3>
-            <p className="font-body-md text-sm text-brand-dark-earth/75 leading-relaxed">{t('production.process.steps.s1.desc')}</p>
+            <h3 className="font-serif text-xl text-brand-dark-earth mb-3 font-normal">{t('production.process.steps.s1.title')}</h3>
+            <p className="font-sans text-sm text-brand-dark-earth/75 leading-relaxed">{t('production.process.steps.s1.desc')}</p>
           </SpotlightCard>
 
           {/* Step 2 */}
           <SpotlightCard
             spotlightColor="rgba(190, 115, 61, 0.25)"
             borderColor="rgba(190, 115, 61, 0.4)"
-            className="p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 bg-white"
+            className="p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 bg-white rounded-2xl"
           >
             <div className="w-16 h-16 rounded-full bg-brand-terracotta/10 text-brand-terracotta flex items-center justify-center mb-6 shadow-sm">
               <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>handyman</span>
             </div>
             <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">{isId ? 'TAHAP 02' : 'STEP 02'}</span>
-            <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s2.title')}</h3>
-            <p className="font-body-md text-sm text-brand-dark-earth/75 leading-relaxed">{t('production.process.steps.s2.desc')}</p>
+            <h3 className="font-serif text-xl text-brand-dark-earth mb-3 font-normal">{t('production.process.steps.s2.title')}</h3>
+            <p className="font-sans text-sm text-brand-dark-earth/75 leading-relaxed">{t('production.process.steps.s2.desc')}</p>
           </SpotlightCard>
 
           {/* Step 3 */}
           <SpotlightCard
             spotlightColor="rgba(72, 49, 36, 0.25)"
             borderColor="rgba(72, 49, 36, 0.4)"
-            className="p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 bg-white"
+            className="p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 bg-white rounded-2xl"
           >
             <div className="w-16 h-16 rounded-full bg-brand-cocoa-brown text-white flex items-center justify-center mb-6 shadow-sm">
               <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>inventory_2</span>
             </div>
             <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">{isId ? 'TAHAP 03' : 'STEP 03'}</span>
-            <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s3.title')}</h3>
-            <p className="font-body-md text-sm text-brand-dark-earth/75 leading-relaxed">{t('production.process.steps.s3.desc')}</p>
+            <h3 className="font-serif text-xl text-brand-dark-earth mb-3 font-normal">{t('production.process.steps.s3.title')}</h3>
+            <p className="font-sans text-sm text-brand-dark-earth/75 leading-relaxed">{t('production.process.steps.s3.desc')}</p>
           </SpotlightCard>
 
           {/* Step 4 */}
           <SpotlightCard
             spotlightColor="rgba(80, 100, 67, 0.25)"
             borderColor="rgba(80, 100, 67, 0.4)"
-            className="p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 bg-white"
+            className="p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 bg-white rounded-2xl"
           >
             <div className="w-16 h-16 rounded-full bg-brand-deep-olive/10 text-brand-deep-olive flex items-center justify-center mb-6 shadow-sm">
               <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>local_shipping</span>
             </div>
             <span className="font-mono text-xs tracking-widest text-brand-cocoa-brown font-semibold mb-2">{isId ? 'TAHAP 04' : 'STEP 04'}</span>
-            <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s4.title')}</h3>
-            <p className="font-body-md text-sm text-brand-dark-earth/75 leading-relaxed">{t('production.process.steps.s4.desc')}</p>
+            <h3 className="font-serif text-xl text-brand-dark-earth mb-3 font-normal">{t('production.process.steps.s4.title')}</h3>
+            <p className="font-sans text-sm text-brand-dark-earth/75 leading-relaxed">{t('production.process.steps.s4.desc')}</p>
           </SpotlightCard>
         </div>
       </section>
@@ -126,8 +126,8 @@ export function Production() {
       <section className="py-section-gap-desktop bg-[#fff1e6] px-6 md:px-16 lg:px-24">
         <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24 items-center">
           <div className="md:col-span-6 order-2 md:order-1 flex flex-col justify-center pr-0 md:pr-8 lg:pr-12">
-            <h2 className="font-headline-lg text-[40px] md:text-[48px] leading-tight text-brand-dark-earth mb-8">{t('production.craft.title')}</h2>
-            <p className="font-body-md text-xl md:text-2xl text-brand-dark-earth/80 mb-10 leading-relaxed">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-brand-dark-earth mb-8 font-normal">{t('production.craft.title')}</h2>
+            <p className="font-sans text-lg md:text-xl text-brand-dark-earth/80 mb-10 leading-relaxed">
               {t('production.craft.desc1')}
             </p>
             <ul className="space-y-6">
@@ -136,7 +136,7 @@ export function Production() {
                   <span className="material-symbols-outlined text-brand-deep-olive text-[28px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>check_circle</span>
                 </div>
                 <div>
-                  <h4 className="font-headline-md text-xl text-brand-dark-earth font-semibold">{t('production.craft.point1')}</h4>
+                  <h4 className="font-serif text-lg md:text-xl text-brand-dark-earth font-normal">{t('production.craft.point1')}</h4>
                 </div>
               </li>
               <li className="flex items-center bg-white/70 backdrop-blur-sm p-4 rounded-xl shadow-sm border border-brand-cocoa-brown/10 hover:border-brand-terracotta/40 transition-all">
@@ -144,7 +144,7 @@ export function Production() {
                   <span className="material-symbols-outlined text-brand-deep-olive text-[28px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>check_circle</span>
                 </div>
                 <div>
-                  <h4 className="font-headline-md text-xl text-brand-dark-earth font-semibold">{t('production.craft.point2')}</h4>
+                  <h4 className="font-serif text-lg md:text-xl text-brand-dark-earth font-normal">{t('production.craft.point2')}</h4>
                 </div>
               </li>
               <li className="flex items-center bg-white/70 backdrop-blur-sm p-4 rounded-xl shadow-sm border border-brand-cocoa-brown/10 hover:border-brand-terracotta/40 transition-all">
@@ -152,7 +152,7 @@ export function Production() {
                   <span className="material-symbols-outlined text-brand-deep-olive text-[28px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>check_circle</span>
                 </div>
                 <div>
-                  <h4 className="font-headline-md text-xl text-brand-dark-earth font-semibold">{t('production.craft.point3')}</h4>
+                  <h4 className="font-serif text-lg md:text-xl text-brand-dark-earth font-normal">{t('production.craft.point3')}</h4>
                 </div>
               </li>
             </ul>
@@ -212,8 +212,8 @@ export function Production() {
       <section className="py-section-gap-desktop bg-[#fff8f4] px-grid-margin border-t border-brand-dark-earth/10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-headline-lg text-[32px] md:text-headline-lg text-brand-dark-earth mb-4">{t('production.shipping.title')}</h2>
-            <p className="font-body-md text-lg text-brand-dark-earth/70">
+            <h2 className="font-serif text-3xl md:text-4xl text-brand-dark-earth mb-4 font-normal tracking-tight">{t('production.shipping.title')}</h2>
+            <p className="font-sans text-base md:text-lg text-brand-dark-earth/70">
               {t('production.shipping.desc')}
             </p>
             <div className="w-16 h-1 bg-brand-terracotta mx-auto mt-4 rounded-full"></div>

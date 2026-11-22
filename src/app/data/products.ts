@@ -6,7 +6,7 @@ import cab5 from '../../assets/cabinet/02702143-1.jpg';
 import bookrackImg from '../../assets/cabinet/bookrack.jpg';
 import proofWardrobeImg from '../assets/93fec46fe2c182559cb71aafc651703bd56b2630.png';
 
-// Dressoir Images
+// Dressoir / Sideboard Images
 import dres1 from '../../assets/dressoir/02703170-1-650x650.jpg';
 import dres2 from '../../assets/dressoir/02732018-1.jpg';
 import dres3 from '../../assets/dressoir/02732026-650x650.jpg';
@@ -21,6 +21,9 @@ import chairImg3 from '../../assets/chair/1380686619-650x650.jpg';
 import chairImg4 from '../../assets/chair/1532591640-650x650.jpg';
 import chairImg5 from '../../assets/chair/1565899437-650x650.jpg';
 import chairImg6 from '../../assets/chair/KL-J-010-A1-650x650.jpg';
+
+// Table Images
+import floresDiningTableImg from '../assets/flores_dining_table.jpg';
 
 // Water Sink Images
 import waterSinkImg1 from '../../assets/water sink/6a3d62e1-b9c4-496c-9132-a025c0627efb.jpg';
@@ -38,18 +41,22 @@ export interface Product {
   badge?: 'New' | 'Custom' | null;
   description?: string;
   material?: string;
+  dimensions?: string;
+  finish?: string;
 }
 
 export interface Category {
   id: string;
-  label: string;
+  labelEn: string;
+  labelId: string;
 }
 
 export const CATEGORIES: Category[] = [
-  { id: 'chair', label: 'Chair' },
-  { id: 'dressoir', label: 'Dressoir' },
-  { id: 'cabinet', label: 'Cabinet' },
-  { id: 'sink-stone', label: 'Sink Stone' },
+  { id: 'chair', labelEn: 'Chair', labelId: 'Kursi' },
+  { id: 'table', labelEn: 'Table', labelId: 'Meja' },
+  { id: 'sideboard', labelEn: 'Sideboard', labelId: 'Dressoir' },
+  { id: 'cabinet', labelEn: 'Cabinet', labelId: 'Lemari' },
+  { id: 'sink-stone', labelEn: 'Sink Stone', labelId: 'Wastafel Batu' },
 ];
 
 export const PRODUCTS: Product[] = [
@@ -60,8 +67,10 @@ export const PRODUCTS: Product[] = [
     category: 'chair',
     image: chairImg1,
     badge: null,
-    description: 'Ergonomic curved solid teak lounge chair crafted with traditional joinery.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Solid teak dining chair with a clean straight panel back.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '48 × 52 × 84 cm',
+    finish: 'Natural Botanical Oil',
   },
   {
     id: 'chr-02',
@@ -69,8 +78,10 @@ export const PRODUCTS: Product[] = [
     category: 'chair',
     image: chairImg2,
     badge: null,
-    description: 'Minimalist solid teak dining chair with ergonomic lumbar contour.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Solid teak dining chair with an ergonomically contoured curved backrest.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '50 × 54 × 82 cm',
+    finish: 'Natural Botanical Oil',
   },
   {
     id: 'chr-03',
@@ -78,8 +89,10 @@ export const PRODUCTS: Product[] = [
     category: 'chair',
     image: chairImg3,
     badge: null,
-    description: 'Traditional handcrafted Kudus armchair with artisan carved details.',
-    material: 'Aged Solid Teak',
+    description: 'Round solid teak accent stool with turned legs and smooth natural finish.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '38 × 38 × 45 cm',
+    finish: 'Hand-Rubbed Beeswax',
   },
   {
     id: 'chr-04',
@@ -87,8 +100,10 @@ export const PRODUCTS: Product[] = [
     category: 'chair',
     image: chairImg4,
     badge: null,
-    description: 'Solid circular teak accent stool, minimal and versatile.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Low solid teak bench featuring slim turned spindles and tapered legs.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '120 × 42 × 48 cm',
+    finish: 'Natural Botanical Oil',
   },
   {
     id: 'chr-05',
@@ -96,8 +111,10 @@ export const PRODUCTS: Product[] = [
     category: 'chair',
     image: chairImg5,
     badge: null,
-    description: 'Classic Scandinavian design teak chair with natural botanical oil finish.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Classic solid teak dining chair with hand-woven natural rattan backrest.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '52 × 55 × 85 cm',
+    finish: 'Natural Botanical Oil',
   },
   {
     id: 'chr-06',
@@ -105,64 +122,91 @@ export const PRODUCTS: Product[] = [
     category: 'chair',
     image: chairImg6,
     badge: null,
-    description: 'Natural finish solid teak studio desk chair with ergonomic back support.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Low-slung solid teak lounge chair with woven strap seating and an angled stance.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '64 × 75 × 72 cm',
+    finish: 'Natural Matte Finish',
   },
 
-  // ─── DRESSOIR & CREDENZA ─────────────────────────────────────────────
+  // ─── TABLE ───────────────────────────────────────────────────────────
+  {
+    id: 'drs-05',
+    name: 'Coffee Table',
+    category: 'table',
+    image: dres5,
+    badge: null,
+    description: 'Low solid teak coffee table with integrated storage drawers and natural wood grain.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '100 × 46 × 45 cm',
+    finish: 'Natural Matte Oil',
+  },
+  {
+    id: 'tbl-01',
+    name: 'Dining Set',
+    category: 'table',
+    image: floresDiningTableImg,
+    badge: null,
+    description: 'Solid reclaimed teak dining table paired with artisanal matching bench seating.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '200 × 90 × 76 cm',
+    finish: 'Natural Botanical Oil',
+  },
+
+  // ─── SIDEBOARD (DRESSOIR) ────────────────────────────────────────────
   {
     id: 'drs-01',
     name: 'Drawer Credenza',
-    category: 'dressoir',
+    category: 'sideboard',
     image: dres1,
     badge: null,
-    description: 'Solid teak 4 sliding door credenza with ample storage and sleek profile.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Solid teak credenza featuring multi-tier storage drawers and traditional joinery.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '180 × 45 × 80 cm',
+    finish: 'Natural Botanical Oil',
   },
   {
     id: 'drs-02',
     name: 'Sliding Sideboard',
-    category: 'dressoir',
+    category: 'sideboard',
     image: dres2,
     badge: null,
-    description: 'Minimalist console with smooth sliding drawers and clean geometric lines.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Minimalist solid teak sideboard with smooth sliding doors and interior shelving.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '160 × 45 × 75 cm',
+    finish: 'Natural Matte Finish',
   },
   {
     id: 'drs-03',
     name: 'Nightstand',
-    category: 'dressoir',
+    category: 'sideboard',
     image: dres3,
     badge: null,
-    description: 'Louvred teak sideboard with airflow ventilation and brass fittings.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Compact solid teak bedside table with an open display niche and slatted door.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '50 × 40 × 55 cm',
+    finish: 'Natural Botanical Oil',
   },
   {
     id: 'drs-04',
     name: 'Curve Lowboard',
-    category: 'dressoir',
+    category: 'sideboard',
     image: dres4,
     badge: null,
-    description: 'Low profile teak media console designed for modern living rooms.',
-    material: '100% Solid Heartwood Teak',
-  },
-  {
-    id: 'drs-05',
-    name: 'Coffee Table',
-    category: 'dressoir',
-    image: dres5,
-    badge: null,
-    description: 'Multi-tiered storage teak drawer dresser with soft dovetail joinery.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Low-profile solid teak media unit with softly rounded curved corners.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '170 × 42 × 48 cm',
+    finish: 'Natural Botanical Oil',
   },
   {
     id: 'drs-06',
     name: 'Long Lowboard',
-    category: 'dressoir',
+    category: 'sideboard',
     image: dres6,
     badge: null,
-    description: 'Elegant wide-profile vintage Kudus credenza with handcrafted textures.',
-    material: 'Aged Solid Teak',
+    description: 'Extended-length solid teak credenza with clean architectural lines.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '200 × 45 × 52 cm',
+    finish: 'Hand-Rubbed Botanical Wax',
   },
 
   // ─── CABINET & ARMOIRE ───────────────────────────────────────────────
@@ -172,8 +216,10 @@ export const PRODUCTS: Product[] = [
     category: 'cabinet',
     image: cab1,
     badge: null,
-    description: 'Glass display showcase with solid teak frame and tempered glass panels.',
-    material: 'Solid Teak & Tempered Glass',
+    description: 'Tall architectural solid teak bookcase with graduated open shelves.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '100 × 38 × 190 cm',
+    finish: 'Natural Botanical Oil',
   },
   {
     id: 'cab-02',
@@ -181,8 +227,10 @@ export const PRODUCTS: Product[] = [
     category: 'cabinet',
     image: cab3,
     badge: null,
-    description: 'Sturdy 2-door tall solid teak wardrobe with internal shelving and hang rod.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Solid teak storage cabinet designed with bottle racks and stemware space.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '90 × 45 × 140 cm',
+    finish: 'Natural Matte Oil',
   },
   {
     id: 'cab-03',
@@ -190,8 +238,10 @@ export const PRODUCTS: Product[] = [
     category: 'cabinet',
     image: bookrackImg,
     badge: null,
-    description: 'Handcrafted Kudus solid teak bookrack with open shelving and lower cabinet.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Solid teak shelving unit featuring three open tiers above a double-door base cabinet.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '85 × 40 × 175 cm',
+    finish: 'Natural Botanical Oil',
   },
   {
     id: 'cab-04',
@@ -199,8 +249,10 @@ export const PRODUCTS: Product[] = [
     category: 'cabinet',
     image: cab4,
     badge: null,
-    description: 'Minimalist modern glass vitrine display cabinet with warm LED accents.',
-    material: 'Solid Teak & Glass',
+    description: 'Two-piece solid teak vitrine hutch with framed glass upper doors and closed base.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '110 × 45 × 200 cm',
+    finish: 'Natural Botanical Oil',
   },
   {
     id: 'cab-05',
@@ -208,8 +260,10 @@ export const PRODUCTS: Product[] = [
     category: 'cabinet',
     image: cab5,
     badge: null,
-    description: 'Open teak bookshelf with lower concealed storage cabinet.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Symmetrical multi-tier open teak display unit with lower utility drawers.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '95 × 36 × 180 cm',
+    finish: 'Natural Botanical Oil',
   },
   {
     id: 'cab-06',
@@ -217,8 +271,10 @@ export const PRODUCTS: Product[] = [
     category: 'cabinet',
     image: proofWardrobeImg,
     badge: null,
-    description: '3-door master bedroom teak wardrobe with lower drawers and mirror option.',
-    material: '100% Solid Heartwood Teak',
+    description: 'Substantial three-door solid teak wardrobe with generous hanging and shelf space.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '160 × 60 × 210 cm',
+    finish: 'Natural Matte Wax',
   },
 
   // ─── STONE & TEAK VANITY ─────────────────────────────────────────────
@@ -228,8 +284,10 @@ export const PRODUCTS: Product[] = [
     category: 'sink-stone',
     image: waterSinkImg1,
     badge: null,
-    description: 'Organic natural river stone vessel washbasin hollowed by hand.',
-    material: 'Natural River Stone',
+    description: 'Oval vessel washbasin hand-carved from a single natural river stone boulder with polished grey bowl.',
+    material: 'Natural river stone, hand-carved',
+    dimensions: '45 × 38 × 15 cm',
+    finish: 'Honed Interior / Raw Exterior',
   },
   {
     id: 'snk-02',
@@ -237,8 +295,10 @@ export const PRODUCTS: Product[] = [
     category: 'sink-stone',
     image: waterSinkImg2,
     badge: null,
-    description: 'Hand-chiseled smooth interior natural granite sink with rustic exterior.',
-    material: 'Natural Granite Stone',
+    description: 'Chiseled natural granite vessel washbasin with a honed interior and textured exterior.',
+    material: 'Natural river stone, hand-carved',
+    dimensions: '48 × 40 × 14 cm',
+    finish: 'Fine Chiseled / Polished Basin',
   },
   {
     id: 'snk-03',
@@ -246,8 +306,10 @@ export const PRODUCTS: Product[] = [
     category: 'sink-stone',
     image: waterSinkImg3,
     badge: null,
-    description: 'Floating solid teak vanity paired seamlessly with a carved stone vessel.',
-    material: 'Solid Teak & River Stone',
+    description: 'Hand-carved organic stone washbasin featuring a chiseled perimeter and smooth vessel bowl.',
+    material: 'Natural river stone, hand-carved',
+    dimensions: '44 × 36 × 15 cm',
+    finish: 'Natural Chiseled Stone',
   },
   {
     id: 'snk-04',
@@ -255,8 +317,10 @@ export const PRODUCTS: Product[] = [
     category: 'sink-stone',
     image: waterSinkImg4,
     badge: null,
-    description: 'Artisan hand-carved natural marble basin with silky honed finish.',
-    material: 'Natural Indonesian Marble',
+    description: 'Wall-mount solid teak bathroom vanity console designed to support a natural stone vessel.',
+    material: 'Reclaimed or premium selected teak',
+    dimensions: '90 × 50 × 40 cm',
+    finish: 'Water-Resistant Botanical Seal',
   },
   {
     id: 'snk-05',
@@ -264,8 +328,10 @@ export const PRODUCTS: Product[] = [
     category: 'sink-stone',
     image: waterSinkImg5,
     badge: null,
-    description: 'Natural smooth oval river rock washbasin with pre-drilled drain hole.',
-    material: 'Natural River Rock',
+    description: 'Organic river rock washbasin in warm cream earth tones with a smooth water bowl.',
+    material: 'Natural river stone, hand-carved',
+    dimensions: '46 × 37 × 14 cm',
+    finish: 'Smooth Honed Surface',
   },
   {
     id: 'snk-06',
@@ -273,7 +339,9 @@ export const PRODUCTS: Product[] = [
     category: 'sink-stone',
     image: waterSinkImg6,
     badge: null,
-    description: 'Raw rustic textured monolithic stone sink for bold statement bathrooms.',
-    material: 'Monolithic Volcanic Stone',
+    description: 'Substantial geometric square washbasin carved from solid natural river stone.',
+    material: 'Natural river stone, hand-carved',
+    dimensions: '40 × 40 × 14 cm',
+    finish: 'Honed Matte Stone',
   },
 ];

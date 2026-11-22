@@ -61,7 +61,7 @@ export function VisualShowcase({ title }: { title?: string }) {
   return (
     <section className="w-full relative py-section-gap-desktop overflow-hidden bg-brand-cream/10 border-y border-brand-dark-earth/10">
       <div className="text-center mb-16 relative z-10 px-grid-margin">
-        <h2 className="font-headline-lg text-headline-lg text-brand-dark-earth mb-4 font-bold">{displayTitle}</h2>
+        <h2 className="font-serif text-3xl md:text-4xl text-brand-dark-earth mb-4 font-normal tracking-tight">{displayTitle}</h2>
         <div className="w-16 h-1 bg-brand-terracotta mx-auto rounded-full"></div>
       </div>
       <div className="w-full h-[600px] md:h-[800px] relative">

@@ -55,10 +55,10 @@ export function Home() {
     },
     {
       id: 'aceh',
-      title: isId ? "Set Bufet & Dressoir" : "Dressoir Set",
-      subtitle: isId ? "Bufet Bilah Kayu Jati dengan Laci Fungsional" : "Solid Teak Louvre Dressoir & Sideboard",
+      title: isId ? "Set Bufet & Dressoir" : "Sideboard Set",
+      subtitle: isId ? "Bufet Bilah Kayu Jati dengan Laci Fungsional" : "Solid Teak Louvre Sideboard",
       image: dressoirSetImg,
-      categoryName: isId ? 'Set Dressoir' : 'Dressoir Set',
+      categoryName: isId ? 'Set Dressoir' : 'Sideboard Set',
     },
     {
       id: 'sumatra',
@@ -136,11 +136,11 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-grid-margin">
           
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-brand-dark-earth/15 bg-white/70 mb-3 text-xs uppercase tracking-wider text-brand-terracotta font-medium">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-brand-dark-earth/15 bg-white/70 mb-3 text-xs uppercase tracking-wider text-brand-terracotta font-medium font-sans">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-terracotta"></span>
               {t('home.pillars.badge')}
             </div>
-            <h2 className="font-serif text-3xl md:text-4xl text-brand-dark-earth font-bold">
+            <h2 className="font-serif text-3xl md:text-4xl text-brand-dark-earth font-normal tracking-tight">
               {t('home.pillars.title')}
             </h2>
           </div>
@@ -153,18 +153,18 @@ export function Home() {
               className="p-8 shadow-md shadow-brand-terracotta/20 flex flex-col justify-start transition-transform hover:-translate-y-1 duration-300 bg-brand-terracotta border border-white/20 rounded-2xl relative text-white"
             >
               <div>
-                <div className="flex items-center justify-between border-b border-white/20 pb-3 mb-6 text-xs">
+                <div className="flex items-center justify-between border-b border-white/20 pb-3 mb-6 text-xs font-sans">
                   <span className="px-2.5 py-0.5 rounded-full bg-white/20 text-white border border-white/30 font-medium">
                     {t('home.values.badge1')}
                   </span>
-                  <span className="text-white/70">01</span>
+                  <span className="text-white/70 font-mono">01</span>
                 </div>
 
                 <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center mb-6 text-white">
                   <span className="material-symbols-outlined text-3xl">nest_eco_leaf</span>
                 </div>
-                <h3 className="font-serif text-xl text-white mb-3 font-bold">{t('home.values.title1')}</h3>
-                <p className="text-sm text-white/90 leading-relaxed">{t('home.values.desc1')}</p>
+                <h3 className="font-serif text-xl text-white mb-3 font-normal">{t('home.values.title1')}</h3>
+                <p className="text-sm text-white/90 leading-relaxed font-sans">{t('home.values.desc1')}</p>
               </div>
             </SpotlightCard>
             
@@ -175,18 +175,18 @@ export function Home() {
               className="p-8 shadow-md shadow-brand-terracotta/20 flex flex-col justify-start transition-transform hover:-translate-y-1 duration-300 bg-brand-terracotta border border-white/20 rounded-2xl relative text-white"
             >
               <div>
-                <div className="flex items-center justify-between border-b border-white/20 pb-3 mb-6 text-xs">
+                <div className="flex items-center justify-between border-b border-white/20 pb-3 mb-6 text-xs font-sans">
                   <span className="px-2.5 py-0.5 rounded-full bg-white/20 text-white border border-white/30 font-medium">
                     {t('home.values.badge2')}
                   </span>
-                  <span className="text-white/70">02</span>
+                  <span className="text-white/70 font-mono">02</span>
                 </div>
 
                 <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center mb-6 text-white">
                   <span className="material-symbols-outlined text-3xl">group</span>
                 </div>
-                <h3 className="font-serif text-xl text-white mb-3 font-bold">{t('home.values.title2')}</h3>
-                <p className="text-sm text-white/90 leading-relaxed">{t('home.values.desc2')}</p>
+                <h3 className="font-serif text-xl text-white mb-3 font-normal">{t('home.values.title2')}</h3>
+                <p className="text-sm text-white/90 leading-relaxed font-sans">{t('home.values.desc2')}</p>
               </div>
             </SpotlightCard>
             
@@ -197,18 +197,18 @@ export function Home() {
               className="p-8 shadow-md shadow-brand-terracotta/20 flex flex-col justify-start transition-transform hover:-translate-y-1 duration-300 bg-brand-terracotta border border-white/20 rounded-2xl relative text-white"
             >
               <div>
-                <div className="flex items-center justify-between border-b border-white/20 pb-3 mb-6 text-xs">
+                <div className="flex items-center justify-between border-b border-white/20 pb-3 mb-6 text-xs font-sans">
                   <span className="px-2.5 py-0.5 rounded-full bg-white/20 text-white border border-white/30 font-medium">
                     {t('home.values.badge3')}
                   </span>
-                  <span className="text-white/70">03</span>
+                  <span className="text-white/70 font-mono">03</span>
                 </div>
 
                 <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center mb-6 text-white">
                   <span className="material-symbols-outlined text-3xl">auto_awesome</span>
                 </div>
-                <h3 className="font-serif text-xl text-white mb-3 font-bold">{t('home.values.title3')}</h3>
-                <p className="text-sm text-white/90 leading-relaxed">{t('home.values.desc3')}</p>
+                <h3 className="font-serif text-xl text-white mb-3 font-normal">{t('home.values.title3')}</h3>
+                <p className="text-sm text-white/90 leading-relaxed font-sans">{t('home.values.desc3')}</p>
               </div>
             </SpotlightCard>
           </div>
@@ -221,17 +221,17 @@ export function Home() {
           
           <div className="flex flex-col md:flex-row items-center justify-between mb-16 pb-6 border-b border-brand-dark-earth/10 gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs text-brand-terracotta uppercase font-medium tracking-wider mb-2">
+              <div className="inline-flex items-center gap-2 text-xs text-brand-terracotta uppercase font-medium tracking-wider mb-2 font-sans">
                 <span>{t('home.collection.badge')}</span>
               </div>
-              <h2 className="font-serif text-3xl md:text-4xl text-brand-dark-earth font-bold">
+              <h2 className="font-serif text-3xl md:text-4xl text-brand-dark-earth font-normal tracking-tight">
                 {t('home.collection.title')}
               </h2>
             </div>
 
             <Link
               to="/products"
-              className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-brand-terracotta hover:text-brand-dark-earth transition-colors px-5 py-2.5 rounded-full border border-brand-terracotta/30 hover:border-brand-terracotta bg-brand-terracotta/5"
+              className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-brand-terracotta hover:text-brand-dark-earth transition-colors px-5 py-2.5 rounded-full border border-brand-terracotta/30 hover:border-brand-terracotta bg-brand-terracotta/5 font-sans"
             >
               <span>{t('home.collection.viewAllBtn')}</span>
               <span>→</span>
@@ -257,7 +257,7 @@ export function Home() {
               <Magnet magnetStrength={0.2}>
                 <button 
                   onClick={() => setVisibleItems(prev => prev + 3)}
-                  className="inline-flex items-center justify-center border border-brand-dark-earth text-brand-dark-earth text-xs h-12 px-9 rounded-full hover:bg-brand-dark-earth hover:text-white transition-colors duration-300 tracking-wider font-semibold shadow-sm"
+                  className="inline-flex items-center justify-center border border-brand-dark-earth text-brand-dark-earth text-xs h-12 px-9 rounded-full hover:bg-brand-dark-earth hover:text-white transition-colors duration-300 tracking-wider font-semibold shadow-sm font-sans"
                 >
                   {t('home.collection.loadMore', { count: collections.length - visibleItems })}
                 </button>
@@ -281,17 +281,17 @@ export function Home() {
         />
 
         <div className="max-w-4xl mx-auto px-grid-margin text-center relative z-10 text-brand-cream">
-          <h2 className="font-display-lg text-display-lg mb-6 leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl mb-6 leading-tight font-normal">
             {t('home.cta.title')}
           </h2>
-          <p className="font-body-lg text-body-lg mb-10 opacity-90 max-w-2xl mx-auto leading-relaxed">
+          <p className="font-sans text-base sm:text-lg mb-10 opacity-90 max-w-2xl mx-auto leading-relaxed">
             {t('home.cta.desc')}
           </p>
           <Magnet magnetStrength={0.3}>
             <StarBorder color="#ffffff" speed="3s">
               <Link 
                 to="/contact" 
-                className="inline-flex items-center justify-center bg-brand-terracotta text-white font-label-md text-label-md h-14 px-10 rounded-full hover:bg-[#d6854b] shadow-2xl shadow-brand-terracotta/50 transition-all duration-300"
+                className="inline-flex items-center justify-center bg-brand-terracotta text-white font-sans text-sm md:text-base h-14 px-10 rounded-full hover:bg-[#d6854b] shadow-2xl shadow-brand-terracotta/50 transition-all duration-300 font-medium"
               >
                 <ShinyText text={t('home.cta.button')} color="#ffffff" shineColor="#ffdcc7" speed={2.5} />
               </Link>

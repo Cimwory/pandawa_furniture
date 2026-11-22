@@ -65,7 +65,7 @@
   display: block;
   border-radius: var(--dw-radius);
   overflow: hidden;
-  background: #0b0b12;
+  background: #EAE2D8;
   opacity: var(--dw-dim);
   transform: translateZ(0);
   pointer-events: none;

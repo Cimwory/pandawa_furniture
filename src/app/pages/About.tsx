@@ -13,8 +13,6 @@ import {
 export function About() {
   const { t } = useTranslation();
 
-
-
   const scrollToFoundation = () => {
     const el = document.getElementById('foundation-section');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -96,7 +94,7 @@ export function About() {
                     {t('about.hero.artisanName')}
                   </span>
                 </div>
-                <span className="text-xs text-brand-dark-earth/60 font-medium">
+                <span className="text-xs text-brand-dark-earth/60 font-medium font-sans">
                   {t('about.hero.artisanExp')}
                 </span>
               </div>
@@ -116,31 +114,23 @@ export function About() {
         </div>
       </section>
 
-      {/* Dynamic Stats Section with React Bits CountUp */}
+      {/* Dynamic Stats Section with React Bits CountUp (20+ Years, 90% Export) */}
       <section className="bg-brand-cream/60 border-y border-brand-dark-earth/10 py-16">
-        <div className="max-w-5xl mx-auto px-grid-margin grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+        <div className="max-w-3xl mx-auto px-grid-margin grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-16 text-center">
           <div className="p-4">
             <div className="font-serif text-4xl md:text-5xl font-bold text-brand-terracotta mb-2">
-              <CountUp to={32} suffix="+" duration={2.2} />
+              <CountUp to={20} suffix="+" duration={2.0} />
             </div>
-            <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70">
+            <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70 font-sans">
               {t('about.stats.experience')}
             </p>
           </div>
           <div className="p-4">
             <div className="font-serif text-4xl md:text-5xl font-bold text-brand-deep-olive mb-2">
-              <CountUp to={100} suffix="%" duration={2.5} />
+              <CountUp to={90} suffix="%" duration={2.2} />
             </div>
-            <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70">
+            <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70 font-sans">
               {t('about.stats.wood')}
-            </p>
-          </div>
-          <div className="p-4">
-            <div className="font-serif text-4xl md:text-5xl font-bold text-brand-cocoa-brown mb-2">
-              <CountUp to={1000} suffix="+" duration={2.0} separator="," />
-            </div>
-            <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-brand-dark-earth/70">
-              {t('about.stats.shipped')}
             </p>
           </div>
         </div>
@@ -149,10 +139,10 @@ export function About() {
       {/* Our Foundation with SpotlightCard */}
       <section id="foundation-section" className="max-w-7xl mx-auto px-grid-margin py-section-gap-desktop scroll-mt-24">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-brand-dark-earth/15 bg-white/70 text-xs font-medium text-brand-terracotta uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-brand-dark-earth/15 bg-white/70 text-xs font-medium text-brand-terracotta uppercase tracking-wider mb-3 font-sans">
             <span>{t('about.foundation.badge')}</span>
           </div>
-          <h2 className="font-serif text-3xl md:text-4xl text-brand-dark-earth mb-4 font-bold">{t('about.foundation.title')}</h2>
+          <h2 className="font-serif text-3xl md:text-4xl text-brand-dark-earth mb-4 font-normal tracking-tight">{t('about.foundation.title')}</h2>
           <div className="w-16 h-1 bg-brand-terracotta mx-auto rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
@@ -162,8 +152,8 @@ export function About() {
             className="p-10 text-center shadow-level1 bg-white hover:-translate-y-1 transition-transform duration-300 rounded-2xl"
           >
             <span className="material-symbols-outlined text-4xl text-brand-terracotta mb-6 block" style={{ fontVariationSettings: "'wght' 300" }}>family_history</span>
-            <h3 className="font-serif text-xl text-brand-dark-earth mb-4 font-bold">{t('about.pillar1.title')}</h3>
-            <p className="text-sm text-brand-dark-earth/75 leading-relaxed">{t('about.pillar1.desc')}</p>
+            <h3 className="font-serif text-xl text-brand-dark-earth mb-4 font-normal">{t('about.pillar1.title')}</h3>
+            <p className="text-sm text-brand-dark-earth/75 leading-relaxed font-sans">{t('about.pillar1.desc')}</p>
           </SpotlightCard>
 
           <SpotlightCard 
@@ -172,8 +162,8 @@ export function About() {
             className="p-10 text-center shadow-level1 bg-white hover:-translate-y-1 transition-transform duration-300 rounded-2xl"
           >
             <span className="material-symbols-outlined text-4xl text-brand-deep-olive mb-6 block" style={{ fontVariationSettings: "'wght' 300" }}>forest</span>
-            <h3 className="font-serif text-xl text-brand-dark-earth mb-4 font-bold">{t('about.pillar2.title')}</h3>
-            <p className="text-sm text-brand-dark-earth/75 leading-relaxed">{t('about.pillar2.desc')}</p>
+            <h3 className="font-serif text-xl text-brand-dark-earth mb-4 font-normal">{t('about.pillar2.title')}</h3>
+            <p className="text-sm text-brand-dark-earth/75 leading-relaxed font-sans">{t('about.pillar2.desc')}</p>
           </SpotlightCard>
 
           <SpotlightCard 
@@ -182,8 +172,8 @@ export function About() {
             className="p-10 text-center shadow-level1 bg-white hover:-translate-y-1 transition-transform duration-300 rounded-2xl"
           >
             <span className="material-symbols-outlined text-4xl text-brand-cocoa-brown mb-6 block" style={{ fontVariationSettings: "'wght' 300" }}>architecture</span>
-            <h3 className="font-serif text-xl text-brand-dark-earth mb-4 font-bold">{t('about.pillar3.title')}</h3>
-            <p className="text-sm text-brand-dark-earth/75 leading-relaxed">{t('about.pillar3.desc')}</p>
+            <h3 className="font-serif text-xl text-brand-dark-earth mb-4 font-normal">{t('about.pillar3.title')}</h3>
+            <p className="text-sm text-brand-dark-earth/75 leading-relaxed font-sans">{t('about.pillar3.desc')}</p>
           </SpotlightCard>
         </div>
       </section>
@@ -202,7 +192,7 @@ export function About() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <span className="material-symbols-outlined text-4xl text-brand-cream mb-8 opacity-50 block" style={{ fontVariationSettings: "'wght' 300" }}>format_quote</span>
           <p 
-            className="font-headline-lg text-headline-lg font-bold text-brand-cream mb-8 leading-relaxed"
+            className="font-serif text-2xl sm:text-3xl md:text-4xl text-brand-cream mb-8 leading-relaxed font-normal"
             dangerouslySetInnerHTML={{ __html: t('about.mission.quote') }}
           />
         </div>

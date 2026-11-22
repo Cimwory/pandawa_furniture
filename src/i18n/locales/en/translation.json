@@ -1,7 +1,7 @@
 {
   "upbar": {
     "location": "Workshop & Gallery: Kudus, Central Java",
-    "badge": "100% Solid Heartwood Teak · Heritage Joinery & Natural Finish",
+    "badge": "Selected Solid Teak · Heritage Joinery & Natural Finish",
     "shipping": "Nationwide Delivery & International Export Ready",
     "hours": "Mon – Sat: 08:00 – 17:00 WIB",
     "chat": "Artisan WhatsApp",
@@ -22,13 +22,13 @@
     "mobileConsultation": "Design & Bespoke Order"
   },
   "footer": {
-    "desc": "Timeless elegance from Indonesian recycled teak.",
+    "desc": "Timeless elegance from Indonesian reclaimed and selected teak.",
     "quickLinks": {
       "title": "Quick Links"
     },
     "commitment": {
       "title": "Our Commitment",
-      "item1": "100% Recycled Teak",
+      "item1": "Reclaimed & Selected Teak",
       "item2": "Sustainable Practices",
       "item3": "Local Artisan Support",
       "item4": "Eco-Friendly Finishes"
@@ -38,13 +38,13 @@
       "whatsapp": "WhatsApp",
       "email": "Email Us",
       "locationTitle": "Location",
-      "locationDesc": "Jln. Lingkar Selatan Kudus km 3, Desa Pasuruhan kidul, Kota Kudus"
+      "locationDesc": "Jln. Lingkar Selatan Kudus–Jepara Km 3, Desa Pasuruhan Kidul, Kudus"
     },
-    "copyright": "2026 Pandawa Furniture. Crafted with care in Indonesia."
+    "copyright": "© 2026 Pandawa Furniture. All rights reserved."
   },
   "home": {
     "hero": {
-      "title": "Timeless Craft, Naturally Involved",
+      "title": "Timeless Craft, Naturally Evolved",
       "desc": "Where heritage craftsmanship meets sustainable luxury. Each piece tells a story of nature, tradition, and modern living.",
       "explore": "Explore Collection",
       "chat": "Chat with us"
@@ -72,13 +72,13 @@
     },
     "collection": {
       "badge": "Curated Pandawa Collection",
-      "title": "Sample Collection",
+      "title": "Signature Pieces",
       "viewAll": "View Full Catalog",
       "viewAllBtn": "VIEW ALL PRODUCTS",
       "loadMore": "Show More Collections (+{{count}})"
     },
     "cta": {
-      "title": "Create your own detail",
+      "title": "Design Your Own Piece",
       "desc": "Let's discuss your vision and craft furniture that perfectly fits your space and style.",
       "button": "Start Your Custom Order"
     }
@@ -88,7 +88,7 @@
   },
   "about": {
     "hero": {
-      "badge": "Heritage Woodcraft Since 1994 · Kudus",
+      "badge": "Heritage Woodcraft · Kudus",
       "headlinePart1": "Two Decades of Honoring",
       "headlineHighlight": "Timeless Beauty",
       "headlinePart2": "in Natural Teak.",
@@ -96,7 +96,7 @@
       "pillars": {
         "woodSource": "WOOD TYPE",
         "woodSourceVal": "Perhutani Teak",
-        "woodSourceSub": "100% Sustainable",
+        "woodSourceSub": "Responsible Forestry",
         "construction": "CONSTRUCTION",
         "constructionVal": "Mortise & Tenon",
         "constructionSub": "Timeless Strength",
@@ -107,13 +107,13 @@
       "btnPhilosophy": "Explore Our Philosophy",
       "btnProcess": "Crafting Process",
       "artisanName": "Mr. Alex · Owner Pandawa Furniture",
-      "artisanExp": "32+ Years Experience",
+      "artisanExp": "Two Decades of Craftsmanship",
       "artisanBadge": "Kudus Craft Dedication",
       "artisanQuote": "\"Every grain of teak carries its own soul and character. Our calling is to patiently nurture it into a living heirloom that graces your home for generations.\""
     },
     "stats": {
-      "experience": "Years of Woodcraft Mastery",
-      "wood": "100% Solid & Reclaimed Teak",
+      "experience": "20+ Years of Craftsmanship",
+      "wood": "90% Export",
       "shipped": "Handcrafted Pieces Delivered",
       "artisans": "Master Artisans in Kudus",
       "furniture": "Heirloom Grade Craftsmanship"
@@ -128,8 +128,8 @@
       "desc": "A family-owned legacy rooted in Indonesian woodworking traditions. We collaborate with local artisans to preserve craftsmanship passed down through generations."
     },
     "pillar2": {
-      "title": "100% Recycled Wood",
-      "desc": "We are committed to sustainability by exclusively using reclaimed and recycled teak wood, protecting Indonesia's rainforests and reducing our environmental impact."
+      "title": "Reclaimed & Selected Teak",
+      "desc": "We are committed to sustainability by using reclaimed and premium selected teak wood, protecting Indonesia's forests and honoring responsible, enduring woodcraft."
     },
     "pillar3": {
       "title": "The Beauty of Aged Teak",
@@ -154,18 +154,11 @@
     },
     "nav": {
       "all": "ALL COLLECTIONS",
-      "chair": "CHAIR SERIES",
-      "dressoir": "DRESSOIR & CREDENZA",
-      "cabinet": "CABINET & ARMOIRE",
-      "stone": "STONE & TEAK VANITY",
-      "chairLounge": "Lounge Chairs",
-      "chairDining": "Dining Chairs",
-      "dresSideboard": "Low Sideboards",
-      "dresSlat": "Slatted Credenzas",
-      "cabGlass": "Glass Cabinets",
-      "cabWardrobe": "Solid Wardrobes",
-      "stoneRiver": "River Stone Basins",
-      "stoneGranite": "Chiseled Granite",
+      "chair": "CHAIR",
+      "table": "TABLE",
+      "dressoir": "SIDEBOARD",
+      "cabinet": "CABINET",
+      "stone": "SINK STONE",
       "sort": "SORT: CHRONOLOGICAL",
       "items": "ITEMS",
       "index": "INDEX /"
@@ -204,12 +197,12 @@
       "title": "Why Choose Pandawa Furniture?",
       "desc": "At Pandawa Furniture, we don't just build furniture; we preserve history and nature through every piece we create. Here is why we are the trusted partner for your interior needs:",
       "reason1": {
-        "title": "A Decade of Mastery",
-        "desc": "With over 10 years of dedicated experience, we have mastered the art of working with recycled teak wood, transforming reclaimed timber into timeless masterpieces."
+        "title": "Two Decades of Mastery",
+        "desc": "With two decades of dedicated experience, we transform reclaimed timber and selected teak into enduring heirlooms."
       },
       "reason2": {
         "title": "Global Quality Standards",
-        "desc": "Our craftsmanship has crossed borders, earning trust and recognition in various countries worldwide. We maintain a consistent export-quality standard that meets the demands of international markets."
+        "desc": "Our craftsmanship has crossed borders, earning trust and recognition in markets across the U.S., Europe, and Asia. We maintain export standards that meet discerning international demands."
       },
       "reason3": {
         "title": "Bespoke & Custom Solutions",
@@ -217,7 +210,7 @@
       },
       "reason4": {
         "title": "Empowering Local Artisans",
-        "desc": "Every piece is handcrafted by local Indonesian artisans whose skills have been passed down through generations. Their unparalleled expertise ensures that every joint, texture, and finish is of the highest possible quality."
+        "desc": "Every piece is handcrafted by local Indonesian artisans whose skills have been passed down through generations. Their unparalleled expertise ensures that every joint, texture, and finish is crafted with pride."
       }
     },
     "proof": {
@@ -233,14 +226,14 @@
       "p2": { "name": "Lounge Teak Chair", "desc": "Comfort meets artisan craftsmanship" },
       "p3": { "name": "Water Sink Stone", "desc": "Hand-carved elegance for your sanctuary" },
       "p4": { "name": "Coffee Table Minimalist", "desc": "Centerpieces that spark conversation" },
-      "p5": { "name": "Vintage Dressoir", "desc": "Elegant solutions for organized living" },
+      "p5": { "name": "Vintage Sideboard", "desc": "Elegant solutions for organized living" },
       "p6": { "name": "Bedroom Wardrobe", "desc": "Rest in sustainable elegance" }
     }
   },
   "production": {
     "hero": {
       "title": "Production & Shipping",
-      "desc": "From reclaimed wood to your home a transparent journey of craftsmanship, sustainability, and care."
+      "desc": "From reclaimed wood to your home — a transparent journey of craftsmanship, sustainability, and care."
     },
     "process": {
       "title": "Our Transparent Process",
@@ -248,11 +241,11 @@
       "steps": {
         "s1": {
           "title": "Sourcing Recycled Teak",
-          "desc": "We carefully source reclaimed teak from old buildings, boats, and structures across Indonesia. Each piece of wood is inspected for quality and character, ensuring it meets our high standards while honoring its past life."
+          "desc": "We carefully source reclaimed teak from old buildings, bridges, and structures across Indonesia. Each piece of wood is inspected for structural integrity and grain character, honoring its rich history."
         },
         "s2": {
           "title": "Artisan Crafting",
-          "desc": "Our skilled Indonesian artisans using traditional techniques passed down through generations. Each joint, curve, and surface is carefully shaped by hand, bringing modern designs to life while preserving time-honored craftsmanship."
+          "desc": "Our skilled artisans use traditional techniques passed down through generations. Each joint, curve, and surface is carefully shaped by hand, bringing timeless designs to life while preserving time-honored craftsmanship."
         },
         "s3": {
           "title": "Quality Packing",
@@ -260,21 +253,21 @@
         },
         "s4": {
           "title": "Global Shipping",
-          "desc": "We deliver our products across the worldwide with trusted logistic providers to ensure your furniture arrives safely, no matter where you are. We delivered across nation such as UK, Spain, Portugal, Taiwan, Netherland, etc. Each piece is carefully packaged with protective materials and tracking is provided for complete peace of mind."
+          "desc": "We deliver our products across the world with trusted logistic providers to ensure your furniture arrives safely, no matter where you are. We have shipped to the U.S., Spain, the U.K., Belgium, the Netherlands, Taiwan, India and the UAE. Each piece is carefully crated with protective materials and full tracking is provided."
         }
       }
     },
     "craft": {
       "title": "Craftsmanship in Every Detail",
-      "desc1": "Our artisans don't just build furniture they honor the wood's history and create pieces that will be cherished for generations.",
-      "desc2": "From selecting the perfect piece of reclaimed teak to the final hand-rubbed finish, every step is performed with care, skill, and respect for both the material and the craft.",
+      "desc1": "Our artisans honor the wood's history and create pieces that will be cherished for generations.",
+      "desc2": "From selecting the ideal timber to the final hand-rubbed botanical finish, every step is performed with care, skill, and respect for the natural material.",
       "point1": "Traditional joinery techniques",
-      "point2": "Hand-sanding and finishing",
-      "point3": "Quality inspection at every stage"
+      "point2": "Hand-sanding and natural finishing",
+      "point3": "Rigorous quality inspection at every stage"
     },
     "shipping": {
       "title": "Global Shipping",
-      "desc": "We ship worldwide, ensuring your furniture arrives in perfect condition."
+      "desc": "We ship worldwide, ensuring your furniture arrives in pristine condition."
     }
   },
   "contact": {
@@ -284,19 +277,19 @@
     },
     "methods": {
       "wa": {
-        "title": "WhatsApp for Fast Response",
-        "desc": "The quickest way to reach us for custom design discussions, questions, or urgent inquiries.",
+        "title": "WhatsApp Direct Consultation",
+        "desc": "Connect directly with our workshop team for design discussions, dimension adjustments, or order inquiries.",
         "button": "Chat on WhatsApp"
       },
       "email": {
         "title": "Email for Official Inquiries",
-        "desc": "For detailed project proposals, quotes, and formal correspondence.",
+        "desc": "For detailed architectural drawings, project proposals, and formal export correspondence.",
         "button": "Send Email"
       }
     },
     "info": {
       "location": "Location",
-      "phone": "Phone",
+      "phone": "WhatsApp",
       "email": "Email"
     },
     "cta": {

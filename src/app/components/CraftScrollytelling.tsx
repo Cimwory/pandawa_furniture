@@ -53,8 +53,8 @@ const CHAPTERS: Chapter[] = [
       phase: 'timber_selection',
       technique: 'kiln_dried_equilibrium',
       tolerance: '±0.5% moisture',
-      sustainability: '100% legal reclaimed',
-      durability: '50+ years guarantee'
+      sustainability: 'verified_reclaimed_teak',
+      durability: 'enduring_patina'
     }
   },
   {
@@ -100,7 +100,7 @@ const CHAPTERS: Chapter[] = [
     codeSnippet: {
       phase: 'artisanal_carving',
       technique: 'hand_chiseled_relief',
-      tolerance: 'human_tactile_perfection',
+      tolerance: 'human_tactile_mastery',
       sustainability: 'heritage_preservation',
       durability: 'timeless_aesthetic'
     }
@@ -125,7 +125,7 @@ const CHAPTERS: Chapter[] = [
       phase: 'heirloom_finishing',
       technique: 'hand_buffed_beeswax',
       tolerance: 'food_safe_contact',
-      sustainability: '100% bio_degradable',
+      sustainability: 'bio_degradable_botanical',
       durability: 'self_healing_patina'
     }
   }

@@ -1,14 +1,20 @@
 import { useState, useMemo, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { ChevronDown, MessageCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { PRODUCTS, CATEGORIES } from '../data/products';
 
 const PRODUCTS_PER_PAGE = 12;
 type SortOption = 'newest' | 'name-az';
 
 export function Products() {
+  const { i18n } = useTranslation();
+  const isId = (i18n.resolvedLanguage || i18n.language)?.startsWith('id');
+
   const [searchParams, setSearchParams] = useSearchParams();
-  const categoryParam = searchParams.get('category') || 'all';
+  const rawCategoryParam = searchParams.get('category') || 'all';
+  // Normalize 'dressoir' param to 'sideboard' internally
+  const categoryParam = rawCategoryParam === 'dressoir' ? 'sideboard' : rawCategoryParam;
 
   const [activeCategory, setActiveCategory] = useState<string>(categoryParam);
   const [sortBy, setSortBy] = useState<SortOption>('newest');
@@ -24,17 +30,23 @@ export function Products() {
 
   // Determine active category label
   const activeTitle = useMemo(() => {
-    if (activeCategory === 'all') return 'All Products';
+    if (activeCategory === 'all') return isId ? 'Semua Produk' : 'All Products';
     const found = CATEGORIES.find((c) => c.id === activeCategory);
-    return found ? found.label : 'All Products';
-  }, [activeCategory]);
+    if (!found) return isId ? 'Semua Produk' : 'All Products';
+    return isId ? found.labelId : found.labelEn;
+  }, [activeCategory, isId]);
 
   // Filter products by category
   const filteredProducts = useMemo(() => {
     if (activeCategory === 'all') {
       return PRODUCTS;
     }
-    return PRODUCTS.filter((p) => p.category === activeCategory);
+    return PRODUCTS.filter((p) => {
+      if (activeCategory === 'sideboard' || activeCategory === 'dressoir') {
+        return p.category === 'sideboard' || p.category === 'dressoir';
+      }
+      return p.category === activeCategory;
+    });
   }, [activeCategory]);
 
   // Sort products
@@ -70,8 +82,22 @@ export function Products() {
   // Plain text Category List
   const CategoryNavList = () => (
     <ul className="space-y-1">
+      <li className="py-0.5">
+        <button
+          type="button"
+          onClick={() => handleSelectCategory('all')}
+          className={`text-left py-1 text-[15px] font-sans transition-colors duration-150 w-full ${
+            activeCategory === 'all'
+              ? 'text-brand-dark-earth font-semibold'
+              : 'text-neutral-500 hover:text-brand-dark-earth'
+          }`}
+        >
+          {isId ? 'Semua Produk' : 'All Products'}
+        </button>
+      </li>
       {CATEGORIES.map((cat) => {
         const isActive = activeCategory === cat.id;
+        const label = isId ? cat.labelId : cat.labelEn;
 
         return (
           <li key={cat.id} className="py-0.5">
@@ -84,7 +110,7 @@ export function Products() {
                   : 'text-neutral-500 hover:text-brand-dark-earth'
               }`}
             >
-              {cat.label}
+              {label}
             </button>
           </li>
         );
@@ -98,7 +124,7 @@ export function Products() {
       <div className="w-full bg-[#f4f4f4] border-b border-neutral-200/60">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-center gap-2 text-[13px] font-sans text-neutral-500">
           <Link to="/" className="hover:text-brand-dark-earth transition-colors">
-            Home
+            {isId ? 'Beranda' : 'Home'}
           </Link>
           <span>/</span>
           <button
@@ -106,7 +132,7 @@ export function Products() {
             onClick={() => handleSelectCategory('all')}
             className="hover:text-brand-dark-earth transition-colors"
           >
-            Products
+            {isId ? 'Produk' : 'Products'}
           </button>
           {activeCategory !== 'all' && (
             <>
@@ -129,7 +155,7 @@ export function Products() {
           >
             <div className="flex items-center gap-2">
               <span className="text-xs uppercase tracking-widest text-neutral-400 font-semibold">
-                Categories:
+                {isId ? 'KATEGORI:' : 'CATEGORIES:'}
               </span>
               <span className="font-medium text-brand-dark-earth">{activeTitle}</span>
             </div>
@@ -154,7 +180,7 @@ export function Products() {
           <aside className="hidden lg:block w-[25%] flex-shrink-0 pr-10 border-r border-neutral-200/80">
             <div className="sticky top-28">
               <h3 className="text-[11px] uppercase tracking-[0.18em] font-semibold text-neutral-400 font-sans mb-6">
-                CATEGORIES
+                {isId ? 'KATEGORI' : 'CATEGORIES'}
               </h3>
               <CategoryNavList />
             </div>
@@ -170,7 +196,9 @@ export function Products() {
             {/* b. One row: "Showing 1–[X] of [Total] products" on left, sort dropdown on right */}
             <div className="flex items-center justify-between pb-6 mb-8 border-b border-neutral-200/60">
               <p className="text-[13px] md:text-sm font-sans text-neutral-500">
-                Showing {showingStart}–{showingEnd} of {sortedProducts.length} products
+                {isId
+                  ? `Menampilkan ${showingStart}–${showingEnd} dari ${sortedProducts.length} produk`
+                  : `Showing ${showingStart}–${showingEnd} of ${sortedProducts.length} products`}
               </p>
 
               <div className="flex items-center gap-2">
@@ -186,8 +214,8 @@ export function Products() {
                   }}
                   className="text-[13px] font-sans text-neutral-600 bg-transparent border border-neutral-300 rounded px-3 py-1.5 focus:outline-none focus:border-brand-dark-earth cursor-pointer"
                 >
-                  <option value="newest">Sort by newest</option>
-                  <option value="name-az">Name A–Z</option>
+                  <option value="newest">{isId ? 'Urutkan terbaru' : 'Sort by newest'}</option>
+                  <option value="name-az">{isId ? 'Nama A–Z' : 'Name A–Z'}</option>
                 </select>
               </div>
             </div>
@@ -227,7 +255,7 @@ export function Products() {
             ) : (
               <div className="py-24 text-center">
                 <p className="text-neutral-400 font-sans text-sm">
-                  No products found in this category.
+                  {isId ? 'Tidak ada produk dalam kategori ini.' : 'No products found in this category.'}
                 </p>
               </div>
             )}
@@ -241,7 +269,7 @@ export function Products() {
                   disabled={currentPage === 1}
                   className="px-3 py-1.5 text-xs font-sans text-neutral-500 hover:text-brand-dark-earth disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                 >
-                  ← Previous
+                  {isId ? '← Sebelumnya' : '← Previous'}
                 </button>
 
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
@@ -265,7 +293,7 @@ export function Products() {
                   disabled={currentPage === totalPages}
                   className="px-3 py-1.5 text-xs font-sans text-neutral-500 hover:text-brand-dark-earth disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                 >
-                  Next →
+                  {isId ? 'Berikutnya →' : 'Next →'}
                 </button>
               </nav>
             )}
@@ -275,7 +303,7 @@ export function Products() {
 
       {/* ─── 3. Floating WhatsApp button at the bottom-right corner ─ */}
       <a
-        href="https://wa.me/6281291566470"
+        href="https://wa.me/6285168628421"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"

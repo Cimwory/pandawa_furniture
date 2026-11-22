@@ -1,7 +1,7 @@
 {
   "upbar": {
     "location": "Workshop & Galeri: Kudus, Jawa Tengah",
-    "badge": "100% Kayu Jati Solid Pilihan · Garansi Mutu & Finishing Alami",
+    "badge": "Kayu Jati Solid Pilihan · Garansi Mutu & Finishing Alami",
     "shipping": "Pengiriman Seluruh Nusantara & Ekspor Internasional",
     "hours": "Senin – Sabtu: 08.00 – 17.00 WIB",
     "chat": "WhatsApp Pengrajin",
@@ -22,13 +22,13 @@
     "mobileConsultation": "Konsultasi Desain & Pemesanan"
   },
   "footer": {
-    "desc": "Keanggunan abadi kriya mebel kayu jati solid dan ramah lingkungan dari pengrajin Kudus, Jawa Tengah.",
+    "desc": "Keanggunan abadi kriya mebel kayu jati reklamasi dan jati pilihan dari pengrajin Kudus, Jawa Tengah.",
     "quickLinks": {
       "title": "Tautan Cepat"
     },
     "commitment": {
       "title": "Komitmen Kami",
-      "item1": "100% Jati Daur Ulang",
+      "item1": "Jati Reklamasi & Pilihan",
       "item2": "Praktik Berkelanjutan",
       "item3": "Dukungan Pengrajin Lokal",
       "item4": "Finishing Ramah Lingkungan"
@@ -38,13 +38,13 @@
       "whatsapp": "WhatsApp",
       "email": "Email Kami",
       "locationTitle": "Lokasi",
-      "locationDesc": "Jln. Lingkar Selatan Kudus km 3, Desa Pasuruhan kidul, Kota Kudus"
+      "locationDesc": "Jln. Lingkar Selatan Kudus–Jepara Km 3, Desa Pasuruhan Kidul, Kudus"
     },
-    "copyright": "2026 Pandawa Furniture. Dibuat dengan sepenuh hati di Indonesia."
+    "copyright": "© 2026 Pandawa Furniture. Hak cipta dilindungi undang-undang."
   },
   "home": {
     "hero": {
-      "title": "Karya Abadi, Menyatu dengan Alam",
+      "title": "Karya Abadi, Berevolusi Alami",
       "desc": "Di mana keahlian warisan bertemu dengan kemewahan yang berkelanjutan. Setiap karya menceritakan kisah alam, tradisi, dan kehidupan modern.",
       "explore": "Jelajahi Koleksi",
       "chat": "Hubungi Kami"
@@ -72,13 +72,13 @@
     },
     "collection": {
       "badge": "Koleksi Pilihan Pandawa",
-      "title": "Koleksi Pilihan Kami",
+      "title": "Koleksi Pilihan",
       "viewAll": "Lihat Katalog Lengkap",
       "viewAllBtn": "LIHAT SEMUA PRODUK",
       "loadMore": "Tampilkan Lebih Banyak Koleksi (+{{count}})"
     },
     "cta": {
-      "title": "Wujudkan Detail Impian Anda",
+      "title": "Rancang Desain Anda Sendiri",
       "desc": "Mari diskusikan visi Anda dan ciptakan furnitur yang sesuai dengan ruang dan gaya Anda.",
       "button": "Mulai Pesanan Khusus"
     }
@@ -88,7 +88,7 @@
   },
   "about": {
     "hero": {
-      "badge": "Warisan Kriya Sejak 1994 · Kudus",
+      "badge": "Warisan Kriya Kayu · Kudus",
       "headlinePart1": "Dua Dekade Merawat",
       "headlineHighlight": "Keindahan Abadi",
       "headlinePart2": "Kayu Jati Alami.",
@@ -96,7 +96,7 @@
       "pillars": {
         "woodSource": "JENIS KAYU",
         "woodSourceVal": "Jati Perhutani",
-        "woodSourceSub": "100% Berkelanjutan",
+        "woodSourceSub": "Kehutanan Bertanggung Jawab",
         "construction": "KONSTRUKSI",
         "constructionVal": "Purus & Pasak",
         "constructionSub": "Kekuatan Abadi",
@@ -107,13 +107,13 @@
       "btnPhilosophy": "Mengenal Filosofi Kami",
       "btnProcess": "Proses Pembuatan",
       "artisanName": "Pak Alex · Owner Pandawa Furniture",
-      "artisanExp": "Pengalaman 32+ Tahun",
+      "artisanExp": "Dua Dekade Kriya",
       "artisanBadge": "Dedikasi Kriya Kudus",
       "artisanQuote": "\"Setiap bilah kayu memiliki jiwa dan alur seratnya sendiri. Tugas kami adalah merawatnya dengan sabar agar menjadi karya yang hidup di rumah Anda selama bergenerasi.\""
     },
     "stats": {
-      "experience": "Tahun Pengalaman Kriya",
-      "wood": "Jati Daur Ulang Pilihan",
+      "experience": "20+ Tahun Pengalaman Kriya",
+      "wood": "90% Ekspor",
       "shipped": "Karya Mebel Terkirim",
       "artisans": "Pengrajin Ahli Kudus",
       "furniture": "Empu Kriya Berpengalaman"
@@ -128,12 +128,12 @@
       "desc": "Warisan milik keluarga yang berakar pada tradisi pertukangan kayu Indonesia. Kami berkolaborasi dengan pengrajin lokal untuk melestarikan keterampilan yang diwariskan dari generasi ke generasi."
     },
     "pillar2": {
-      "title": "100% Kayu Daur Ulang",
-      "desc": "Kami berkomitmen pada keberlanjutan dengan menggunakan kayu jati daur ulang, melindungi hutan hujan Indonesia dan mengurangi dampak lingkungan."
+      "title": "Kayu Jati Reklamasi & Pilihan",
+      "desc": "Kami berkomitmen pada keberlanjutan dengan menggunakan kayu jati daur ulang dan jati pilihan berkualitas, menjaga kelestarian alam dan menjunjung kriya kayu yang bertanggung jawab."
     },
     "pillar3": {
-      "title": "Keistimewaan Kayu Jati Lama",
-      "desc": "Kayu jati daur ulang yang sudah tua memiliki tekstur unik dan daya tahan yang luar biasa. Jejak sejarah dan cuaca membuat setiap karya menjadi lebih kuat, indah, dan benar-benar unik."
+      "title": "Keistimewaan Kayu Jati Alami",
+      "desc": "Kayu jati daur ulang dan jati tua memiliki tekstur unik dan daya tahan yang luar biasa. Jejak sejarah dan cuaca membuat setiap karya menjadi lebih kokoh, indah, dan benar-benar unik."
     },
     "mission": {
       "quote": "Misi kami adalah menjembatani <span class=\"font-bold text-brand-terracotta\">warisan</span> seni kriya kayu nusantara dengan gaya hidup sadar lingkungan yang <span class=\"font-bold text-brand-terracotta\">modern</span>. Kami menciptakan furnitur pusaka yang abadi lintas generasi, memastikan setiap potongan kayu senantiasa <span class=\"font-bold text-brand-terracotta\">menghormati bumi</span>."
@@ -154,18 +154,11 @@
     },
     "nav": {
       "all": "SEMUA KOLEKSI",
-      "chair": "SERI KURSI",
-      "dressoir": "KREDENSA & BUFET",
-      "cabinet": "LEMARI & WARDROBE",
-      "stone": "WASTAFEL BATU & JATI",
-      "chairLounge": "Kursi Santai",
-      "chairDining": "Kursi Makan",
-      "dresSideboard": "Bufet Rendah",
-      "dresSlat": "Kredensa Bilah",
-      "cabGlass": "Lemari Kaca",
-      "cabWardrobe": "Lemari Pakaian",
-      "stoneRiver": "Wastafel Batu Kali",
-      "stoneGranite": "Wastafel Granit Pahat",
+      "chair": "KURSI",
+      "table": "MEJA",
+      "dressoir": "DRESSOIR",
+      "cabinet": "LEMARI",
+      "stone": "WASTAFEL BATU",
       "sort": "URUTAN: KRONOLOGIS",
       "items": "PRODUK",
       "index": "INDEKS /"
@@ -204,20 +197,20 @@
       "title": "Mengapa Memilih Pandawa Furniture?",
       "desc": "Di Pandawa Furniture, kami tidak sekadar membuat furnitur; kami melestarikan sejarah dan alam melalui setiap karya yang kami ciptakan. Inilah alasan mengapa kami adalah mitra terpercaya untuk kebutuhan interior Anda:",
       "reason1": {
-        "title": "Satu Dekade Keahlian",
-        "desc": "Dengan lebih dari 10 tahun pengalaman khusus, kami telah menguasai seni mengolah kayu jati daur ulang, mengubah kayu bekas menjadi mahakarya abadi."
+        "title": "Dua Dekade Keahlian",
+        "desc": "Dengan dua dekade pengalaman khusus, kami mengolah kayu jati reklamasi dan jati pilihan menjadi karya bernilai tinggi."
       },
       "reason2": {
         "title": "Standar Kualitas Global",
-        "desc": "Keahlian kami telah melintasi batas, mendapatkan kepercayaan dan pengakuan di berbagai negara di seluruh dunia. Kami mempertahankan standar kualitas ekspor yang konsisten yang memenuhi permintaan pasar internasional."
+        "desc": "Keahlian kami telah melintasi batas, dipercaya di pasar Amerika Serikat, Eropa, dan Asia. Kami mempertahankan standar mutu ekspor yang konsisten."
       },
       "reason3": {
         "title": "Solusi Desain Sesuai Pesanan",
-        "desc": "Kami percaya setiap ruang itu unik. Kami menawarkan konsultasi yang dipersonalisasi dan layanan pesanan khusus, memungkinkan Anda menyesuaikan desain yang sangat sesuai dengan kebutuhan spesifik dan visi estetika Anda."
+        "desc": "Kami percaya setiap ruang itu unik. Kami menawarkan konsultasi khusus dan layanan pesanan kustom, menyesuaikan desain yang tepat untuk visi estetika Anda."
       },
       "reason4": {
         "title": "Memberdayakan Pengrajin Lokal",
-        "desc": "Setiap karya dibuat dengan tangan oleh pengrajin lokal Indonesia yang keterampilannya telah diwariskan dari generasi ke generasi. Keahlian mereka yang tak tertandingi memastikan bahwa setiap sambungan, tekstur, dan hasil akhir memiliki kualitas setinggi mungkin."
+        "desc": "Setiap karya dibuat dengan tangan oleh pengrajin lokal Kudus yang keterampilannya diwariskan lintas generasi dengan dedikasi penuh."
       }
     },
     "proof": {
@@ -240,7 +233,7 @@
   "production": {
     "hero": {
       "title": "Produksi & Pengiriman",
-      "desc": "Dari kayu jati pilihan hingga ke hunian Anda — perjalanan transparan dari keahlian tangan, keberlanjutan, dan perhatian mutu."
+      "desc": "Dari kayu jati reklamasi hingga ke hunian Anda — perjalanan transparan dari keahlian tangan, keberlanjutan, dan perhatian mutu."
     },
     "process": {
       "title": "Proses Transparan Kami",
@@ -248,11 +241,11 @@
       "steps": {
         "s1": {
           "title": "Sumber Jati Daur Ulang",
-          "desc": "Kami secara hati-hati mencari kayu jati yang direklamasi dari bangunan lama, perahu, dan struktur di seluruh Indonesia. Setiap potongan kayu diperiksa kualitas dan karakternya, memastikan memenuhi standar tinggi kami sambil menghormati kehidupan masa lalunya."
+          "desc": "Kami secara hati-hati mencari kayu jati yang direklamasi dari bangunan lama, jembatan, dan struktur di seluruh Indonesia. Setiap potongan kayu diperiksa kualitas dan karakternya, memastikan standar mutu tinggi sambil menghormati jejak sejarahnya."
         },
         "s2": {
           "title": "Pengerjaan Pengrajin",
-          "desc": "Pengrajin terampil Indonesia kami menggunakan teknik tradisional yang diwariskan dari generasi ke generasi. Setiap sambungan, kurva, dan permukaan dibentuk dengan cermat dengan tangan, menghidupkan desain modern sambil melestarikan keahlian yang telah lama ada."
+          "desc": "Pengrajin terampil kami menggunakan teknik tradisional yang diwariskan dari generasi ke generasi. Setiap sambungan, kurva, dan permukaan dibentuk dengan cermat dengan tangan, menghidupkan desain abadi sambil melestarikan keahlian yang telah lama ada."
         },
         "s3": {
           "title": "Pengemasan Berkualitas",
@@ -260,17 +253,17 @@
         },
         "s4": {
           "title": "Pengiriman Global",
-          "desc": "Kami mengirimkan produk kami ke seluruh dunia dengan penyedia logistik terpercaya untuk memastikan furnitur Anda tiba dengan aman, di mana pun Anda berada. Kami telah mengirim ke berbagai negara seperti Inggris, Spanyol, Portugal, Taiwan, Belanda, dll. Setiap karya dikemas dengan hati-hati menggunakan bahan pelindung dan pelacakan disediakan untuk ketenangan pikiran sepenuhnya."
+          "desc": "Kami mengirimkan produk kami ke seluruh dunia dengan penyedia logistik terpercaya untuk memastikan furnitur Anda tiba dengan aman. Kami telah melakukan pengiriman ke Amerika Serikat, Spanyol, Inggris, Belgia, Belanda, Taiwan, India, dan UEA. Setiap karya dikemas secara aman dengan peti kayu pelindung dan pelacakan lengkap."
         }
       }
     },
     "craft": {
       "title": "Keahlian di Setiap Detail",
-      "desc1": "Pengrajin kami tidak hanya membuat furnitur, mereka menghormati sejarah kayu dan menciptakan karya yang akan dihargai dari generasi ke generasi.",
-      "desc2": "Mulai dari memilih potongan jati daur ulang yang sempurna hingga sentuhan akhir gosokan tangan, setiap langkah dilakukan dengan perhatian, keterampilan, dan rasa hormat terhadap material dan seni pembuatan.",
-      "point1": "Teknik sambungan tradisional",
-      "point2": "Pengamplasan dan penyelesaian manual",
-      "point3": "Inspeksi kualitas di setiap tahap"
+      "desc1": "Pengrajin kami menghormati sejarah kayu dan menciptakan karya yang akan dihargai dari generasi ke generasi.",
+      "desc2": "Mulai dari memilih potongan kayu yang ideal hingga sentuhan akhir minyak nabati gosokan tangan, setiap langkah dilakukan dengan perhatian, keterampilan, dan integritas kriya.",
+      "point1": "Teknik sambungan purus & pasak tradisional",
+      "point2": "Pengamplasan halus dan finishing alami",
+      "point3": "Inspeksi kualitas ketat di setiap tahap"
     },
     "shipping": {
       "title": "Pengiriman Global",
@@ -284,19 +277,19 @@
     },
     "methods": {
       "wa": {
-        "title": "WhatsApp untuk Respon Cepat",
-        "desc": "Cara tercepat untuk menghubungi kami terkait diskusi desain khusus, pertanyaan, atau hal mendesak.",
+        "title": "Konsultasi Cepat via WhatsApp",
+        "desc": "Terhubung langsung dengan tim workshop kami untuk diskusi desain, penyesuaian ukuran, atau pemesanan.",
         "button": "Chat di WhatsApp"
       },
       "email": {
         "title": "Email untuk Permintaan Resmi",
-        "desc": "Untuk proposal proyek rinci, penawaran harga, dan korespondensi formal.",
+        "desc": "Untuk proposal arsitektural, gambar kerja, penawaran harga, dan korespondensi ekspor resmi.",
         "button": "Kirim Email"
       }
     },
     "info": {
       "location": "Lokasi",
-      "phone": "Telepon",
+      "phone": "WhatsApp",
       "email": "Email"
     },
     "cta": {

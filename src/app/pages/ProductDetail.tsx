@@ -1,10 +1,13 @@
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router';
+import { useTranslation } from 'react-i18next';
 import { PRODUCTS, CATEGORIES } from '../data/products';
 import { MessageCircle, ArrowLeft } from 'lucide-react';
 
 export function ProductDetail() {
   const { id } = useParams<{ id: string }>();
+  const { i18n } = useTranslation();
+  const isId = (i18n.resolvedLanguage || i18n.language)?.startsWith('id');
   const product = PRODUCTS.find((p) => p.id === id);
 
   useEffect(() => {
@@ -18,26 +21,40 @@ export function ProductDetail() {
   if (!product) {
     return (
       <div className="pt-[100px] pb-24 min-h-[60vh] flex flex-col items-center justify-center bg-brand-cream text-center px-4">
-        <h1 className="font-serif text-3xl text-brand-dark-earth mb-4">Product Not Found</h1>
-        <p className="text-neutral-500 font-sans mb-8">The requested furniture piece could not be located.</p>
+        <h1 className="font-serif text-3xl text-brand-dark-earth mb-4">
+          {isId ? 'Produk Tidak Ditemukan' : 'Product Not Found'}
+        </h1>
+        <p className="text-neutral-500 font-sans mb-8">
+          {isId ? 'Karya mebel yang Anda cari tidak tersedia.' : 'The requested furniture piece could not be located.'}
+        </p>
         <Link
           to="/products"
           className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-brand-terracotta text-white font-sans text-sm hover:bg-[#a55825] transition-colors"
         >
           <ArrowLeft size={16} />
-          <span>Return to Catalog</span>
+          <span>{isId ? 'Kembali ke Katalog' : 'Return to Catalog'}</span>
         </Link>
       </div>
     );
   }
 
-  const categoryObj = CATEGORIES.find((c) => c.id === product.category);
-  const categoryLabel = categoryObj?.label || 'Products';
+  const categoryObj = CATEGORIES.find(
+    (c) => c.id === product.category || (product.category === 'dressoir' && c.id === 'sideboard')
+  );
+  const categoryLabel = categoryObj
+    ? isId
+      ? categoryObj.labelId
+      : categoryObj.labelEn
+    : isId
+    ? 'Produk'
+    : 'Products';
+
+  const isSink = product.category === 'sink-stone';
 
   const waMessage = encodeURIComponent(
     `Halo Pandawa Furniture, saya tertarik dengan produk ${product.name} (ID: ${product.id}). Bisakah minta informasi detail, ketersediaan, dan harganya?`
   );
-  const whatsappUrl = `https://wa.me/6281291566470?text=${waMessage}`;
+  const whatsappUrl = `https://wa.me/6285168628421?text=${waMessage}`;
 
   return (
     <div className="pt-[68px] md:pt-[76px] min-h-screen bg-brand-cream">
@@ -45,14 +62,17 @@ export function ProductDetail() {
       <div className="w-full bg-[#f5f3ef] border-b border-brand-dark-earth/8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-3 flex items-center justify-center gap-2 text-[13px] font-sans text-brand-dark-earth/50">
           <Link to="/" className="hover:text-brand-dark-earth transition-colors">
-            Home
+            {isId ? 'Beranda' : 'Home'}
           </Link>
           <span>/</span>
           <Link to="/products" className="hover:text-brand-dark-earth transition-colors">
-            Products
+            {isId ? 'Produk' : 'Products'}
           </Link>
           <span>/</span>
-          <Link to={`/products?category=${product.category}`} className="hover:text-brand-dark-earth transition-colors">
+          <Link
+            to={`/products?category=${product.category}`}
+            className="hover:text-brand-dark-earth transition-colors"
+          >
             {categoryLabel}
           </Link>
           <span>/</span>
@@ -69,7 +89,7 @@ export function ProductDetail() {
           className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-neutral-500 hover:text-brand-dark-earth transition-colors mb-8 font-sans"
         >
           <ArrowLeft size={14} />
-          <span>Back to Catalog</span>
+          <span>{isId ? 'Kembali ke Katalog' : 'Back to Catalog'}</span>
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-start">
@@ -96,18 +116,50 @@ export function ProductDetail() {
               {product.name}
             </h1>
 
-            {product.material && (
-              <p className="text-sm font-sans text-neutral-500 mb-6">
-                <span className="font-medium text-brand-dark-earth">Material:</span> {product.material}
+            {/* Material & Spec Fields */}
+            <div className="space-y-2 mb-6 text-sm font-sans border-b border-brand-dark-earth/10 pb-6">
+              <p className="text-neutral-600">
+                <span className="font-medium text-brand-dark-earth">
+                  {isId ? 'Bahan:' : 'Material:'}
+                </span>{' '}
+                {isSink
+                  ? isId
+                    ? 'Batu sungai alami, dipahat dengan tangan'
+                    : 'Natural river stone, hand-carved'
+                  : product.material ||
+                    (isId
+                      ? 'Kayu jati reklamasi atau pilihan premium'
+                      : 'Reclaimed or premium selected teak')}
               </p>
-            )}
-
-            <div className="border-t border-b border-brand-dark-earth/10 py-6 mb-8">
-              <p className="font-sans text-brand-dark-earth/75 text-sm md:text-base leading-relaxed">
-                {product.description || 'Solid teak woodcraft hand-carved in Kudus, Central Java with zero-nail traditional joinery and natural eco-friendly finish.'}
+              <p className="text-neutral-600">
+                <span className="font-medium text-brand-dark-earth">
+                  {isId ? 'Dimensi (P×L×T):' : 'Dimensions (W×D×H):'}
+                </span>{' '}
+                {product.dimensions || (isId ? 'Sesuai permintaan' : 'On request')}
+              </p>
+              <p className="text-neutral-600">
+                <span className="font-medium text-brand-dark-earth">
+                  {isId ? 'Finishing:' : 'Finish:'}
+                </span>{' '}
+                {product.finish || (isId ? 'Sesuai permintaan' : 'On request')}
               </p>
             </div>
 
+            {/* Description */}
+            <div className="mb-8">
+              <p className="font-sans text-brand-dark-earth/75 text-sm md:text-base leading-relaxed">
+                {product.description ||
+                  (isSink
+                    ? isId
+                      ? 'Wastafel batu sungai alami dipahat dengan tangan dari batuan utuh.'
+                      : 'Natural river stone vessel basin hand-carved from solid boulder.'
+                    : isId
+                    ? 'Kriya kayu jati solid dibuat di Kudus, Jawa Tengah dengan sambungan purus & pasak tradisional serta finishing ramah lingkungan.'
+                    : 'Solid teak woodcraft handcrafted in Kudus, Central Java with traditional mortise and tenon joinery and botanical oil finish.')}
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href={whatsappUrl}
@@ -116,21 +168,90 @@ export function ProductDetail() {
                 className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-[#25D366] text-white font-sans text-sm font-medium hover:bg-[#20ba59] transition-all shadow-sm"
               >
                 <MessageCircle size={18} />
-                <span>Inquire on WhatsApp</span>
+                <span>{isId ? 'Konsultasi via WhatsApp' : 'Inquire on WhatsApp'}</span>
               </a>
 
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-brand-dark-earth text-white font-sans text-sm font-medium hover:bg-[#3f3326] transition-all shadow-sm"
               >
-                Custom Order Inquiries
+                {isId ? 'Pemesanan Khusus' : 'Custom Order Inquiries'}
               </Link>
             </div>
 
-            <div className="mt-10 pt-6 border-t border-brand-dark-earth/8 space-y-2 text-xs text-neutral-500 font-sans">
-              <p>✓ 100% Solid Heartwood Teak from Kudus</p>
-              <p>✓ Custom sizes & bespoke dimensions available upon request</p>
-              <p>✓ Safe nationwide packaging & worldwide shipping</p>
+            {/* Category-Specific Bullets */}
+            <div className="mt-8 pt-6 border-t border-brand-dark-earth/10 space-y-2.5 text-xs md:text-[13px] text-neutral-600 font-sans">
+              {isSink ? (
+                <>
+                  <p className="flex items-center gap-2">
+                    <span className="text-brand-terracotta font-serif font-bold">✓</span>
+                    <span>
+                      {isId
+                        ? 'Batu sungai alami asli, dipahat langsung dengan tangan'
+                        : 'Natural river stone, hand-carved from solid boulder'}
+                    </span>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="text-brand-terracotta font-serif font-bold">✓</span>
+                    <span>
+                      {isId
+                        ? 'Tekstur organik alami yang unik di setiap karya'
+                        : 'Unique organic texture and natural stone variation'}
+                    </span>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="text-brand-terracotta font-serif font-bold">✓</span>
+                    <span>
+                      {isId
+                        ? 'Dimensi kustom dan pesanan khusus tersedia sesuai permintaan'
+                        : 'Custom sizes & bespoke dimensions available upon request'}
+                    </span>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="text-brand-terracotta font-serif font-bold">✓</span>
+                    <span>
+                      {isId
+                        ? 'Pengemasan peti kayu standar ekspor & pengiriman internasional'
+                        : 'Safe export-grade crating & international shipping'}
+                    </span>
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="flex items-center gap-2">
+                    <span className="text-brand-terracotta font-serif font-bold">✓</span>
+                    <span>
+                      {isId
+                        ? 'Kayu jati reklamasi atau pilihan premium dari Kudus'
+                        : 'Reclaimed or premium selected teak from Kudus'}
+                    </span>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="text-brand-terracotta font-serif font-bold">✓</span>
+                    <span>
+                      {isId
+                        ? 'Dirakit dengan sambungan purus & pasak tradisional'
+                        : 'Handcrafted with traditional mortise & tenon joinery'}
+                    </span>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="text-brand-terracotta font-serif font-bold">✓</span>
+                    <span>
+                      {isId
+                        ? 'Dimensi kustom dan pesanan khusus tersedia sesuai permintaan'
+                        : 'Custom sizes & bespoke dimensions available upon request'}
+                    </span>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="text-brand-terracotta font-serif font-bold">✓</span>
+                    <span>
+                      {isId
+                        ? 'Pengemasan standar ekspor aman & pengiriman ke seluruh dunia'
+                        : 'Safe export-grade packaging & worldwide shipping'}
+                    </span>
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -138,7 +259,7 @@ export function ProductDetail() {
 
       {/* ─── Floating WhatsApp Button ──────────────────────────── */}
       <a
-        href="https://wa.me/6281291566470"
+        href="https://wa.me/6285168628421"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
